@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Профили движков: пути, параметры, признаки админки."""
 
 PROFILES = {
@@ -54,6 +54,23 @@ PROFILES = {
         "admin": ["/login", "/app"],
         "params": [("/login", "usr", "Administrator")],
         "login_field": "usr",
+    },
+    "joomla": {
+        "files": ["/configuration.php", "/configuration.php~", "/configuration.php.bak",
+                  "/administrator/manifests/files/joomla.xml", "/administrator/",
+                  "/.env", "/.git/config", "/backup.sql", "/dump.sql"],
+        "admin": ["/administrator/", "/administrator/index.php"],
+        "params": [("/", "searchword", "a"),
+                   ("/index.php?option=com_content&view=article", "id", "1")],
+        "login_field": "username",
+    },
+    "dle": {
+        "files": ["/engine/data/config.php", "/engine/data/dbconfig.php",
+                  "/admin.php", "/backup/", "/.env", "/.git/config"],
+        "admin": ["/admin.php"],
+        "params": [("/index.php?do=search&subaction=search", "story", "a"),
+                   ("/", "do", "search")],
+        "login_field": "login_name",
     },
     "django": {
         "files": ["/.env", "/.git/config", "/backup.sql", "/adminer.php"],

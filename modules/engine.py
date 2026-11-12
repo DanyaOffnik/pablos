@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import time
 
 from core import http, ui
@@ -10,6 +10,8 @@ MARKS = [
     ("shopify", ("cdn.shopify", "shopify")),
     ("horoshop", ("horoshop",)),
     ("promua", ("prom.ua", "promgroup")),
+    ("joomla", ("/media/system/js/", "com_content", "/components/com_", "joomla")),
+    ("dle", ("datalife", "engine/classes/", "engine/ajax/")),
     ("laravel", ("laravel", "csrf-token")),
     ("prestashop", ("prestashop", "modules/ps_")),
     ("django", ("csrfmiddlewaretoken", "django")),
@@ -52,6 +54,9 @@ VER = {
                   re.compile(r"wp-includes/css/[^\"']*?ver=([0-9.]+)")],
     "bitrix": [re.compile(r"bitrix[^0-9]{0,20}([0-9]{2}\.[0-9.]+)", re.I)],
     "prestashop": [re.compile(r"PrestaShop\s*([0-9.]+)", re.I)],
+    "joomla": [re.compile(r'content="Joomla!\s*([0-9.]+)', re.I),
+               re.compile(r"<version>([0-9.]+)</version>")],
+    "dle": [re.compile(r"DataLife Engine[^0-9]{0,20}([0-9.]+)", re.I)],
 }
 
 
