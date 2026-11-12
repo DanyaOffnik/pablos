@@ -11,7 +11,7 @@ import random
 import re
 import time
 
-from core import config, http, learn, ui, users, vault, verify
+from core import config, http, learn, ui, users, vault, verify, waf
 from modules import post, profiles
 
 CAP = 6            # попыток на хост по умолчанию
@@ -134,6 +134,77 @@ def _links(host, sess, limit=20):
     return out[:limit]
 
 
+WP_PATHS = ("/wp-login.php", "/wp-admin/")
+COMMON = ("/login", "/login/", "/signin", "/sign-in", "/admin/", "/administrator/",
+          "/manager/", "/panel/", "/cabinet/", "/lk/", "/account/", "/my-account/",
+          "/bitrix/admin/", "/user/login", "/admin/login", "/auth/login",
+          "/administrator/index.php", "/index.php?route=common/login")
+
+
+def _has_pass(html):
+    return bool(re.search(r'<input[^>]*type=[\"\']?password', html, re.I))
+
+
+def _final(r):
+    try:
+        u = r.url or ""
+        return "/" + (u.split("/", 3)[-1] or "")
+    except Exception:
+        return ""
+
+
+def _discover(host, sess, prof):
+    """Настоящая форма входа: редиректы с wp-login, robots, типовые пути."""
+    out = []
+
+    def add(p):
+        p = (p or "").split("?")[0]
+        if p.startswith("/") and p not in out:
+            out.append(p)
+
+    for p in (prof.get("admin") or []):
+        add(p)
+
+    for p in WP_PATHS:
+        try:
+            r = http.get(host, p, sess=sess, timeout=8, tries=1)
+        except Exception:
+            continue
+        body = r.text or ""
+        fin = _final(r)
+        if fin and "wp-login" not in fin and fin != p and _has_pass(body):
+            add(fin)
+        elif p == "/wp-admin/" and _has_pass(body):
+            add(p)
+
+    try:
+        r = http.get(host, "/robots.txt", sess=sess, timeout=6, tries=1)
+        for line in (r.text or "").splitlines():
+            low = line.lower()
+            if ":" in line and any(k in low for k in ("login", "admin", "cabinet", "auth")):
+                part = line.split(":", 1)[-1].strip().split(" ")[0]
+                if part.startswith("/"):
+                    add(part)
+    except Exception:
+        pass
+
+    for p in COMMON:
+        if len(out) >= 24:
+            break
+        if p in out:
+            continue
+        try:
+            r = http.get(host, p, sess=sess, timeout=6, tries=1)
+        except Exception:
+            continue
+        if r.status_code == 200 and _has_pass(r.text or ""):
+            add(p)
+
+    for p in _links(host, sess):
+        add(p)
+    return out[:24]
+
+
 def _form(host, path, sess):
     """Разбирает форму входа: экшен, имена полей, скрытые токены, капча."""
     r = http.get(host, path, sess=sess, timeout=8, tries=1)
@@ -145,7 +216,7 @@ def _form(host, path, sess):
             r = http.get(host, loc, sess=sess, timeout=8, tries=1)
             path = loc
     html = r.text
-    if not _loginish(html):
+    if not _loginish(html) and not _has_pass(html):
         return None
     captcha = any(c in html.lower() for c in CAPTCHA_HINTS)
 
@@ -235,9 +306,14 @@ def _limited(r):
 
 def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login=""):
     prof = profiles.get(kind) or {}
+    guard = (waf.known(host) or {}).get("strategy")
+    if guard == "wait":
+        pause = max(pause, 2.0)
+    elif guard == "browser":
+        pause = max(pause, 1.0)
     sess = http.persist(host)
     form = None
-    paths = [login] if login else list(prof.get("admin") or [])[:4] + _links(host, sess)
+    paths = [login] if login else _discover(host, sess, prof)
     for a in paths:
         try:
             form = _form(host, a, sess)
