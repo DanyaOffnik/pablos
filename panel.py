@@ -629,6 +629,7 @@ def _dispatch(ch, h):
 
 def main():
     ui.enable()
+    ui.intro()
     _beat()
     while True:
         ui.clear()
