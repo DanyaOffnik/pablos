@@ -1,4 +1,6 @@
 ﻿# -*- coding: utf-8 -*-
+"""Терминальный вывод. Ширина фиксированная, рамки считаются точно."""
+import shutil
 import sys
 import time
 
@@ -10,39 +12,16 @@ WHITE = "\x1b[97m"
 YELLOW = "\x1b[93m"
 GREEN = "\x1b[92m"
 BOLD = "\x1b[1m"
-BLINK = "\x1b[5m"
 OFF = "\x1b[0m"
 
-SKULL = [
-    "              ▄▄▄▄▄▄▄▄▄▄▄▄▄",
-    "           ▄█████████████████▄",
-    "          █████████████████████",
-    "         ████▀▀▀▀███████▀▀▀▀████",
-    "         ██▀   ▄▄▄   █   ▄▄▄   ▀██",
-    "         ██   █████  █  █████   ██",
-    "         ██▄   ▀▀▀   █   ▀▀▀   ▄██",
-    "          ████▄▄▄▄███████▄▄▄▄████",
-    "           ▀███████████████████▀",
-    "             ▀▀███▀▀▀▀▀███▀▀",
-    "               ██       ██",
-]
+def _w():
+    try:
+        return max(46, min(70, shutil.get_terminal_size().columns - 6))
+    except Exception:
+        return 60
 
-BANNER = [
-    "  ██████╗  █████╗ ██████╗ ██╗      ██████╗ ███████╗",
-    "  ██╔══██╗██╔══██╗██╔══██╗██║     ██╔═══██╗██╔════╝",
-    "  ██████╔╝███████║██████╔╝██║     ██║   ██║███████╗",
-    "  ██╔═══╝ ██╔══██║██╔══██╗██║     ██║   ██║╚════██║",
-    "  ██║     ██║  ██║██████╔╝███████╗╚██████╔╝███████║",
-    "  ╚═╝     ╚═╝  ╚═╝╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝",
-    "        ▄▀█ ▀█▀ ▀█▀ ▄▀█ █▀▀ █ █",
-    "        █▀█  █   █  █▀█ █▄▄ █▄▀",
-]
-
-W = 62
+W = _w()
 SLOW = [False]
-
-THREAT = ((8, "КРИТИЧНО", RED), (5, "ВЫСОКИЙ", DIMRED),
-          (2, "СРЕДНИЙ", YELLOW), (1, "НИЗКИЙ", GREEN))
 
 
 def enable():
@@ -66,80 +45,51 @@ def clear():
     sys.stdout.flush()
 
 
-def _type(text, delay=0.004):
-    if not SLOW[0]:
-        print(text, flush=True)
-        return
-    for ch in text:
-        sys.stdout.write(ch)
-        sys.stdout.flush()
-        time.sleep(delay)
-    print(flush=True)
-
-
-def rule(ch="─"):
-    print("  " + DIMRED + ch * W + OFF, flush=True)
-
-
-def threat(score):
-    for lim, name, color in THREAT:
-        if score >= lim:
-            return color, name
-    return GREY, "ПУСТО"
-
-
-def gauge(score, width=10):
-    """Полоса угрозы от 0 до 12."""
-    n = max(0, min(width, int(round(score / 12.0 * width))))
-    color, _ = threat(score)
-    return color + "▰" * n + GREY + "▱" * (width - n) + OFF
+def _line(left, right, color=RED, left_color=WHITE, right_color=GREY):
+    """Строка рамки ровно по ширине W."""
+    r = str(right)[:24]
+    l = str(left)
+    pad = W - len(l) - len(r)
+    if pad < 0:
+        l = l[:max(0, W - len(r))]
+        pad = 0
+    print("  " + color + "│" + OFF + left_color + l + " " * pad
+          + right_color + r + OFF + color + "│" + OFF, flush=True)
 
 
 def banner():
     print(flush=True)
-    for line in SKULL:
-        print(RED + BOLD + line + OFF, flush=True)
-    print(flush=True)
-    for line in BANNER:
-        print(RED + BOLD + line + OFF, flush=True)
-    print(flush=True)
-    print(DIMRED + "  ╔" + "═" * W + "╗" + OFF, flush=True)
-    print(DIMRED + "  ║ " + GREY + "инструмент пробива" + OFF
-          + " " * (W - 36) + GREY + "цели не свои" + OFF + DIMRED + " ║" + OFF, flush=True)
-    print(DIMRED + "  ╚" + "═" * W + "╝" + OFF, flush=True)
+    print("  " + RED + "┌" + "─" * W + "┐" + OFF, flush=True)
+    _line("  P A B L O S", "v1.0")
+    print("  " + RED + "├" + "─" * W + "┤" + OFF, flush=True)
+    _line("  инструмент пробива", "цели не свои", GREY, GREY, GREY)
+    print("  " + RED + "└" + "─" * W + "┘" + OFF, flush=True)
 
 
 def intro():
-    """Короткая заставка при старте."""
     clear()
-    for line in SKULL:
-        print(RED + BOLD + line + OFF, flush=True)
-        time.sleep(0.03)
-    for line in BANNER:
-        print(RED + BOLD + line + OFF, flush=True)
-        time.sleep(0.03)
+    banner()
     print(flush=True)
-    for t in ("инициализация ядра", "загрузка шаблонов", "проверка связи"):
-        sys.stdout.write("  " + GREY + "▸ " + t + " " + OFF)
+    for t in ("ядро", "шаблоны", "связь"):
+        sys.stdout.write("  " + GREY + "  " + t.ljust(12) + OFF)
         sys.stdout.flush()
-        time.sleep(0.18)
+        time.sleep(0.15)
         print(GREEN + "ok" + OFF, flush=True)
-    time.sleep(0.15)
 
 
 def bar(t, right=""):
-    t = str(t)[:W - 8]
-    right = str(right)[:24]
-    pad = max(0, W - len(t) - len(right) - 3)
     print(flush=True)
-    print(DIMRED + "  ╔" + "═" * W + "╗" + OFF, flush=True)
-    print(DIMRED + "  ║ " + RED + BOLD + "▌" + OFF + " " + WHITE + BOLD + t + OFF
-          + " " * pad + YELLOW + right + OFF + " " + DIMRED + "║" + OFF, flush=True)
-    print(DIMRED + "  ╚" + "═" * W + "╝" + OFF, flush=True)
+    print("  " + DIMRED + "┌" + "─" * W + "┐" + OFF, flush=True)
+    _line("  " + str(t).upper(), right, DIMRED, WHITE + BOLD, GREY)
+    print("  " + DIMRED + "└" + "─" * W + "┘" + OFF, flush=True)
 
 
 def head(t, right=""):
     bar(t, right)
+
+
+def rule():
+    print("  " + GREY + "  " + "─" * (W - 2) + OFF, flush=True)
 
 
 def say(m=""):
@@ -147,47 +97,55 @@ def say(m=""):
 
 
 def kv(k, v, color=WHITE):
-    print("  " + GREY + str(k).ljust(18) + OFF + color + str(v) + OFF, flush=True)
+    print("  " + GREY + "  " + str(k).ljust(20) + OFF + color + str(v) + OFF, flush=True)
 
 
 def ok(m):
-    print("  " + GREEN + "▸ [" + "+" + "] " + str(m) + OFF, flush=True)
+    print("  " + GREEN + "  OK   " + OFF + str(m), flush=True)
 
 
 def warn(m):
-    print("  " + YELLOW + "▸ [!] " + str(m) + OFF, flush=True)
+    print("  " + YELLOW + "  WARN " + OFF + str(m), flush=True)
 
 
 def err(m):
-    print("  " + RED + "▸ [" + "x" + "] " + str(m) + OFF, flush=True)
+    print("  " + RED + "  ERR  " + OFF + str(m), flush=True)
 
 
 def alert(m):
     print(flush=True)
-    print(RED + BOLD + "  ╔" + "═" * W + "╗" + OFF, flush=True)
-    print(RED + BOLD + "  ║ " + str(m)[:W - 4].ljust(W - 2) + "║" + OFF, flush=True)
-    print(RED + BOLD + "  ╚" + "═" * W + "╝" + OFF, flush=True)
+    print("  " + RED + BOLD + "┌" + "─" * W + "┐" + OFF, flush=True)
+    _line("  " + str(m), "", RED, RED + BOLD, RED)
+    print("  " + RED + BOLD + "└" + "─" * W + "┘" + OFF, flush=True)
     print(flush=True)
 
 
 def item(n, text, hint=""):
-    num = RED + BOLD + "[" + str(n).rjust(2) + "]" + OFF
     tail = ("   " + GREY + hint + OFF) if hint else ""
-    print("  " + num + " " + WHITE + str(text) + OFF + tail, flush=True)
+    print("  " + RED + "%2s" % str(n) + OFF + "  " + WHITE + str(text) + OFF + tail, flush=True)
+
+
+def threat(score):
+    if score >= 7:
+        return RED
+    if score >= 4:
+        return YELLOW
+    if score > 0:
+        return GREEN
+    return GREY
 
 
 def row(score, host, notes):
-    color, name = threat(score)
-    print("  " + gauge(score) + " " + color + ("%3d" % score) + OFF + "  "
-          + WHITE + ("%-30s" % host) + OFF + " " + GREY + str(notes)[:34] + OFF, flush=True)
+    c = threat(score)
+    print("  " + c + "%3d" % score + OFF + "  " + WHITE + ("%-34s" % str(host))[:34] + OFF
+          + " " + GREY + str(notes)[:30] + OFF, flush=True)
 
 
 def ask(p, d=""):
     tail = (" [" + str(d) + "]") if d else ""
-    v = input("  " + DIMRED + "┌─" + OFF + CYAN + BOLD + " " + str(p) + tail + OFF
-              + DIMRED + " ▸ " + OFF).strip()
+    v = input("  " + CYAN + "> " + str(p) + tail + ":" + OFF + " ").strip()
     return v or d
 
 
 def pause():
-    input("  " + GREY + "─ Enter ─" + OFF)
+    input("  " + GREY + "  Enter" + OFF)

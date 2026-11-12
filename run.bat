@@ -1,4 +1,4 @@
 @echo off
 cd /d %~dp0
-python hunt.py
+python panel.py
 pause
