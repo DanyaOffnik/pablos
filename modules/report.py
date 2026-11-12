@@ -17,6 +17,8 @@ def _read_csv(path):
 
 
 def _sources(d):
+    if os.path.isfile(d):
+        d = os.path.dirname(d)
     out = []
     for n in sorted(os.listdir(d)):
         low = n.lower()

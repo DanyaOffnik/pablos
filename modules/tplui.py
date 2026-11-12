@@ -7,7 +7,7 @@ import subprocess
 from core import config, ui
 from modules import tpl
 
-TPL = os.path.join(config.DATA, "templates")
+TPL = config.TPL
 
 
 def _files():
@@ -95,10 +95,10 @@ def run(h):
             ui.say("%s %2d. %-34s %-12s %s" % (mark, i, n.replace(".json.off", "").replace(".json", ""),
                                                t.get("engine", "?"), (t.get("match") or {}).get("type", "?")))
         print()
-        ui.item("1", "включить или выключить")
-        ui.item("2", "править в блокноте")
-        ui.item("3", "добавить")
-        ui.item("4", "прогнать по цели")
+        ui.item("1", "включить или выключить", "номер строки")
+        ui.item("2", "править в блокноте", "номер строки")
+        ui.item("3", "добавить", "новый шаблон")
+        ui.item("4", "прогнать по цели", "только текущая")
         ui.item("0", "назад")
         c = ui.ask("пункт")
         if c == "0":
@@ -133,6 +133,6 @@ def run(h):
             except Exception:
                 k = ""
             got = tpl.run(h, k or "")
-            for tid, payload, sc in got:
-                ui.ok("%s [%s] +%s" % (tid, payload[:40], sc))
+            for f in got:
+                ui.ok("%s [%s]" % (f["tag"], f["url"]))
             ui.pause()

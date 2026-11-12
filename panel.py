@@ -56,14 +56,14 @@ def do_targets():
         ui.banner()
         c = state.counts()
         ui.head("ЦЕЛИ", "очередь %d, годных %d, в работе %d" % (c["new"], c["hot"], c["manual"]))
-        ui.item("1", "показать очередь")
-        ui.item("2", "добавить домены вручную")
-        ui.item("3", "импорт из файла")
-        ui.item("4", "собрать поиском")
-        ui.item("5", "выбрать цель")
-        ui.item("6", "показать мусор")
-        ui.item("7", "вернуть из мусора")
-        ui.item("8", "статистика")
+        ui.item("1", "показать очередь", "первые 60")
+        ui.item("2", "добавить домены", "через запятую")
+        ui.item("3", "импорт из файла", "построчно")
+        ui.item("4", "собрать поиском", "поисковики")
+        ui.item("5", "выбрать цель", "рабочая карточка")
+        ui.item("6", "показать мусор", "отсеянное")
+        ui.item("7", "вернуть из мусора", "обратно в очередь")
+        ui.item("8", "статистика", "счётчики")
         ui.item("0", "назад")
         ch = ui.ask("пункт")
         if ch == "0":
@@ -125,8 +125,8 @@ def do_run():
         ui.head("ПРОГОН", "STOP: " + ("есть" if os.path.isfile(STOP) else "нет"))
         ui.item("1", "фильтр и глубина", "сначала отсев, потом годное")
         ui.item("2", "только ночной", "по всей очереди")
-        ui.item("3", "поставить STOP")
-        ui.item("4", "снять STOP")
+        ui.item("3", "поставить STOP", "мягкая остановка")
+        ui.item("4", "снять STOP", "продолжить")
         ui.item("0", "назад")
         c = ui.ask("пункт")
         if c == "0":
@@ -221,15 +221,15 @@ def do_triage():
         state.set_status(h, "manual", note="взят в разбор")
         while True:
             _card(h)
-            ui.item("1", "собрать досье")
-            ui.item("2", "инструменты")
-            ui.item("3", "проверить доступ")
-            ui.item("4", "открыть сессию")
-            ui.item("5", "заметка")
-            ui.item("6", "готово, в отработанные")
-            ui.item("7", "в мусор")
-            ui.item("8", "отложить и следующая")
-            ui.item("9", "следующая")
+            ui.item("1", "собрать досье", "всё в файл")
+            ui.item("2", "инструменты", "ручные действия")
+            ui.item("3", "проверить доступ", "код и размер")
+            ui.item("4", "открыть сессию", "куки браузером")
+            ui.item("5", "заметка", "в дневник")
+            ui.item("6", "готово", "в отработанные")
+            ui.item("7", "в мусор", "отсеять")
+            ui.item("8", "отложить", "и следующая")
+            ui.item("9", "следующая", "без отметки")
             ui.item("0", "выйти из разбора")
             c = ui.ask("пункт")
             if c == "0":
@@ -436,20 +436,20 @@ def tool_keep(h):
 
 
 TOOLS = [
-    ("1", "движок и версия", tool_engine),
-    ("2", "профиль движка", tool_profile),
-    ("3", "сторонние модули", tool_mods),
-    ("4", "поддомены", tool_subdom),
-    ("5", "архивы", tool_arch),
-    ("6", "админка и обходы", tool_admin),
-    ("7", "подбор пароля", tool_brute),
-    ("8", "повтор пароля", tool_reuse),
-    ("9", "WordPress", tool_wp),
-    ("10", "слив контактов", tool_creds),
-    ("11", "заказы OpenCart", tool_orders),
-    ("12", "бэкап базы", tool_backup),
-    ("13", "закрепление", tool_keep),
-    ("14", "поиск админки", tool_find_admin),
+    ("1", "движок и версия", tool_engine, "определить CMS"),
+    ("2", "профиль движка", tool_profile, "пути и поля"),
+    ("3", "сторонние модули", tool_mods, "плагины, темы"),
+    ("4", "поддомены", tool_subdom, "поиск по именам"),
+    ("5", "архивы", tool_arch, "бэкапы наружу"),
+    ("6", "админка и обходы", tool_admin, "входы, обходы"),
+    ("7", "подбор пароля", tool_brute, "по словарю"),
+    ("8", "повтор пароля", tool_reuse, "с других хостов"),
+    ("9", "WordPress", tool_wp, "логины, плагины"),
+    ("10", "слив контактов", tool_creds, "из найденных файлов"),
+    ("11", "заказы OpenCart", tool_orders, "выгрузка"),
+    ("12", "бэкап базы", tool_backup, "скачать дамп"),
+    ("13", "закрепление", tool_keep, "свой доступ"),
+    ("14", "поиск админки", tool_find_admin, "перебор путей"),
 ]
 
 
@@ -458,13 +458,13 @@ def do_tools(h):
         ui.clear()
         ui.banner()
         ui.head("ИНСТРУМЕНТЫ  ->  " + h)
-        for n, text, _ in TOOLS:
-            ui.item(n, text)
+        for n, text, _, hint in TOOLS:
+            ui.item(n, text, hint)
         ui.item("0", "назад")
         c = ui.ask("пункт")
         if c == "0":
             return
-        for n, text, fn in TOOLS:
+        for n, text, fn, _h in TOOLS:
             if c == n:
                 ui.head(text.upper() + "  ->  " + h)
                 try:
@@ -486,13 +486,13 @@ def do_service():
         ui.say("телеграм: " + ("настроен" if c.get("tg_token") and c.get("tg_chat") else "нет"))
         ui.say("пульс: " + ("вкл" if c.get("tg_beat", True) else "выкл"))
         ui.say("картинка: " + ("вкл" if c.get("tg_photo", True) else "выкл"))
-        ui.item("1", "проверить сеть")
-        ui.item("2", "прокси и VPN")
-        ui.item("3", "настроить телеграм")
-        ui.item("4", "послать пульс")
-        ui.item("5", "имя машины")
-        ui.item("6", "переключить пульс")
-        ui.item("7", "переключить картинку")
+        ui.item("1", "проверить сеть", "доступность")
+        ui.item("2", "прокси и VPN", "пул")
+        ui.item("3", "телеграм", "токен, чат")
+        ui.item("4", "послать пульс", "проверка бота")
+        ui.item("5", "имя машины", "метка")
+        ui.item("6", "пульс", "вкл / выкл")
+        ui.item("7", "картинка", "вкл / выкл")
         ui.item("0", "назад")
         ch = ui.ask("пункт")
         if ch == "0":
@@ -555,17 +555,37 @@ def do_reports():
     ui.clear()
     ui.banner()
     ui.head("ОТЧЁТЫ")
-    ui.item("R", "собрать отчёт по последнему прогону")
+    ui.item("R", "отчёт по последнему прогону")
+    ui.item("P", "упаковать прогон в zip")
     runs = []
     if os.path.isdir(config.RUNS):
-        runs = sorted(os.listdir(config.RUNS), reverse=True)[:15]
+        runs = sorted((n for n in os.listdir(config.RUNS)
+                       if os.path.isdir(os.path.join(config.RUNS, n))), reverse=True)[:15]
     for i, n in enumerate(runs, 1):
         ui.item(str(i), n)
     ui.item("0", "назад")
     c = ui.ask("пункт")
+    if c.upper() == "P":
+        runs3 = sorted((n for n in os.listdir(config.RUNS)
+                        if os.path.isdir(os.path.join(config.RUNS, n))), reverse=True) if os.path.isdir(config.RUNS) else []
+        if not runs3:
+            ui.say("прогонов нет")
+            ui.pause()
+            return
+        d = os.path.join(config.RUNS, runs3[0])
+        ui.say("пакую: " + d)
+        try:
+            base = os.path.join(config.RUNS, runs3[0] + "_pack")
+            p = shutil.make_archive(base, "zip", d)
+            ui.ok("архив: " + p)
+        except Exception as e:
+            ui.err("сбой: %s" % e)
+        ui.pause()
+        return
     if c.upper() == "R":
         from modules import report
-        runs2 = sorted(os.listdir(config.RUNS), reverse=True) if os.path.isdir(config.RUNS) else []
+        runs2 = sorted((n for n in os.listdir(config.RUNS)
+                        if os.path.isdir(os.path.join(config.RUNS, n))), reverse=True) if os.path.isdir(config.RUNS) else []
         if runs2:
             report.run(os.path.join(config.RUNS, runs2[0]))
         else:
