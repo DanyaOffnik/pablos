@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import os
 import shutil
 import sys
@@ -209,13 +209,10 @@ def _next_hot():
 
 def do_triage():
     while True:
-        h = _next_hot()
+        h = _next_hot() or store.current()
         if not h:
-            ui.clear()
-            ui.banner()
-            ui.head("РАЗБОР", "пусто")
-            ui.say("годных целей нет")
-            ui.pause()
+            h = pick()
+        if not h:
             return
         state.acquire(h)
         state.set_status(h, "manual", note="взят в разбор")
@@ -223,32 +220,34 @@ def do_triage():
             _card(h)
             ui.item("1", "собрать досье", "всё в файл")
             ui.item("2", "инструменты", "ручные действия")
-            ui.item("3", "проверить доступ", "код и размер")
-            ui.item("4", "открыть сессию", "куки браузером")
-            ui.item("5", "заметка", "в дневник")
-            ui.item("6", "готово", "в отработанные")
-            ui.item("7", "в мусор", "отсеять")
-            ui.item("8", "отложить", "и следующая")
-            ui.item("9", "следующая", "без отметки")
+            ui.item("3", "шаблоны", "библиотека дыр")
+            ui.item("4", "проверить доступ", "код и размер")
+            ui.item("5", "открыть сессию", "куки браузером")
+            ui.item("6", "заметка", "в дневник")
+            ui.item("7", "готово", "в отработанные")
+            ui.item("8", "в мусор", "отсеять")
+            ui.item("9", "отложить", "и следующая")
+            ui.item("С", "следующая", "без отметки")
             ui.item("0", "выйти из разбора")
-            c = ui.ask("пункт")
+            c = ui.ask("пункт").upper()
             if c == "0":
                 state.release(h)
                 return
             if c == "1":
-                from modules import dossier
-                dossier.run(h)
-                ui.pause()
+                do_dossier(h)
             elif c == "2":
                 do_tools(h)
             elif c == "3":
+                from modules import tplui
+                tplui.run(h)
+            elif c == "4":
                 try:
                     r = http.get(h, "/")
                     ui.say("код %d, размер %d" % (r.status_code, len(r.content)))
                 except Exception as e:
                     ui.err("сбой: %s" % e)
                 ui.pause()
-            elif c == "4":
+            elif c == "5":
                 try:
                     stt = browser.grab(h, store.get(h).get("url"))
                     browser.save_state(h, stt)
@@ -256,7 +255,7 @@ def do_triage():
                 except Exception as e:
                     ui.err("сбой: %s" % e)
                 ui.pause()
-            elif c == "5":
+            elif c == "6":
                 t = ui.ask("текст заметки")
                 if t:
                     d = store.get(h)
@@ -264,21 +263,21 @@ def do_triage():
                     store.save(h, d)
                     ui.ok("записано")
                 ui.pause()
-            elif c == "6":
+            elif c == "7":
                 state.set_status(h, "cracked", note="обработано")
                 queue.drop_hot(h, "done")
                 state.release(h)
                 break
-            elif c == "7":
+            elif c == "8":
                 state.set_status(h, "trash", note="в мусор")
                 queue.drop_hot(h, "trash")
                 state.release(h)
                 break
-            elif c == "8":
+            elif c == "9":
                 state.set_status(h, "hot", note="отложено")
                 state.release(h)
                 break
-            elif c == "9":
+            elif c == "С":
                 state.release(h)
                 break
 
@@ -435,21 +434,54 @@ def tool_keep(h):
         ui.say(keep.keep(h, c) or "не закрепился")
 
 
+def tool_engine_profile(h):
+    from modules import engine, profiles
+    k = _kind(h)
+    ui.say("движок: %s" % k)
+    ui.say("версия: %s" % (engine.version(h, k) or "не определена"))
+    p = profiles.get(k)
+    ui.say("файлы: " + ", ".join(p.get("files", [])[:8]))
+    ui.say("админка: " + ", ".join(p.get("admin", [])))
+    ui.say("поле входа: " + str(p.get("login_field")))
+
+
+def tool_net(h):
+    from modules import arch, subdom
+    got = subdom.run(h) or []
+    ui.say("поддомены: " + (", ".join(got[:20]) if got else "нет"))
+    ar = arch.run(h) or []
+    if not ar:
+        ui.say("архивы: нет")
+    for u, name in ar:
+        ui.say("%s  %s" % (u, name))
+
+
+def tool_admin_full(h):
+    tool_admin(h)
+    ui.say("--- поиск админки")
+    tool_find_admin(h)
+
+
+def tool_data(h):
+    from modules import admin, orders
+    c = _creds(h)
+    if not c:
+        return
+    ui.say("заказов: %s" % (orders.run(h, c) or "0"))
+    ui.say("база: %s байт" % (admin.backup(h, c) or "0"))
+
+
 TOOLS = [
-    ("1", "движок и версия", tool_engine, "определить CMS"),
-    ("2", "профиль движка", tool_profile, "пути и поля"),
-    ("3", "сторонние модули", tool_mods, "плагины, темы"),
-    ("4", "поддомены", tool_subdom, "поиск по именам"),
-    ("5", "архивы", tool_arch, "бэкапы наружу"),
-    ("6", "админка и обходы", tool_admin, "входы, обходы"),
-    ("7", "подбор пароля", tool_brute, "по словарю"),
-    ("8", "повтор пароля", tool_reuse, "с других хостов"),
-    ("9", "WordPress", tool_wp, "логины, плагины"),
-    ("10", "слив контактов", tool_creds, "из найденных файлов"),
-    ("11", "заказы OpenCart", tool_orders, "выгрузка"),
-    ("12", "бэкап базы", tool_backup, "скачать дамп"),
-    ("13", "закрепление", tool_keep, "свой доступ"),
-    ("14", "поиск админки", tool_find_admin, "перебор путей"),
+    ("1", "движок и профиль", tool_engine_profile, "CMS, пути, поля"),
+    ("2", "сторонние модули", tool_mods, "плагины, темы"),
+    ("3", "поддомены и архивы", tool_net, "бэкапы наружу"),
+    ("4", "админка и обходы", tool_admin_full, "входы, перебор путей"),
+    ("5", "подбор пароля", tool_brute, "по словарю"),
+    ("6", "повтор пароля", tool_reuse, "с других хостов"),
+    ("7", "WordPress", tool_wp, "логины, плагины, уязвимости"),
+    ("8", "слив контактов", tool_creds, "из найденных файлов"),
+    ("9", "заказы и бэкап", tool_data, "выгрузка, дамп"),
+    ("10", "закрепление", tool_keep, "свой доступ"),
 ]
 
 
@@ -481,7 +513,7 @@ def do_service():
         ui.banner()
         c = notify.cfg()
         free = shutil.disk_usage(config.DATA).free // (1024 ** 3)
-        ui.head("СЛУЖБА", "машина " + state.machine())
+        ui.head("СИСТЕМА", "машина " + state.machine())
         ui.say("свободно на диске: %d ГБ" % free)
         ui.say("телеграм: " + ("настроен" if c.get("tg_token") and c.get("tg_chat") else "нет"))
         ui.say("пульс: " + ("вкл" if c.get("tg_beat", True) else "выкл"))
@@ -622,7 +654,7 @@ def _beat():
 
 
 def _dispatch(ch, h):
-    if ch == "9":
+    if ch == "6":
         return False
     if ch == "1":
         do_targets()
@@ -630,20 +662,10 @@ def _dispatch(ch, h):
         do_run()
     elif ch == "3":
         do_triage()
-    elif ch in ("4", "5") and not h:
-        ui.err("сначала цель")
-        ui.pause()
     elif ch == "4":
-        do_dossier(h)
-    elif ch == "5":
-        do_tools(h)
-    elif ch == "6":
-        do_service()
-    elif ch == "7":
-        from modules import tplui
-        tplui.run(h)
-    elif ch == "8":
         do_reports()
+    elif ch == "5":
+        do_service()
     return True
 
 
@@ -660,13 +682,10 @@ def main():
                 "очередь %d · годных %d · входов %d" % (c["new"], c["hot"], c["cracked"]))
         ui.item("1", "ЦЕЛИ", "сбор, импорт, очередь, выбор")
         ui.item("2", "ПРОГОН", "массовый и ночной, STOP")
-        ui.item("3", "РАЗБОР", "годное по одной")
-        ui.item("4", "ДОСЬЕ", "автосбор по цели")
-        ui.item("5", "ИНСТРУМЕНТЫ", "по выбранной цели")
-        ui.item("6", "СЛУЖБА", "сеть, прокси, телеграм, машина")
-        ui.item("7", "ШАБЛОНЫ", "библиотека дыр")
-        ui.item("8", "ОТЧЁТЫ", "прогоны")
-        ui.item("9", "выход")
+        ui.item("3", "РАЗБОР", "досье, инструменты, шаблоны")
+        ui.item("4", "ОТЧЁТЫ", "прогоны, выгрузки")
+        ui.item("5", "СИСТЕМА", "сеть, прокси, телеграм, машина")
+        ui.item("6", "выход")
         try:
             ch = ui.ask("пункт")
             if not _dispatch(ch, h):
