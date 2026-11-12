@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-contact-form-cfdb7",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/contact-form-cfdb7/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Contact Form 7 Database Addon – CFDB7 Detection | версии: 1.3.2",
+ "finger": true,
+ "wordlist": true
+}

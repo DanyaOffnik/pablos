@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-disable-comments",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/disable-comments/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Disable Comments – Remove Comments & Stop Spam [Multi-Site Support] Detection | версии: 2.5.2",
+ "finger": true,
+ "wordlist": true
+}

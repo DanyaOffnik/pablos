@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-astra-widgets",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/astra-widgets/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Astra Widgets Detection | версии: 1.2.13",
+ "finger": true,
+ "wordlist": true
+}

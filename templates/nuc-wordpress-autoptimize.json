@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-autoptimize",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/autoptimize/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Autoptimize Detection | версии: 3.1.13",
+ "finger": true,
+ "wordlist": true
+}

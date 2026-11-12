@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-facebook-for-woocommerce",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/facebook-for-woocommerce/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Facebook for WooCommerce Detection | версии: 3.5.4",
+ "finger": true,
+ "wordlist": true
+}

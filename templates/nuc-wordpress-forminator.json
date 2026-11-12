@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-forminator",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/forminator/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Forminator Forms – Contact Form, Payment Form & Custom Form Builder Detection | версии: 1.45.1",
+ "finger": true,
+ "wordlist": true
+}

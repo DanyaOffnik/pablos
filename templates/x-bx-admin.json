@@ -1,0 +1,15 @@
+{
+ "id": "x-bx-admin",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/bitrix/admin/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "USER_LOGIN"
+ },
+ "score": 3,
+ "note": "форма входа Bitrix"
+}

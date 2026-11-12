@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-all-404-redirect-to-homepage",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/all-404-redirect-to-homepage/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: All 404 Redirect to Homepage Detection | версии: 4.3",
+ "finger": true,
+ "wordlist": true
+}

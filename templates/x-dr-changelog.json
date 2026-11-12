@@ -1,0 +1,15 @@
+{
+ "id": "x-dr-changelog",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/CHANGELOG.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Drupal 7"
+ },
+ "score": 3,
+ "note": "версия Drupal"
+}

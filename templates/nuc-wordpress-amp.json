@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-amp",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/amp/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: AMP Detection | версии: 2.5.5",
+ "finger": true,
+ "wordlist": true
+}

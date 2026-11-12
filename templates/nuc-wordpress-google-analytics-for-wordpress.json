@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-google-analytics-for-wordpress",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/google-analytics-for-wordpress/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: MonsterInsights – Google Analytics Dashboard for WordPress (Website Stats Made E | версии: 9.6.1",
+ "finger": true,
+ "wordlist": true
+}

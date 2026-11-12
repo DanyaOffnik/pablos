@@ -1,0 +1,21 @@
+{
+ "id": "x-jm-config-bak",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/configuration.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  ".txt",
+  "~",
+  "-bak",
+  ".save"
+ ],
+ "match": {
+  "type": "body",
+  "value": "$password"
+ },
+ "score": 8,
+ "note": "configuration.php выложен"
+}

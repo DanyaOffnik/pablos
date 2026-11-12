@@ -1,0 +1,15 @@
+{
+ "id": "x-dr-node-json",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/node/1?_format=json",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "\"nid\""
+ },
+ "score": 5,
+ "note": "REST отдаёт ноду"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "x-bx-1c",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/1c_exchange.php",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "success"
+ },
+ "score": 4,
+ "note": "1C обмен без авторизации"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "x-wp-dump-root",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql",
+  "dump.sql",
+  "wp.sql",
+  "site.sql",
+  "www.sql",
+  "database.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп базы в корне"
+}

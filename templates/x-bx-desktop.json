@@ -1,0 +1,15 @@
+{
+ "id": "x-bx-desktop",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/desktop_app/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "desktop_app"
+ },
+ "score": 3,
+ "note": "desktop_app"
+}

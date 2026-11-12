@@ -1,0 +1,15 @@
+{
+ "id": "x-dj-debug",
+ "engine": "django",
+ "method": "GET",
+ "path": "/__debug__/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "djdt"
+ },
+ "score": 4,
+ "note": "Django Debug Toolbar"
+}

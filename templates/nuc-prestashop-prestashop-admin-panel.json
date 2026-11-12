@@ -1,0 +1,20 @@
+{
+ "id": "nuc-prestashop-prestashop-admin-panel",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/{{p}}/",
+ "payloads": [
+  "backoffice",
+  "back-office",
+  "Backoffice",
+  "back-office",
+  "admin-dev",
+  "backend"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PrestaShop"
+ },
+ "score": 2,
+ "note": "nuclei: Prestashop Admin Login Panel - Detect"
+}

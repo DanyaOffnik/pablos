@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-duracelltomi-google-tag-manager",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/duracelltomi-google-tag-manager/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: GTM4WP – A Google Tag Manager (GTM) plugin for WordPress Detection | версии: 1.21.1",
+ "finger": true,
+ "wordlist": true
+}

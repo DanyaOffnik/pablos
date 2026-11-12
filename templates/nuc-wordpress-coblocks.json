@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-coblocks",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/coblocks/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Page Builder Gutenberg Blocks – CoBlocks Detection | версии: 3.1.16",
+ "finger": true,
+ "wordlist": true
+}

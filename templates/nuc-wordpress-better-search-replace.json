@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-better-search-replace",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/better-search-replace/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Better Search Replace Detection | версии: N/A",
+ "finger": true,
+ "wordlist": true
+}

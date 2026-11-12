@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-black-studio-tinymce-widget",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/black-studio-tinymce-widget/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Black Studio TinyMCE Widget Detection | версии: 2.7.3",
+ "finger": true,
+ "wordlist": true
+}

@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-custom-post-type-ui",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/custom-post-type-ui/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Custom Post Type UI Detection | версии: 1.17.3",
+ "finger": true,
+ "wordlist": true
+}

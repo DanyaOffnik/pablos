@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-cookie-law-info",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/cookie-law-info/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: CookieYes – Cookie Banner for Cookie Consent (Easy to setup GDPR/CCPA Compliant  | версии: 3.3.1",
+ "finger": true,
+ "wordlist": true
+}

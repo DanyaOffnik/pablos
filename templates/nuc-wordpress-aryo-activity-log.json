@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-aryo-activity-log",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/aryo-activity-log/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Activity Log – Monitor & Record User Changes Detection | версии: 2.11.2",
+ "finger": true,
+ "wordlist": true
+}

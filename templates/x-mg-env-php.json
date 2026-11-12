@@ -1,0 +1,15 @@
+{
+ "id": "x-mg-env-php",
+ "engine": "magento",
+ "method": "GET",
+ "path": "/app/etc/env.php",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "crypt"
+ },
+ "score": 5,
+ "note": "env.php отдаётся как текст"
+}

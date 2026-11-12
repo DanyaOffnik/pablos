@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-child-theme-configurator",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/child-theme-configurator/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Child Theme Configurator Detection | версии: 2.6.7",
+ "finger": true,
+ "wordlist": true
+}

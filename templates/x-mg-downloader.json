@@ -1,0 +1,15 @@
+{
+ "id": "x-mg-downloader",
+ "engine": "magento",
+ "method": "GET",
+ "path": "/downloader/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Magento"
+ },
+ "score": 4,
+ "note": "downloader открыт"
+}

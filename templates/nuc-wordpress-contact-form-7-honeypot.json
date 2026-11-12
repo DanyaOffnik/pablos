@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-contact-form-7-honeypot",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/contact-form-7-honeypot/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: CF7 Apps – [Honeypot and hCAPTCHA for Contact Form 7] Detection | версии: 3.0.0",
+ "finger": true,
+ "wordlist": true
+}

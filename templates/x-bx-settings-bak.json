@@ -1,0 +1,18 @@
+{
+ "id": "x-bx-settings-bak",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/bitrix/.settings.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  "~"
+ ],
+ "match": {
+  "type": "body",
+  "value": "connections"
+ },
+ "score": 8,
+ "note": ".settings.php выложен"
+}

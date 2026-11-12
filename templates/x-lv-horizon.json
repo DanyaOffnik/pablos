@@ -1,0 +1,15 @@
+{
+ "id": "x-lv-horizon",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/horizon",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Horizon"
+ },
+ "score": 5,
+ "note": "Horizon открыт"
+}

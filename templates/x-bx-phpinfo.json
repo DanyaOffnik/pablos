@@ -1,0 +1,18 @@
+{
+ "id": "x-bx-phpinfo",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "phpinfo.php",
+  "info.php",
+  "test.php",
+  "bitrix/phpinfo.php"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP Version"
+ },
+ "score": 5,
+ "note": "phpinfo"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-copy-delete-posts",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/copy-delete-posts/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Duplicate Post Detection | версии: 1.5.0",
+ "finger": true,
+ "wordlist": true
+}

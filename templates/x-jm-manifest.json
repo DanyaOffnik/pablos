@@ -1,0 +1,15 @@
+{
+ "id": "x-jm-manifest",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/administrator/manifests/files/joomla.xml",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "<version>"
+ },
+ "score": 4,
+ "note": "версия Joomla"
+}

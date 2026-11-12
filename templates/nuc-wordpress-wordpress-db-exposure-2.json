@@ -1,0 +1,26 @@
+{
+ "id": "nuc-wordpress-wordpress-db-exposure-2",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "/backup.sql",
+  "/database.sql",
+  "/db.sql",
+  "/dump.sql",
+  "/mysql.sql",
+  "/{{Hostname}}.sql",
+  "/wp-content/uploads/backup.sql",
+  "/wp-content/uploads/database.sql",
+  "/wp-content/uploads/dump.sql",
+  "/wp-content/uploads/{{Hostname}}.sql",
+  "/wp-content/database.sql",
+  "/backups/database.sql"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 6,
+ "note": "nuclei: WordPress Database Backup File - Exposure"
+}

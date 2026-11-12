@@ -1,0 +1,20 @@
+{
+ "id": "x-backup-zip",
+ "engine": "*",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "backup.zip",
+  "site.zip",
+  "www.zip",
+  "backup.tar.gz",
+  "site.tar.gz",
+  "html.zip"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 7,
+ "note": "архив сайта в корне"
+}

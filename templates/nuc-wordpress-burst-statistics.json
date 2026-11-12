@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-burst-statistics",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/burst-statistics/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Burst Statistics – Privacy-Friendly Analytics for WordPress Detection | версии: 2.0.8",
+ "finger": true,
+ "wordlist": true
+}

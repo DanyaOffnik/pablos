@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-force-regenerate-thumbnails",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/force-regenerate-thumbnails/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Force Regenerate Thumbnails Detection | версии: 2.2.2",
+ "finger": true,
+ "wordlist": true
+}

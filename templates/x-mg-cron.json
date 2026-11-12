@@ -1,0 +1,15 @@
+{
+ "id": "x-mg-cron",
+ "engine": "magento",
+ "method": "GET",
+ "path": "/cron.php",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Magento"
+ },
+ "score": 3,
+ "note": "cron.php"
+}

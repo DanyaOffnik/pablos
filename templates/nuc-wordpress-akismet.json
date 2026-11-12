@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-akismet",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/akismet/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Akismet Anti-spam' Spam Protection Detection | версии: 5.5",
+ "finger": true,
+ "wordlist": true
+}

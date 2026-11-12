@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-easy-wp-smtp",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/easy-wp-smtp/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Easy WP SMTP – WordPress SMTP and Email Logs' Gmail, Office 365, Outlook, Custom | версии: 2.11.0",
+ "finger": true,
+ "wordlist": true
+}

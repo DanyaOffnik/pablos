@@ -1,0 +1,15 @@
+{
+ "id": "x-git-head",
+ "engine": "*",
+ "method": "GET",
+ "path": "/.git/HEAD",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "ref: refs/"
+ },
+ "score": 6,
+ "note": "git без каталога"
+}

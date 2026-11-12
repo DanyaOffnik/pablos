@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-envato-elements",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/envato-elements/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Envato Elements – Photos & Elementor Templates Detection | версии: 2.0.16",
+ "finger": true,
+ "wordlist": true
+}

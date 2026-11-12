@@ -1,0 +1,15 @@
+{
+ "id": "x-bx-backup-dir",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/bitrix/backup/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 403
+ },
+ "score": 4,
+ "note": "каталог бэкапов"
+}

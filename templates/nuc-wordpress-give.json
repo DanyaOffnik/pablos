@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-give",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/give/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Wordpress GiveWP Detection | версии: 3.15.1",
+ "finger": true,
+ "wordlist": true
+}

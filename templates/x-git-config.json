@@ -1,0 +1,15 @@
+{
+ "id": "x-git-config",
+ "engine": "*",
+ "method": "GET",
+ "path": "/.git/config",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "repositoryformatversion"
+ },
+ "score": 8,
+ "note": "открытый .git"
+}

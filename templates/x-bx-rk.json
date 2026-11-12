@@ -1,0 +1,15 @@
+{
+ "id": "x-bx-rk",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/bitrix/rk.php?goto=/bitrix/admin/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "bitrix"
+ },
+ "score": 3,
+ "note": "rk.php редирект"
+}

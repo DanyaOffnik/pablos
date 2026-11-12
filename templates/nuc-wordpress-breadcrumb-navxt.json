@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-breadcrumb-navxt",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/breadcrumb-navxt/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Breadcrumb NavXT Detection | версии: 7.4.1",
+ "finger": true,
+ "wordlist": true
+}

@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-cloudflare",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/cloudflare/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Cloudflare Detection | версии: 4.12.2",
+ "finger": true,
+ "wordlist": true
+}

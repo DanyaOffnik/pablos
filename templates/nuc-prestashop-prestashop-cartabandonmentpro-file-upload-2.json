@@ -1,0 +1,19 @@
+{
+ "id": "nuc-prestashop-prestashop-cartabandonmentpro-file-upload-2",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/modules/{{p}}/upload.php",
+ "payloads": [
+  "cartabandonmentpro",
+  "cartabandonmentproOld",
+  "cartabandonmentpro_Old",
+  "cartabandonmentpro2",
+  "pscartabandonmentpro"
+ ],
+ "match": {
+  "type": "body",
+  "value": "{{filename}}.php.png"
+ },
+ "score": 8,
+ "note": "nuclei: Prestashop Cart Abandonment Pro File Upload"
+}

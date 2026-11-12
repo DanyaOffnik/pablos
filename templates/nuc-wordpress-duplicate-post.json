@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-duplicate-post",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/duplicate-post/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Yoast Duplicate Post Detection | версии: 4.5",
+ "finger": true,
+ "wordlist": true
+}

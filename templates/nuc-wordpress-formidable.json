@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-formidable",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/formidable/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Formidable Forms – Contact Form Plugin, Survey, Quiz, Payment, Calculator Form & | версии: 6.22.3",
+ "finger": true,
+ "wordlist": true
+}

@@ -1,0 +1,15 @@
+{
+ "id": "x-dr-files-listing",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/sites/default/files/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 403
+ },
+ "score": 3,
+ "note": "каталог files"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-add-to-any",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/add-to-any/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: AddToAny Share Buttons Detection | версии: N/A",
+ "finger": true,
+ "wordlist": true
+}

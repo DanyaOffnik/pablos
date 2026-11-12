@@ -1,0 +1,15 @@
+{
+ "id": "x-actuator-env",
+ "engine": "*",
+ "method": "GET",
+ "path": "/actuator/env",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "propertySources"
+ },
+ "score": 6,
+ "note": "spring actuator env"
+}

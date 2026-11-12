@@ -1,0 +1,15 @@
+{
+ "id": "x-lv-debugbar",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/_debugbar/open",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "\"data\""
+ },
+ "score": 5,
+ "note": "debugbar открыт"
+}

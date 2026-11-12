@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-complianz-gdpr",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/complianz-gdpr/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Complianz – GDPR/CCPA Cookie Consent Detection | версии: 7.4.1",
+ "finger": true,
+ "wordlist": true
+}

@@ -1,0 +1,15 @@
+{
+ "id": "x-bx-env",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/.env",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "DB_PASSWORD"
+ },
+ "score": 8,
+ "note": ".env в корне"
+}

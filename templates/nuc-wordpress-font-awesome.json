@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-font-awesome",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/font-awesome/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Font Awesome Detection | версии: 5.1.0",
+ "finger": true,
+ "wordlist": true
+}

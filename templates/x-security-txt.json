@@ -1,0 +1,15 @@
+{
+ "id": "x-security-txt",
+ "engine": "*",
+ "method": "GET",
+ "path": "/.well-known/security.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Contact:"
+ },
+ "score": 2,
+ "note": "security.txt"
+}

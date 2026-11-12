@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-broken-link-checker",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/broken-link-checker/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Broken Link Checker Detection | версии: 2.4.6",
+ "finger": true,
+ "wordlist": true
+}

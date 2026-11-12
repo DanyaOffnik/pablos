@@ -1,0 +1,18 @@
+{
+ "id": "x-backup-sql-gz",
+ "engine": "*",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "backup.sql.gz",
+  "db.sql.gz",
+  "dump.sql.gz",
+  "database.sql.gz"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 8,
+ "note": "сжатый дамп в корне"
+}

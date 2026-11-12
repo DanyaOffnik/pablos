@@ -1,0 +1,17 @@
+{
+ "id": "x-bx-after-connect",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/bitrix/php_interface/after_connect.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  "~"
+ ],
+ "match": {
+  "type": "body",
+  "value": "mysql"
+ },
+ "score": 8,
+ "note": "after_connect выложен"
+}

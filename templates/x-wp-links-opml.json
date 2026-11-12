@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-links-opml",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-links-opml.php",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "<opml"
+ },
+ "score": 3,
+ "note": "утечка версии"
+}

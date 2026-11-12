@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-all-in-one-wp-migration",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/all-in-one-wp-migration/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: All-in-One WP Migration and Backup Detection | версии: 7.97",
+ "finger": true,
+ "wordlist": true
+}

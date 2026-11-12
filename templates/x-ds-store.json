@@ -1,0 +1,15 @@
+{
+ "id": "x-ds-store",
+ "engine": "*",
+ "method": "GET",
+ "path": "/.DS_Store",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 3,
+ "note": ".DS_Store"
+}

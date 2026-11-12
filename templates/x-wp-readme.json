@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-readme",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/readme.html",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "<h1>WordPress</h1>"
+ },
+ "score": 3,
+ "note": "readme с версией"
+}

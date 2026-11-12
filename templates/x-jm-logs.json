@@ -1,0 +1,17 @@
+{
+ "id": "x-jm-logs",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/administrator/logs/{{p}}.php",
+ "payloads": [
+  "admin",
+  "joomla",
+  "error"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP "
+ },
+ "score": 6,
+ "note": "лог админки"
+}

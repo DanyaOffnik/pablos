@@ -1,0 +1,21 @@
+{
+ "id": "x-oc-config-bak",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/config.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  ".txt",
+  "~",
+  ".save",
+  ".swp"
+ ],
+ "match": {
+  "type": "body",
+  "value": "DB_PASSWORD"
+ },
+ "score": 8,
+ "note": "config.php выложен"
+}

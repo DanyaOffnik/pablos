@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-elementor",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/elementor/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Elementor Website Builder – More Than Just a Page Builder Detection | версии: 3.30.3",
+ "finger": true,
+ "wordlist": true
+}

@@ -1,0 +1,15 @@
+{
+ "id": "x-htaccess",
+ "engine": "*",
+ "method": "GET",
+ "path": "/.htaccess",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "RewriteEngine"
+ },
+ "score": 3,
+ "note": ".htaccess читается"
+}

@@ -1,0 +1,16 @@
+{
+ "id": "x-oc-log",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/system/storage/logs/{{p}}",
+ "payloads": [
+  "error.log",
+  "oc_error.log"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP "
+ },
+ "score": 6,
+ "note": "лог ошибок открыт"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-click-to-chat-for-whatsapp",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/click-to-chat-for-whatsapp/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Click to Chat – HoliThemes Detection | версии: 4.26",
+ "finger": true,
+ "wordlist": true
+}

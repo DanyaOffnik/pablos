@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-ad-inserter",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/ad-inserter/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Ad Inserter – Ad Manager & AdSense Ads Detection | версии: 2.8.4",
+ "finger": true,
+ "wordlist": true
+}

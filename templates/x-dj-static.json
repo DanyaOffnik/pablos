@@ -1,0 +1,15 @@
+{
+ "id": "x-dj-static",
+ "engine": "django",
+ "method": "GET",
+ "path": "/static/admin/css/base.css",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 3,
+ "note": "статика админки"
+}

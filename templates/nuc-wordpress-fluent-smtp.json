@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-fluent-smtp",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/fluent-smtp/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: FluentSMTP – WP SMTP Plugin with Amazon SES, SendGrid, MailGun, Postmark, Google | версии: 2.2.90",
+ "finger": true,
+ "wordlist": true
+}

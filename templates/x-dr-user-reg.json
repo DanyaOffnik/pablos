@@ -1,0 +1,15 @@
+{
+ "id": "x-dr-user-reg",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/user/register",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "form_id"
+ },
+ "score": 3,
+ "note": "регистрация открыта"
+}

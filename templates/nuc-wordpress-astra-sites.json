@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-astra-sites",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/astra-sites/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Starter Templates – AI-Powered Templates for Elementor & Gutenberg Detection | версии: 4.4.32",
+ "finger": true,
+ "wordlist": true
+}

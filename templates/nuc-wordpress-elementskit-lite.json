@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-elementskit-lite",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/elementskit-lite/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: ElementsKit Elementor Addons and Templates Detection | версии: 3.5.6",
+ "finger": true,
+ "wordlist": true
+}

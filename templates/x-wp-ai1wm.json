@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-ai1wm",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/ai1wm-backups/{{p}}",
+ "payloads": [
+  "index.html"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 4,
+ "note": "папка ai1wm"
+}

@@ -1,0 +1,16 @@
+{
+ "id": "x-oc-upload-dump",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/system/storage/upload/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп в upload"
+}

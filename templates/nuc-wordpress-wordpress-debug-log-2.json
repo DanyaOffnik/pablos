@@ -1,0 +1,18 @@
+{
+ "id": "nuc-wordpress-wordpress-debug-log-2",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/{{p}}/debug.log",
+ "payloads": [
+  "wp-content",
+  "wordpress",
+  "wp",
+  "blog"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 3,
+ "note": "nuclei: WordPress Debug Log - Exposure"
+}

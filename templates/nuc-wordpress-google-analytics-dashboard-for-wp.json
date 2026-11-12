@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-google-analytics-dashboard-for-wp",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/google-analytics-dashboard-for-wp/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: ExactMetrics – Google Analytics Dashboard for WordPress (Website Stats Plugin) D | версии: 8.7.1",
+ "finger": true,
+ "wordlist": true
+}

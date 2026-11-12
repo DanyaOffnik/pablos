@@ -1,0 +1,15 @@
+{
+ "id": "x-svn-entries",
+ "engine": "*",
+ "method": "GET",
+ "path": "/.svn/entries",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "dir"
+ },
+ "score": 5,
+ "note": "svn метаданные"
+}

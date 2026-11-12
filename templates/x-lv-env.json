@@ -1,0 +1,19 @@
+{
+ "id": "x-lv-env",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  ".env",
+  ".env.bak",
+  ".env.old",
+  ".env.example",
+  ".env.save"
+ ],
+ "match": {
+  "type": "body",
+  "value": "APP_KEY"
+ },
+ "score": 8,
+ "note": ".env Laravel"
+}

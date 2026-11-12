@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-ga-google-analytics",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/ga-google-analytics/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: GA Google Analytics – Connect Google Analytics to WordPress Detection | версии: 20250326",
+ "finger": true,
+ "wordlist": true
+}

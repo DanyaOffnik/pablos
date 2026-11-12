@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-creative-mail-by-constant-contact",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/creative-mail-by-constant-contact/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Creative Mail – Easier WordPress & WooCommerce Email Marketing Detection | версии: 1.6.9",
+ "finger": true,
+ "wordlist": true
+}

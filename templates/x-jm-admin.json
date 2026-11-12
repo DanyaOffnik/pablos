@@ -1,0 +1,15 @@
+{
+ "id": "x-jm-admin",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/administrator/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "mod-login-username"
+ },
+ "score": 3,
+ "note": "форма входа Joomla"
+}

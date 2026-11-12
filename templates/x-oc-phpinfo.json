@@ -1,0 +1,17 @@
+{
+ "id": "x-oc-phpinfo",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "phpinfo.php",
+  "info.php",
+  "test.php"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP Version"
+ },
+ "score": 5,
+ "note": "phpinfo в корне"
+}

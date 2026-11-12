@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-duplicator",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/duplicator/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Duplicator – Backups & Migration Plugin – Cloud Backups, Scheduled Backups, & Mo | версии: 1.5.13",
+ "finger": true,
+ "wordlist": true
+}

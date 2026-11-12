@@ -1,0 +1,19 @@
+{
+ "id": "x-dr-settings-bak",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/sites/default/settings.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  "~",
+  ".txt"
+ ],
+ "match": {
+  "type": "body",
+  "value": "databases"
+ },
+ "score": 8,
+ "note": "settings.php выложен"
+}

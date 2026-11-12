@@ -1,0 +1,18 @@
+{
+ "id": "x-wp-env",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  ".env",
+  ".env.bak",
+  ".env.old",
+  ".env.txt"
+ ],
+ "match": {
+  "type": "body",
+  "value": "DB_PASSWORD"
+ },
+ "score": 8,
+ "note": ".env в корне"
+}

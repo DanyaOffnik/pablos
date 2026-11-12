@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-disable-gutenberg",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/disable-gutenberg/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Disable Gutenberg Detection | версии: 3.2.3",
+ "finger": true,
+ "wordlist": true
+}

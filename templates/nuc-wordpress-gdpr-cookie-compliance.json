@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-gdpr-cookie-compliance",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/gdpr-cookie-compliance/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: GDPR Cookie Compliance – Cookie Banner, Cookie Consent, Cookie Notice – CCPA, DS | версии: 4.16.1",
+ "finger": true,
+ "wordlist": true
+}

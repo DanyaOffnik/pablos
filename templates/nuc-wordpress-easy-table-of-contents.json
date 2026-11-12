@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-easy-table-of-contents",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/easy-table-of-contents/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Easy Table of Contents Detection | версии: N/A",
+ "finger": true,
+ "wordlist": true
+}

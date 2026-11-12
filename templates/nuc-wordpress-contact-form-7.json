@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-contact-form-7",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/contact-form-7/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Contact Form 7 Detection | версии: 6.1",
+ "finger": true,
+ "wordlist": true
+}

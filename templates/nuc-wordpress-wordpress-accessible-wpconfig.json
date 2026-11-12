@@ -1,0 +1,20 @@
+{
+ "id": "nuc-wordpress-wordpress-accessible-wpconfig",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "/wp-config.php",
+  "/.wp-config.php.swp",
+  "/wp-config-sample.php",
+  "/wp-config.inc",
+  "/wp-config.old",
+  "/wp-config.txt"
+ ],
+ "match": {
+  "type": "body",
+  "value": "DB_NAME"
+ },
+ "score": 6,
+ "note": "nuclei: WordPress wp-config Detection"
+}

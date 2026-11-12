@@ -1,0 +1,17 @@
+{
+ "id": "x-oc-image-dump",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/image/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql",
+  "dump.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп в image"
+}

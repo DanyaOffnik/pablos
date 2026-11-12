@@ -1,0 +1,20 @@
+{
+ "id": "nuc-wordpress-wordpress-db-exposure",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "/backup.sql",
+  "/database.sql",
+  "/db.sql",
+  "/dump.sql",
+  "/mysql.sql",
+  "/{{Hostname}}.sql"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 6,
+ "note": "nuclei: WordPress Database Backup File - Exposure"
+}

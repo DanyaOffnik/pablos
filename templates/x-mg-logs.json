@@ -1,0 +1,18 @@
+{
+ "id": "x-mg-logs",
+ "engine": "magento",
+ "method": "GET",
+ "path": "/var/log/{{p}}.log",
+ "payloads": [
+  "system",
+  "exception",
+  "debug",
+  "payment"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP "
+ },
+ "score": 6,
+ "note": "лог Magento"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "x-ps-dump-root",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql",
+  "dump.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп в корне"
+}

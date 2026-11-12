@@ -1,0 +1,15 @@
+{
+ "id": "x-dr-backup-migrate",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/sites/default/files/backup_migrate/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 403
+ },
+ "score": 4,
+ "note": "папка backup_migrate"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "x-dr-update",
+ "engine": "drupal",
+ "method": "GET",
+ "path": "/update.php",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "update.php"
+ },
+ "score": 3,
+ "note": "update.php доступен"
+}

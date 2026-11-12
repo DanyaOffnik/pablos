@@ -1,0 +1,15 @@
+{
+ "id": "x-dj-admin",
+ "engine": "django",
+ "method": "GET",
+ "path": "/admin/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "csrfmiddlewaretoken"
+ },
+ "score": 3,
+ "note": "админка Django"
+}

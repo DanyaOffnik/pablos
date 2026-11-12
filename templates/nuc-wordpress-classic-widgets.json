@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-classic-widgets",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/classic-widgets/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Classic Widgets Detection | версии: 0.3",
+ "finger": true,
+ "wordlist": true
+}

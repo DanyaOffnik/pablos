@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-custom-fonts",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/custom-fonts/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Custom Fonts – Host Your Fonts Locally Detection | версии: 2.1.15",
+ "finger": true,
+ "wordlist": true
+}

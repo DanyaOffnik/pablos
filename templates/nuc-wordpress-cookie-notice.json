@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-cookie-notice",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/cookie-notice/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Cookie Notice & Compliance for GDPR / CCPA Detection | версии: 2.5.7",
+ "finger": true,
+ "wordlist": true
+}

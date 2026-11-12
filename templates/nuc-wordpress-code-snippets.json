@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-code-snippets",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/code-snippets/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Code Snippets Detection | версии: 3.6.8",
+ "finger": true,
+ "wordlist": true
+}

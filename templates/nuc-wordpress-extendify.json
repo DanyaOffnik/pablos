@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-extendify",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/extendify/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Extendify Detection | версии: 1.19.6",
+ "finger": true,
+ "wordlist": true
+}

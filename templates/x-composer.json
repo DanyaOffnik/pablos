@@ -1,0 +1,15 @@
+{
+ "id": "x-composer",
+ "engine": "*",
+ "method": "GET",
+ "path": "/composer.json",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "\"require\""
+ },
+ "score": 4,
+ "note": "composer.json"
+}

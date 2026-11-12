@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-all-in-one-seo-pack",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/all-in-one-seo-pack/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: All in One SEO – Powerful SEO Plugin to Boost SEO Rankings & Increase Traffic De | версии: 4.8.5",
+ "finger": true,
+ "wordlist": true
+}

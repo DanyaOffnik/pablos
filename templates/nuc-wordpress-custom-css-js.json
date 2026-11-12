@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-custom-css-js",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/custom-css-js/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Simple Custom CSS and JS Detection | версии: 3.50",
+ "finger": true,
+ "wordlist": true
+}

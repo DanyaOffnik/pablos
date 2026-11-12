@@ -1,0 +1,17 @@
+{
+ "id": "x-wp-upload-log",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/uploads/{{p}}",
+ "payloads": [
+  "debug.log",
+  "error.log",
+  "php_errorlog"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP "
+ },
+ "score": 6,
+ "note": "лог в uploads"
+}

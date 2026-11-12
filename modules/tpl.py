@@ -8,7 +8,7 @@ import urllib.parse
 
 from core import config, findings, http, ui
 
-TPL = os.path.join(config.DATA, "templates")
+TPL = config.TPL
 
 
 def _load(only_on=True):

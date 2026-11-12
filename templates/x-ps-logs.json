@@ -1,0 +1,18 @@
+{
+ "id": "x-ps-logs",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/var/logs/{{p}}.log",
+ "payloads": [
+  "prod",
+  "dev",
+  "1",
+  "2"
+ ],
+ "match": {
+  "type": "body",
+  "value": "PHP "
+ },
+ "score": 6,
+ "note": "лог в var/logs"
+}

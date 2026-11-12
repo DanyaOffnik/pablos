@@ -1,0 +1,16 @@
+{
+ "id": "x-lv-storage-log",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/storage/logs/{{p}}",
+ "payloads": [
+  "laravel.log",
+  "lumen.log"
+ ],
+ "match": {
+  "type": "body",
+  "value": "ERROR"
+ },
+ "score": 8,
+ "note": "лог в storage"
+}

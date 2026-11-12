@@ -1,0 +1,19 @@
+{
+ "id": "x-oc-admin-config",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/admin/config.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  ".txt",
+  "~"
+ ],
+ "match": {
+  "type": "body",
+  "value": "DB_PASSWORD"
+ },
+ "score": 8,
+ "note": "admin/config.php выложен"
+}

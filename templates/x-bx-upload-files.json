@@ -1,0 +1,17 @@
+{
+ "id": "x-bx-upload-files",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/upload/{{p}}",
+ "payloads": [
+  "backup.tar.gz",
+  "backup.zip",
+  "site.zip"
+ ],
+ "match": {
+  "type": "status_diff",
+  "value": 200
+ },
+ "score": 7,
+ "note": "архив в upload"
+}

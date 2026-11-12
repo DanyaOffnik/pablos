@@ -1,0 +1,15 @@
+{
+ "id": "x-package-json",
+ "engine": "*",
+ "method": "GET",
+ "path": "/package.json",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "\"dependencies\""
+ },
+ "score": 3,
+ "note": "package.json"
+}

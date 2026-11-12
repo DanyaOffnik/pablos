@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-coming-soon",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/coming-soon/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Website Builder by SeedProd — Theme Builder, Landing Page Builder, Coming Soon P | версии: N/A",
+ "finger": true,
+ "wordlist": true
+}

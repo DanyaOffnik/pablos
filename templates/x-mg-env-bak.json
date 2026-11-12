@@ -1,0 +1,18 @@
+{
+ "id": "x-mg-env-bak",
+ "engine": "magento",
+ "method": "GET",
+ "path": "/app/etc/env.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  "~"
+ ],
+ "match": {
+  "type": "body",
+  "value": "crypt"
+ },
+ "score": 8,
+ "note": "env.php выложен"
+}

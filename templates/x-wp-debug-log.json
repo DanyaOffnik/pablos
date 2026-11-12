@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-debug-log",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/debug.log",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "PHP (Fatal error|Warning)"
+ },
+ "score": 6,
+ "note": "debug.log открыт"
+}

@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-cmb2",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/cmb2/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: CMB2 Detection | версии: 2.11.0",
+ "finger": true,
+ "wordlist": true
+}

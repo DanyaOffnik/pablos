@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-enable-media-replace",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/enable-media-replace/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Enable Media Replace Detection | версии: 4.1.6",
+ "finger": true,
+ "wordlist": true
+}

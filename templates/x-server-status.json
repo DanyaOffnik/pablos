@@ -1,0 +1,15 @@
+{
+ "id": "x-server-status",
+ "engine": "*",
+ "method": "GET",
+ "path": "/server-status",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Server Status"
+ },
+ "score": 4,
+ "note": "apache server-status"
+}

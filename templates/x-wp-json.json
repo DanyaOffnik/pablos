@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-json",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-json/",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "\"routes\""
+ },
+ "score": 3,
+ "note": "REST включён"
+}

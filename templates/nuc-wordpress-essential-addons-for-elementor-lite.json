@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-essential-addons-for-elementor-lite",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/essential-addons-for-elementor-lite/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Essential Addons for Elementor – Popular Elementor Templates & Widgets Detection | версии: 6.2.1",
+ "finger": true,
+ "wordlist": true
+}

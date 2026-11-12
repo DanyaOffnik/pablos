@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-fluentform",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/fluentform/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Fluent Forms – Customizable Contact Forms, Survey, Quiz, & Conversational Form B | версии: 6.0.4",
+ "finger": true,
+ "wordlist": true
+}

@@ -1,0 +1,17 @@
+{
+ "id": "x-jm-tmp-dump",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/tmp/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql",
+  "dump.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп в tmp"
+}

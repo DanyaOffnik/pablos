@@ -1,0 +1,23 @@
+{
+ "id": "x-wp-config-bak",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-config.php{{p}}",
+ "payloads": [
+  ".bak",
+  ".old",
+  ".orig",
+  ".save",
+  ".txt",
+  "~",
+  ".swp",
+  ".copy",
+  ".tmp"
+ ],
+ "match": {
+  "type": "body",
+  "value": "DB_PASSWORD"
+ },
+ "score": 8,
+ "note": "wp-config выложен рядом"
+}

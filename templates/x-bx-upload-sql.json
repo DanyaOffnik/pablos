@@ -1,0 +1,17 @@
+{
+ "id": "x-bx-upload-sql",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/upload/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql",
+  "dump.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп в upload"
+}

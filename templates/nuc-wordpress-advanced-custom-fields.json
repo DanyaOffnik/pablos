@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-advanced-custom-fields",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/advanced-custom-fields/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Advanced Custom Fields (ACF®) Detection | версии: 6.4.3",
+ "finger": true,
+ "wordlist": true
+}

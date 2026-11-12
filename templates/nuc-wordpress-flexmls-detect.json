@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-flexmls-detect",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/flexmls-idx/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Flexmls IDX - Detect | версии: 3.14.24",
+ "finger": true,
+ "wordlist": true
+}

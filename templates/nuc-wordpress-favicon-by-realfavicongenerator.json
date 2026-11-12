@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-favicon-by-realfavicongenerator",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/favicon-by-realfavicongenerator/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Favicon by RealFaviconGenerator Detection | версии: N/A",
+ "finger": true,
+ "wordlist": true
+}

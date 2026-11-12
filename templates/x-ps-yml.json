@@ -1,0 +1,15 @@
+{
+ "id": "x-ps-yml",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/app/config/parameters.yml",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "database_password"
+ },
+ "score": 8,
+ "note": "parameters.yml читается"
+}

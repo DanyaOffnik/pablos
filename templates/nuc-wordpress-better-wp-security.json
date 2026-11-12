@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-better-wp-security",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/better-wp-security/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Solid Security – Password, Two Factor Authentication, and Brute Force Protection | версии: 9.3.10",
+ "finger": true,
+ "wordlist": true
+}

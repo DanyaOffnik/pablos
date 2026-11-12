@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-all-in-one-wp-security-and-firewall",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/all-in-one-wp-security-and-firewall/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: All-In-One Security (AIOS) – Security and Firewall Detection | версии: 5.4.2",
+ "finger": true,
+ "wordlist": true
+}

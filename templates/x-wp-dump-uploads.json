@@ -1,0 +1,18 @@
+{
+ "id": "x-wp-dump-uploads",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/uploads/{{p}}",
+ "payloads": [
+  "backup.sql",
+  "db.sql",
+  "dump.sql",
+  "wp.sql"
+ ],
+ "match": {
+  "type": "body",
+  "value": "INSERT INTO"
+ },
+ "score": 8,
+ "note": "дамп в uploads"
+}

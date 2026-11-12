@@ -1,0 +1,15 @@
+{
+ "id": "x-jm-readme",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/README.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Joomla"
+ },
+ "score": 3,
+ "note": "README с версией"
+}

@@ -1,0 +1,15 @@
+{
+ "id": "x-h2-console",
+ "engine": "*",
+ "method": "GET",
+ "path": "/console",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "H2 Console"
+ },
+ "score": 4,
+ "note": "H2 консоль"
+}

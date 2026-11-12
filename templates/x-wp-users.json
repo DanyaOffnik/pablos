@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-users",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-json/wp/v2/users",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "\"slug\""
+ },
+ "score": 4,
+ "note": "перечисление логинов"
+}

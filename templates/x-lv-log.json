@@ -1,0 +1,15 @@
+{
+ "id": "x-lv-log",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/storage/logs/laravel.log",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "local.ERROR"
+ },
+ "score": 8,
+ "note": "лог Laravel открыт"
+}

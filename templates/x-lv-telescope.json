@@ -1,0 +1,15 @@
+{
+ "id": "x-lv-telescope",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/telescope",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Telescope"
+ },
+ "score": 6,
+ "note": "Telescope открыт"
+}

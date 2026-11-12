@@ -1,0 +1,17 @@
+{
+ "id": "nuc-wordpress-easy-google-fonts",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-content/plugins/easy-google-fonts/readme.txt",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "regex",
+  "value": "(?i)Stable.tag:\\s?([\\w.]+)"
+ },
+ "score": 3,
+ "note": "nuclei: Easy Google Fonts Detection | версии: 2.0.4",
+ "finger": true,
+ "wordlist": true
+}

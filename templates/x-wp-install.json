@@ -1,0 +1,15 @@
+{
+ "id": "x-wp-install",
+ "engine": "wordpress",
+ "method": "GET",
+ "path": "/wp-admin/install.php",
+ "payloads": [
+  ""
+ ],
+ "match": {
+  "type": "body",
+  "value": "Installation"
+ },
+ "score": 3,
+ "note": "установщик открыт"
+}
