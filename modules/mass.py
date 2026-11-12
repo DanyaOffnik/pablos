@@ -5,7 +5,7 @@ import os
 import time
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
-from core import checks, config, findings, http, queue, state, ui
+from core import checks, config, findings, http, queue, state, ui, waf
 
 CHECKS = [
     ("/system/storage/logs/error.log", 5, "лог"),
@@ -77,6 +77,9 @@ def _get(host, path, timeout):
 
 
 def scan(host):
+    w = waf.detect(host, FAST)
+    if w["strategy"] == "skip":
+        return host, -1, w["note"], "", []
     r = _get(host, "/", FAST)
     if r is None:
         r = _get(host, "/", FAST)
@@ -141,6 +144,8 @@ def scan(host):
             finds.append(findings.make(host, "https://" + host + path, name,
                                        x.status_code, ln, nf_len, x.text,
                                        extra="403 без заглушки"))
+    if w["note"]:
+        notes.append(w["note"])
     return host, score, ", ".join(notes), home_title, finds
 
 
