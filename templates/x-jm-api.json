@@ -1,15 +1,10 @@
-{
+﻿{
  "id": "x-jm-api",
  "engine": "joomla",
  "method": "GET",
- "path": "/api/index.php/v1/content/articles",
- "payloads": [
-  ""
- ],
- "match": {
-  "type": "body",
-  "value": "\"data\""
- },
- "score": 5,
- "note": "Joomla API открыт"
+ "path": "/api/index.php/v1/content/articles?public=1",
+ "payloads": [""],
+ "match": {"type": "regex", "value": "\"data\"\\s*:"},
+ "score": 6,
+ "note": "открытый REST Joomla 4"
 }

@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-jm-logs-dir",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/administrator/logs/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "Index of"},
+ "score": 6,
+ "note": "листинг логов админки"
+}

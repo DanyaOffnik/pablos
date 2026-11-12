@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-dle-admin",
+ "engine": "dle",
+ "method": "GET",
+ "path": "/admin.php",
+ "payloads": [""],
+ "match": {"type": "body", "value": "login_name"},
+ "score": 6,
+ "note": "админка DLE открыта"
+}

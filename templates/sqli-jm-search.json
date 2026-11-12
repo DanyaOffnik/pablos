@@ -1,0 +1,12 @@
+﻿{
+ "id": "sqli-jm-search",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/index.php?option=com_search&searchword={{p}}",
+ "where": "query",
+ "payloads": ["test' AND 1=1-- -", "test' AND 1=2-- -"],
+ "match": {"type": "bool"},
+ "require": "Joomla",
+ "score": 6,
+ "note": "булева в поиске Joomla"
+}

@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-jm-config-dist",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/configuration.php-dist",
+ "payloads": [""],
+ "match": {"type": "body", "value": "$host"},
+ "score": 4,
+ "note": "шаблон конфига оставлен"
+}

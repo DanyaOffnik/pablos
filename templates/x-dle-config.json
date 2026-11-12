@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-dle-config",
+ "engine": "dle",
+ "method": "GET",
+ "path": "/engine/data/config.php",
+ "payloads": [""],
+ "match": {"type": "body", "value": "$dbname"},
+ "score": 9,
+ "note": "конфиг DLE с доступом к базе"
+}

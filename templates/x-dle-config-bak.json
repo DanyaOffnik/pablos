@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-dle-config-bak",
+ "engine": "dle",
+ "method": "GET",
+ "path": "/engine/data/config.php{{p}}",
+ "payloads": [".bak", ".old", ".orig", "~", ".save", ".txt"],
+ "match": {"type": "body", "value": "$dbname"},
+ "score": 8,
+ "note": "копия конфига DLE"
+}

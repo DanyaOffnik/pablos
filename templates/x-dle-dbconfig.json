@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-dle-dbconfig",
+ "engine": "dle",
+ "method": "GET",
+ "path": "/engine/data/dbconfig.php",
+ "payloads": [""],
+ "match": {"type": "body", "value": "$dbuser"},
+ "score": 9,
+ "note": "dbconfig DLE"
+}

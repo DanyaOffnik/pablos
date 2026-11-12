@@ -1,0 +1,12 @@
+﻿{
+ "id": "sqli-jm-article",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/index.php?option=com_content&view=article&id={{p}}",
+ "where": "query",
+ "payloads": ["1'", "1'-- -", "1 AND 1=1"],
+ "match": {"type": "status_diff", "value": 500},
+ "skip_if": ["Joomla! Debug"],
+ "score": 5,
+ "note": "ошибка на кавычке в id"
+}
