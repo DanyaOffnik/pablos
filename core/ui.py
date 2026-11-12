@@ -1,5 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
-"""Терминальный вывод. Ширина фиксированная, рамки считаются точно."""
+"""Терминальный вывод. Ширина по окну, рамки считаются точно."""
 import shutil
 import sys
 import time
@@ -14,14 +14,39 @@ GREEN = "\x1b[92m"
 BOLD = "\x1b[1m"
 OFF = "\x1b[0m"
 
+VER = "1.1 BETA"
+
+
 def _w():
     try:
         return max(46, min(70, shutil.get_terminal_size().columns - 6))
     except Exception:
         return 60
 
+
 W = _w()
 SLOW = [False]
+
+GLYPH = {
+    "P": ("███ ", "█ █ ", "███ ", "█   ", "█   "),
+    "A": (" █  ", "█ █ ", "███ ", "█ █ ", "█ █ "),
+    "B": ("██  ", "█ █ ", "██  ", "█ █ ", "██  "),
+    "L": ("█   ", "█   ", "█   ", "█   ", "███ "),
+    "O": (" █  ", "█ █ ", "█ █ ", "█ █ ", " █  "),
+    "S": (" ██ ", "█   ", " █  ", "  █ ", "██  "),
+    "F": ("███ ", "█   ", "██  ", "█   ", "█   "),
+    "T": ("███ ", " █  ", " █  ", " █  ", " █  "),
+    " ": ("    ", "    ", "    ", "    ", "    "),
+}
+
+
+def _word(text):
+    rows = [""] * 5
+    for ch in text.upper():
+        g = GLYPH.get(ch, GLYPH[" "])
+        for i in range(5):
+            rows[i] += g[i]
+    return [r.rstrip() for r in rows]
 
 
 def enable():
@@ -46,7 +71,6 @@ def clear():
 
 
 def _line(left, right, color=RED, left_color=WHITE, right_color=GREY):
-    """Строка рамки ровно по ширине W."""
     r = str(right)[:24]
     l = str(left)
     pad = W - len(l) - len(r)
@@ -59,11 +83,10 @@ def _line(left, right, color=RED, left_color=WHITE, right_color=GREY):
 
 def banner():
     print(flush=True)
-    print("  " + RED + "┌" + "─" * W + "┐" + OFF, flush=True)
-    _line("  P A B L O S", "v1.0")
-    print("  " + RED + "├" + "─" * W + "┤" + OFF, flush=True)
-    _line("  инструмент пробива", "цели не свои", GREY, GREY, GREY)
-    print("  " + RED + "└" + "─" * W + "┘" + OFF, flush=True)
+    for row in _word("PABLOSSOFT"):
+        print("  " + RED + BOLD + row + OFF, flush=True)
+    print(flush=True)
+    print("  " + GREY + "v" + VER + OFF, flush=True)
 
 
 def intro():
