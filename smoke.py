@@ -8,12 +8,12 @@ BAD = []
 MODS = ["core.config", "core.http", "core.queue", "core.state", "core.store",
         "core.ui", "core.waf", "core.users", "core.findings", "core.proxies",
         "core.notify", "core.browser", "core.card", "core.checks", "core.hints",
-        "core.learn", "core.stack", "core.brfetch",
+        "core.learn", "core.stack", "core.brfetch", "core.vault", "core.verify",
         "modules.admin", "modules.adminfind", "modules.arch", "modules.brute",
         "modules.bypass", "modules.creds", "modules.dossier", "modules.engine",
         "modules.files", "modules.harvest", "modules.keep", "modules.mass",
         "modules.mods", "modules.night", "modules.nuc", "modules.orders",
-        "modules.profiles", "modules.recon", "modules.report", "modules.reuse",
+        "modules.profiles", "modules.post", "modules.recon", "modules.report", "modules.reuse",
         "modules.sqli", "modules.subdom", "modules.tpl", "modules.tplui",
         "modules.wp", "modules.wpfast", "modules.wpvuln"]
 
@@ -34,6 +34,9 @@ NEED = [
     ("modules.tpl", ("run", "_load")),
     ("modules.report", ("run", "build")),
     ("core.waf", ("detect", "known")),
+    ("core.vault", ("add", "pairs")),
+    ("core.verify", ("confirm",)),
+    ("modules.post", ("run",)),
 ]
 
 for mod, attrs in NEED:

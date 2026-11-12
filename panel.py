@@ -127,6 +127,7 @@ def do_run():
         ui.item("2", "только ночной", "по всей очереди")
         ui.item("3", "поставить STOP", "мягкая остановка")
         ui.item("4", "снять STOP", "продолжить")
+        ui.item("5", "возобновить отложенные", "капча, лимит, блок")
         ui.item("0", "назад")
         c = ui.ask("пункт")
         if c == "0":
@@ -177,6 +178,18 @@ def do_run():
             except Exception:
                 pass
             ui.ok("STOP снят")
+            ui.pause()
+        elif c == "5":
+            from modules import brute as br
+            ui.head("ВОЗОБНОВЛЕНИЕ")
+            try:
+                st = br.resume()
+                for k, v in st.items():
+                    ui.say("%-8s %d" % (k, v))
+                if not st:
+                    ui.say("отложенных нет")
+            except Exception as e:
+                ui.err("сбой: %s" % e)
             ui.pause()
 
 
@@ -360,10 +373,15 @@ def tool_brute(h):
     state = res[0] if res and isinstance(res[0], str) else "none"
     creds = ":".join(str(x) for x in res[1:] if x) if state == "ok" else None
     if state == "ok" and creds:
+        from core import vault
+        from modules import post
         d = store.get(h)
         d["creds"] = creds
         store.save(h, d)
+        u, _, p = creds.partition(":")
+        vault.add(h, _kind(h), u, p)
         ui.ok("вход: " + creds)
+        post.run(h, _kind(h), creds)
     elif state == "captcha":
         ui.say("капча - паркую")
     elif state == "limit":
