@@ -11,7 +11,7 @@ import random
 import re
 import time
 
-from core import config, http, learn, ui
+from core import config, http, learn, ui, users
 from modules import profiles
 
 CAP = 6            # попыток на хост по умолчанию
@@ -87,9 +87,9 @@ def _words(host, title, cap=60):
     return seen[:cap]
 
 
-def _users(host):
+def _users(host, kind=""):
     label = host.split(".")[0]
-    out = ["admin", "administrator", label, "manager", "root", "info"]
+    out = users.get(host, kind) + ["admin", "administrator", label, "manager", "root", "info"]
     seen = []
     for x in out:
         if x and x not in seen:
@@ -265,7 +265,7 @@ def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login="")
         return ("captcha",)
 
     words = learn.bonus(kind, _words(host, title))
-    users = _users(host)
+    users = _users(host, kind)
     pairs = []
     for u, p in DEFAULTS:
         pairs.append((u, p))
