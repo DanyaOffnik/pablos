@@ -70,15 +70,22 @@ def clear():
     sys.stdout.flush()
 
 
-def _line(left, right, color=RED, left_color=WHITE, right_color=GREY):
-    r = str(right)[:24]
-    l = str(left)
+def _row(l, r, color, left_color, right_color):
     pad = W - len(l) - len(r)
     if pad < 0:
         l = l[:max(0, W - len(r))]
         pad = 0
     print("  " + color + "│" + OFF + left_color + l + " " * pad
           + right_color + r + OFF + color + "│" + OFF, flush=True)
+
+
+def _line(left, right, color=RED, left_color=WHITE, right_color=GREY):
+    l, r = str(left), str(right)
+    if r and len(l) + len(r) + 2 > W:
+        _row(l, "", color, left_color, right_color)
+        _row("", r, color, left_color, right_color)
+        return
+    _row(l, r, color, left_color, right_color)
 
 
 def banner():
