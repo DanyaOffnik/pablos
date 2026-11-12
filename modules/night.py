@@ -534,8 +534,6 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
 
     for h in left:
         st[h] = {"score": 0, "notes": [], "creds": "", "stage": "в очереди"}
-    for h in left[:window]:
-        st[h]["stage"] = "взято в пул" 
 
     stop = threading.Event()
     box = [0]
@@ -544,6 +542,8 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
     threading.Thread(target=_painter, args=(st, box, total, stop, left, workers), daemon=True).start()
 
     window = workers + 1
+    for h in left[:window]:
+        st[h]["stage"] = "взято в пул" 
     pending = set()
     it = iter(left)
     pool = ThreadPoolExecutor(max_workers=workers)
