@@ -250,6 +250,7 @@ def run():
     good = [r[0] for r in rows if r[1] >= MIN and r[4]]
     junk = [r[0] for r in rows if (r[1] < MIN or not r[4]) and r[0] != "?"]
     ui.say("годных: %d, мусора: %d" % (len(good), len(junk)))
+    ui.say("разложить: годные уйдут в разбор, мусор в мусор, очередь почистится")
     if ui.ask("разложить списки (1 да / 0 нет)", "1") == "1":
         for h in good:
             state.set_status(h, "hot", note="после массового")

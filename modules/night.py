@@ -446,7 +446,15 @@ def _painter(st, box, total, stop, order, workers=0):
 
 
 def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
-    hosts = only or queue.queue()
+    hosts = list(only or [])
+    if not hosts:
+        try:
+            from core import state as _state
+            hosts = [d["host"] for d in _state.by_status("hot")]
+        except Exception:
+            hosts = []
+        if not hosts:
+            hosts = queue.queue()
     if not hosts:
         ui.say("очередь пуста")
         return
