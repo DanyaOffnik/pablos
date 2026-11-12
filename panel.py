@@ -506,12 +506,20 @@ def do_service():
                     ui.say("%s -> %s" % (p, e))
             ui.pause()
         elif ch == "2":
-            n = 0
-            if os.path.isfile(config.PROXIES):
-                with open(config.PROXIES, encoding="utf-8") as f:
-                    n = len([l for l in f if "://" in l])
-            ui.say("прокси в файле: %d" % n)
-            ui.say("VPN отдельного статуса не имеет, смотри пункт 1")
+            from core import proxies
+            ui.say("в файле: %d" % len(proxies.load()))
+            ui.item("1", "импорт из файла")
+            ui.item("2", "проверить и почистить")
+            ui.item("3", "очистить пул")
+            sub = ui.ask("пункт")
+            if sub == "1":
+                proxies.import_file(ui.ask("путь к файлу со списком"))
+            elif sub == "2":
+                good, total = proxies.check_all()
+                ui.ok("живых %d из %d" % (good, total))
+            elif sub == "3":
+                proxies.save([])
+                ui.ok("пул очищен")
             ui.pause()
         elif ch == "3":
             tok = ui.ask("токен бота (пусто = не менять)")
