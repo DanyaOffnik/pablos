@@ -18,8 +18,9 @@ STATE = os.path.join(DATA, "state")
 LEASE = os.path.join(DATA, "lease")
 RUNS = os.path.join(DATA, "runs")
 REPORTS = os.path.join(DATA, "reports")
+DOSSIER = os.path.join(DATA, "dossier")
 
-for _d in (DATA, DICT, PROFILES, TPL, SESS, LOGS, BROWSER, STATE, LEASE, RUNS, REPORTS):
+for _d in (DATA, DICT, PROFILES, TPL, SESS, LOGS, BROWSER, STATE, LEASE, RUNS, REPORTS, DOSSIER):
     os.makedirs(_d, exist_ok=True)
 
 LIST = os.path.join(DATA, "list.txt")

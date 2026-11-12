@@ -3,10 +3,10 @@ import os
 import sys
 import time
 
-from core import config, http, mass, state, ui
-from modules import arch, bypass, engine, files, mods, profiles, subdom
+from core import config, http, state, ui
+from modules import arch, bypass, engine, files, mass, mods, profiles, subdom
 
-DOSSIER = os.path.join(config.DATA, "dossier")
+DOSSIER = config.DOSSIER
 
 
 def _sec(title):

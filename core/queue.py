@@ -58,6 +58,10 @@ def drop(host, where="done"):
     _write(path, lst)
 
 
+def drop_hot(host, where="done"):
+    drop(host, where)
+
+
 def restore(host):
     host = host.strip().lower()
     for path in (config.DONE, config.TRASH):

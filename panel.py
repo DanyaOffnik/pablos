@@ -194,7 +194,7 @@ def _card(h):
     notes = prof.get("notes") or []
     if notes:
         ui.say("находки: " + ", ".join(notes)[:200])
-    d = os.path.join(config.DATA, "dossier", h + ".txt")
+    d = os.path.join(config.DOSSIER, h + ".txt")
     ui.say("досье: " + (("%d байт" % os.path.getsize(d)) if os.path.isfile(d) else "нет"))
     ui.say("сессия: " + ("да" if os.path.isfile(browser.state_path(h)) else "нет"))
 
@@ -345,7 +345,7 @@ def tool_admin(h):
 
 
 def tool_find_admin(h):
-    import adminfind
+    from modules import adminfind
     got = adminfind.run(h, 16, None, _kind(h)) or []
     if got:
         ui.ok("найдено: %d" % len(got))

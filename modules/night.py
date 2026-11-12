@@ -308,7 +308,7 @@ def _work(host, st, use_browser, full):
         if not has_admin and score >= 3:
             _stage(st, host, "поиск админки", rec)
             try:
-                import adminfind
+                from modules import adminfind
                 hits = _call(adminfind.run, 300, host, 16, None, kind)[1] or []
             except Exception as e:
                 _log("%s adminfind: %s" % (host, e))
