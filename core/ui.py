@@ -173,9 +173,15 @@ def row(score, host, notes):
 
 def ask(p, d=""):
     tail = (" [" + str(d) + "]") if d else ""
-    v = input("  " + CYAN + "> " + str(p) + tail + ":" + OFF + " ").strip()
+    try:
+        v = input("  " + CYAN + "> " + str(p) + tail + ":" + OFF + " ").strip()
+    except (EOFError, KeyboardInterrupt):
+        return d
     return v or d
 
 
 def pause():
-    input("  " + GREY + "  Enter" + OFF)
+    try:
+        input("  " + GREY + "  Enter" + OFF)
+    except (EOFError, KeyboardInterrupt):
+        pass

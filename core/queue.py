@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import os
 
 from core import config
@@ -60,6 +60,11 @@ def drop(host, where="done"):
 
 def drop_hot(host, where="done"):
     drop(host, where)
+
+
+def add_hot(host):
+    """Пометить годным: из очереди в отработанные."""
+    drop(host, "done")
 
 
 def restore(host):

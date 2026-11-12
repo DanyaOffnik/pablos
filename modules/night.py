@@ -58,8 +58,13 @@ STAGE_LIMIT = 45
 _DIRTY = [False]
 
 
+TAIL = []
+
+
 def _log(msg):
     with LOCK:
+        TAIL.append("%s %s" % (time.strftime("%H:%M:%S"), str(msg)[:90]))
+        del TAIL[:-6]
         try:
             with open(ERRS, "a", encoding="utf-8") as f:
                 f.write("%s %s\n" % (time.strftime("%H:%M:%S"), msg))
@@ -432,6 +437,10 @@ def _draw(st, done, total, order, workers=0):
     ui.head("НОЧНОЙ ПРОГОН", "%d / %d  потоков %d" % (done, total, workers))
     for host in order:
         _row(host, st.get(host) or {})
+    if TAIL:
+        print()
+        for line in TAIL:
+            print("  " + ui.YELLOW + "  ! " + line + ui.OFF)
     if os.path.isfile(STOP):
         print()
         ui.warn("найден STOP, встаю после текущих")
@@ -548,7 +557,11 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
     try:
         fill()
         while pending:
-            fin, pending = wait(pending, return_when=FIRST_COMPLETED)
+            try:
+                fin, pending = wait(pending, return_when=FIRST_COMPLETED)
+            except KeyboardInterrupt:
+                ui.warn("прервано с клавиатуры, дочищаю")
+                break
             for fut in fin:
                 try:
                     fut.result()
