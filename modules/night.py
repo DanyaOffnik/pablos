@@ -10,7 +10,7 @@ import time
 import traceback
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
-from core import browser, config, hints, http, notify, queue, ui
+from core import browser, config, hints, http, notify, queue, ui, waf
 from core import card
 from modules import admin, arch, brute, engine, files, keep, mass, orders, reuse, sqli, subdom, tpl, wp, wpfast, wpvuln
 from modules import creds as credmod
@@ -114,15 +114,11 @@ def _call(fn, limit, *a):
 
 
 def _blocked(host):
-    try:
-        r = http.get(host, "/", timeout=15)
-    except Exception:
+    w = waf.detect(host, 12)
+    if w["strategy"] in ("browser", "wait"):
+        return "защита"
+    if w["kind"] == "dead":
         return "нет связи"
-    low = r.text[:3000].lower()
-    if r.status_code in (403, 503):
-        return "защита"
-    if "just a moment" in low or "one moment" in low:
-        return "защита"
     return ""
 
 
