@@ -547,6 +547,7 @@ def do_reports():
     ui.clear()
     ui.banner()
     ui.head("ОТЧЁТЫ")
+    ui.item("R", "собрать отчёт по последнему прогону")
     runs = []
     if os.path.isdir(config.RUNS):
         runs = sorted(os.listdir(config.RUNS), reverse=True)[:15]
@@ -554,6 +555,15 @@ def do_reports():
         ui.item(str(i), n)
     ui.item("0", "назад")
     c = ui.ask("пункт")
+    if c.upper() == "R":
+        from modules import report
+        runs2 = sorted(os.listdir(config.RUNS), reverse=True) if os.path.isdir(config.RUNS) else []
+        if runs2:
+            report.run(os.path.join(config.RUNS, runs2[0]))
+        else:
+            ui.say("прогонов нет")
+        ui.pause()
+        return
     if c == "0" or not c.isdigit():
         return
     try:
