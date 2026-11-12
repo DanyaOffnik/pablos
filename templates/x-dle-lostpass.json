@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-dle-lostpass",
+ "engine": "dle",
+ "method": "GET",
+ "path": "/admin.php?action=lostpass",
+ "payloads": [""],
+ "match": {"type": "body", "value": "lostpass"},
+ "score": 4,
+ "note": "сброс пароля доступен"
+}

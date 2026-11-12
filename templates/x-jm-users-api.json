@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-jm-users-api",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/api/index.php/v1/users?public=1",
+ "payloads": [""],
+ "match": {"type": "regex", "value": "\"username\"\\s*:"},
+ "score": 7,
+ "note": "публичный список пользователей"
+}

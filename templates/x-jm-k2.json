@@ -1,0 +1,11 @@
+﻿{
+ "id": "x-jm-k2",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/components/com_k2/",
+ "payloads": [""],
+ "match": {"type": "status", "value": 200},
+ "skip_if": ["404", "не найдено"],
+ "score": 4,
+ "note": "компонент K2 — частые дыры"
+}

@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-jm-manifests-dir",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/administrator/manifests/files/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "Index of"},
+ "score": 6,
+ "note": "листинг манифестов — версии расширений"
+}

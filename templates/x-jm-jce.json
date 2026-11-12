@@ -1,0 +1,11 @@
+﻿{
+ "id": "x-jm-jce",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/components/com_jce/",
+ "payloads": [""],
+ "match": {"type": "status", "value": 200},
+ "skip_if": ["404", "не найдено"],
+ "score": 4,
+ "note": "компонент JCE"
+}

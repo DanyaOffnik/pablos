@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-dle-engine-data-dir",
+ "engine": "dle",
+ "method": "GET",
+ "path": "/engine/data/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "Index of"},
+ "score": 7,
+ "note": "листинг каталога данных DLE"
+}

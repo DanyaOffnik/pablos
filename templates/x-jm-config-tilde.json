@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-jm-config-tilde",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/configuration.php{{p}}",
+ "payloads": ["~", ".bak", ".old", ".save", ".txt", "-bak"],
+ "match": {"type": "body", "value": "$password"},
+ "score": 9,
+ "note": "копия configuration.php"
+}

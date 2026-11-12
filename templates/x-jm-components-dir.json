@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-jm-components-dir",
+ "engine": "joomla",
+ "method": "GET",
+ "path": "/components/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "Index of"},
+ "score": 6,
+ "note": "листинг компонентов"
+}
