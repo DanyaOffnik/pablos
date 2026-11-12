@@ -543,6 +543,7 @@ def do_service():
         ui.item("5", "имя машины", "метка")
         ui.item("6", "пульс", "вкл / выкл")
         ui.item("7", "картинка", "вкл / выкл")
+        ui.item("8", "уровень уведомлений", "1 лом / 2 важное / 3 всё")
         ui.item("0", "назад")
         ch = ui.ask("пункт")
         if ch == "0":
@@ -598,6 +599,15 @@ def do_service():
             ui.pause()
         elif ch == "7":
             notify.save_cfg({"tg_photo": not c.get("tg_photo", True)})
+            ui.pause()
+        elif ch == "8":
+            ui.say("сейчас: %d" % notify.level())
+            v = ui.ask("порог 1/2/3 (1 только лом, 3 всё)", str(notify.level()))
+            try:
+                notify.save_cfg({"tg_level": max(1, min(3, int(v)))})
+                ui.ok("порог: %d" % notify.level())
+            except Exception:
+                ui.err("нужно число")
             ui.pause()
 
 

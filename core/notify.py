@@ -130,6 +130,9 @@ def site(host, rec):
     c = cfg()
     if not c.get("tg_sites", True):
         return False
+    lvl = 1 if rec.get("creds") else (2 if rec.get("score", 0) >= 8 else 3)
+    if lvl > level():
+        return False
 
     notes = ", ".join(rec.get("notes") or []) or "-"
     text = "%s\n%s\nбаллы: %s" % (v, host, rec.get("score", 0))
@@ -144,6 +147,20 @@ def site(host, rec):
             ok, _ = _call("sendPhoto", {"photo": img, "caption": text[:1000]})
             if ok:
                 return True
+    return send(text)
+
+
+def level():
+    """Порог: 1 только лом, 2 важное, 3 всё подряд."""
+    try:
+        return int(cfg().get("tg_level", 2))
+    except Exception:
+        return 2
+
+
+def send_lvl(lvl, text):
+    if lvl > level():
+        return False
     return send(text)
 
 
