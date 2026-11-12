@@ -1,0 +1,11 @@
+﻿{
+ "id": "x-ps-install",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/install/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "PrestaShop"},
+ "skip_if": ["404"],
+ "score": 6,
+ "note": "установщик не снят"
+}

@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-fr-files-listing",
+ "engine": "frappe",
+ "method": "GET",
+ "path": "/files/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "Index of"},
+ "score": 5,
+ "note": "листинг вложений Frappe"
+}

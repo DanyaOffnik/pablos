@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-bx-upload-dir",
+ "engine": "bitrix",
+ "method": "GET",
+ "path": "/upload/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "Index of"},
+ "score": 5,
+ "note": "листинг загрузок Bitrix"
+}

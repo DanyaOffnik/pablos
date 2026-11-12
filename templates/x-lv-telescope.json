@@ -1,15 +1,11 @@
-{
+﻿{
  "id": "x-lv-telescope",
  "engine": "laravel",
  "method": "GET",
  "path": "/telescope",
- "payloads": [
-  ""
- ],
- "match": {
-  "type": "body",
-  "value": "Telescope"
- },
+ "payloads": [""],
+ "match": {"type": "body", "value": "Laravel"},
+ "skip_if": ["404"],
  "score": 6,
- "note": "Telescope открыт"
+ "note": "Telescope открыт — запросы, письма, джобы"
 }

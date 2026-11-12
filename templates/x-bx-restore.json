@@ -1,15 +1,11 @@
-{
+﻿{
  "id": "x-bx-restore",
  "engine": "bitrix",
  "method": "GET",
  "path": "/restore.php",
- "payloads": [
-  ""
- ],
- "match": {
-  "type": "body",
-  "value": "restore"
- },
- "score": 4,
- "note": "restore.php доступен"
+ "payloads": [""],
+ "match": {"type": "regex", "value": "restore|восстановлени"},
+ "skip_if": ["404 Not Found"],
+ "score": 8,
+ "note": "restore.php — восстановление базы из файла"
 }

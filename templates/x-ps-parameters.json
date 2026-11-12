@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-ps-parameters",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/app/config/parameters.php",
+ "payloads": [""],
+ "match": {"type": "body", "value": "database_password"},
+ "score": 9,
+ "note": "пароль базы наружу"
+}

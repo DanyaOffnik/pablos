@@ -1,0 +1,11 @@
+﻿{
+ "id": "x-oc-install",
+ "engine": "opencart",
+ "method": "GET",
+ "path": "/install/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "OpenCart"},
+ "skip_if": ["404"],
+ "score": 6,
+ "note": "установщик не снят"
+}

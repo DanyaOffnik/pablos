@@ -1,0 +1,11 @@
+﻿{
+ "id": "x-ps-admin-dev",
+ "engine": "prestashop",
+ "method": "GET",
+ "path": "/admin-dev/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "password"},
+ "skip_if": ["404"],
+ "score": 6,
+ "note": "вторая админка /admin-dev/"
+}

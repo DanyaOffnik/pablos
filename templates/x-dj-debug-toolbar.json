@@ -1,0 +1,11 @@
+﻿{
+ "id": "x-dj-debug-toolbar",
+ "engine": "django",
+ "method": "GET",
+ "path": "/__debug__/",
+ "payloads": [""],
+ "match": {"type": "body", "value": "djdt"},
+ "skip_if": ["404"],
+ "score": 6,
+ "note": "панель отладки открыта — SQL и настройки"
+}

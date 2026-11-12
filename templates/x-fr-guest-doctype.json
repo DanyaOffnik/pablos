@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-fr-guest-doctype",
+ "engine": "frappe",
+ "method": "GET",
+ "path": "/api/method/frappe.client.get_list?doctype=User&limit_page_length=5",
+ "payloads": [""],
+ "match": {"type": "regex", "value": "\"message\"\\s*:"},
+ "score": 7,
+ "note": "гость читает User через API"
+}

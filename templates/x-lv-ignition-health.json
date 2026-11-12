@@ -1,0 +1,10 @@
+﻿{
+ "id": "x-lv-ignition-health",
+ "engine": "laravel",
+ "method": "GET",
+ "path": "/_ignition/health-check",
+ "payloads": [""],
+ "match": {"type": "body", "value": "can_execute_requests"},
+ "score": 7,
+ "note": "Ignition жив — за ним выполнение кода"
+}
