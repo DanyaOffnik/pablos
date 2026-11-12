@@ -38,6 +38,7 @@ STOP = os.path.join(config.DATA, "STOP")
 DRAW_EVERY = 0.3
 FAST = 6
 SLOW = 10
+MIN = 3
 HASHES = {}
 
 
@@ -234,7 +235,7 @@ def run():
     ui.clear()
     ui.banner()
     ui.head("ИТОГ ПРОГОНА", "%d из %d" % (done, total))
-    top = [r for r in sorted(rows, key=lambda x: -x[1]) if r[1] > 0]
+    top = [r for r in sorted(rows, key=lambda x: -x[1]) if r[1] >= MIN and r[4]]
     if top:
         for row in top[:20]:
             ui.row(row[1], row[0], row[2])
@@ -246,8 +247,8 @@ def run():
     ui.say("отчёт: " + out)
     ui.say("детали: " + det)
 
-    good = [r[0] for r in rows if r[1] > 0]
-    junk = [r[0] for r in rows if r[1] <= 0 and r[0] != "?"]
+    good = [r[0] for r in rows if r[1] >= MIN and r[4]]
+    junk = [r[0] for r in rows if (r[1] < MIN or not r[4]) and r[0] != "?"]
     ui.say("годных: %d, мусора: %d" % (len(good), len(junk)))
     if ui.ask("разложить списки (1 да / 0 нет)", "1") == "1":
         for h in good:
