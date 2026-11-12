@@ -5,7 +5,7 @@ import os
 import time
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
-from core import checks, config, http, queue, state, ui
+from core import checks, config, findings, http, queue, state, ui
 
 CHECKS = [
     ("/system/storage/logs/error.log", 5, "лог"),
@@ -31,6 +31,9 @@ ENGINES = (
     ("django", ("csrfmiddlewaretoken", "django")),
 )
 
+BLOCK = ("one moment", "just a moment", "доступ временно ограничен", "gas shield",
+         "you don't have permission", "access denied", "forbidden")
+
 STOP = os.path.join(config.DATA, "STOP")
 DRAW_EVERY = 0.3
 FAST = 6
@@ -47,6 +50,14 @@ def _title(body):
     if b < 0:
         return ""
     return body[a:b].strip()[:60]
+
+
+def _is_block(status, text):
+    """Похоже ли на страницу защиты, а не на содержимое."""
+    low = (text or "")[:3000].lower()
+    if any(m in low for m in BLOCK):
+        return True
+    return status in (403, 429) and len(text or "") < 400
 
 
 def _engine(body, headers):
@@ -70,15 +81,15 @@ def scan(host):
     if r is None:
         r = _get(host, "/", FAST)
     if r is None:
-        return host, -2, "нет связи", ""
+        return host, -2, "нет связи", "", []
 
     low = r.text[:3000].lower()
     if r.status_code in (403, 503) or "just a moment" in low:
-        return host, -1, "защита", ""
+        return host, -1, "защита", "", []
     if r.status_code != 200:
-        return host, -1, "главная %d" % r.status_code, ""
+        return host, -1, "главная %d" % r.status_code, "", []
     if len(r.content) < 1500:
-        return host, 0, "заглушка", _title(r.text)
+        return host, 0, "заглушка", _title(r.text), []
 
     body = r.text
     home_title = _title(body)
@@ -88,7 +99,7 @@ def scan(host):
     h = hashlib.sha1(body.encode("utf-8", "ignore")).hexdigest()
     if kind not in ("wordpress", "opencart", "bitrix", "prestashop", "laravel", "django"):
         if h in HASHES:
-            return host, 0, "дубль", home_title
+            return host, 0, "дубль", home_title, []
         if len(HASHES) < 200000:
             HASHES[h] = host
 
@@ -98,6 +109,7 @@ def scan(host):
 
     score = 2 if kind else 0
     notes = [kind] if kind else []
+    finds = []
 
     for path, weight, name in CHECKS:
         x = _get(host, path, SLOW)
@@ -108,27 +120,36 @@ def scan(host):
         if t and (abs(ln - home_len) < max(2500, home_len // 20)
                   or abs(ln - nf_len) < max(2500, nf_len // 20)) and t in (home_title, nf_title):
             continue
+
         if path == "/server-status":
             if x.status_code == 401:
                 score += weight
                 notes.append(name)
+                finds.append(findings.make(host, "https://" + host + path, name,
+                                           x.status_code, ln, nf_len, x.text))
             continue
+
         if x.status_code == 200 and len(x.content) > 20:
             if checks.real(path, x.text):
                 score += weight
                 notes.append(name)
-        elif x.status_code == 403 and path in ("/.env", "/.git/HEAD"):
+                finds.append(findings.make(host, "https://" + host + path, name,
+                                           x.status_code, ln, nf_len, x.text))
+        elif x.status_code == 403 and not _is_block(x.status_code, x.text):
             score += 1
-            notes.append(name + "?")
-    return host, score, ", ".join(notes), home_title
+            notes.append(name)
+            finds.append(findings.make(host, "https://" + host + path, name,
+                                       x.status_code, ln, nf_len, x.text,
+                                       extra="403 без заглушки"))
+    return host, score, ", ".join(notes), home_title, finds
 
 
 def _draw(rows, done, total, phase):
     ui.clear()
     ui.banner()
     ui.head("МАССОВЫЙ ПРОГОН · " + phase, "%d / %d" % (done, total))
-    for host, score, notes, title in sorted(rows, key=lambda x: -x[1])[:18]:
-        ui.row(score, host, notes)
+    for row in sorted(rows, key=lambda x: -x[1])[:18]:
+        ui.row(row[1], row[0], row[2])
 
 
 def run():
@@ -172,7 +193,7 @@ def run():
                 try:
                     rows.append(fut.result())
                 except Exception as e:
-                    rows.append(("?", -3, "сбой: " + type(e).__name__, ""))
+                    rows.append(("?", -3, "сбой: " + type(e).__name__, "", []))
                 done += 1
             now = time.time()
             if now - last[0] >= DRAW_EVERY:
@@ -185,25 +206,36 @@ def run():
     finally:
         pool.shutdown(wait=False)
 
-    out = os.path.join(config.REPORTS, "mass_%s.csv" % time.strftime("%Y%m%d_%H%M%S"))
+    stamp = time.strftime("%Y%m%d_%H%M%S")
+    out = os.path.join(config.REPORTS, "mass_%s.csv" % stamp)
+    det = os.path.join(config.REPORTS, "findings_%s.csv" % stamp)
     with open(out, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f, delimiter=";")
         w.writerow(["хост", "баллы", "находки", "заголовок"])
-        w.writerows(rows)
+        for row in rows:
+            w.writerow([row[0], row[1], row[2], row[3]])
+    with open(det, "w", encoding="utf-8", newline="") as f:
+        w = csv.writer(f, delimiter=";")
+        w.writerow(["время", "хост", "метка", "код", "размер", "база", "url", "sha1", "прим"])
+        for row in rows:
+            for fd in row[4]:
+                w.writerow([fd["ts"], fd["host"], fd["tag"], fd["status"],
+                            fd["size"], fd["base_size"], fd["url"], fd["sha1"], fd["extra"]])
 
     ui.clear()
     ui.banner()
     ui.head("ИТОГ ПРОГОНА", "%d из %d" % (done, total))
     top = [r for r in sorted(rows, key=lambda x: -x[1]) if r[1] > 0]
     if top:
-        for host, score, notes, _ in top[:20]:
-            ui.row(score, host, notes)
+        for row in top[:20]:
+            ui.row(row[1], row[0], row[2])
     else:
         ui.say("пусто")
     print()
     if stop[0]:
         ui.warn("остановлено по STOP")
     ui.say("отчёт: " + out)
+    ui.say("детали: " + det)
 
     good = [r[0] for r in rows if r[1] > 0]
     junk = [r[0] for r in rows if r[1] <= 0 and r[0] != "?"]
