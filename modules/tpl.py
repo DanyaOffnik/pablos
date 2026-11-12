@@ -6,7 +6,7 @@ import re
 import time
 import urllib.parse
 
-from core import config, http, ui
+from core import config, findings, http, ui
 
 TPL = os.path.join(config.DATA, "templates")
 
@@ -24,6 +24,19 @@ def _load(only_on=True):
         except Exception:
             continue
     return out
+
+
+def _url(t, payload):
+    """Реконструирует адрес запроса — для отчёта."""
+    raw = t["path"]
+    where = t.get("where") or "query"
+    quoted = urllib.parse.quote(payload, safe="")
+    if where in ("post-json", "post-form"):
+        return raw
+    if "{{p}}" in raw:
+        return raw.replace("{{p}}", quoted)
+    sep = "&" if "?" in raw else "?"
+    return raw + sep + t["param"] + "=" + quoted
 
 
 def _send(host, t, payload, timeout):
@@ -55,7 +68,7 @@ def _ready(host, t, timeout):
     return req in r.text
 
 
-def _verdict(t, r, elapsed, base_hash):
+def _verdict(t, r, elapsed, base):
     body = r.text[:200000]
     for s in t.get("skip_if") or []:
         if s in body:
@@ -73,10 +86,9 @@ def _verdict(t, r, elapsed, base_hash):
     if kind == "status_diff":
         if r.status_code != int(m.get("value", 403)):
             return ""
-        return "hit" if str(hash(body)) != base_hash else ""
+        return "hit" if str(hash(body)) != base[0] else ""
     if kind == "diff":
-        h = str(hash(body))
-        return "hit" if h != base_hash else ""
+        return "hit" if str(hash(body)) != base[0] else ""
     return ""
 
 
@@ -87,21 +99,23 @@ def _bool(host, t, timeout):
         r1 = _send(host, t, p1, timeout)
         r2 = _send(host, t, p2, timeout)
     except Exception:
-        return ""
+        return None
     if r1.status_code == 200 and r2.status_code != 200:
-        return "hit"
+        return r1
     a, b = len(r1.text), len(r2.text)
     if abs(a - b) > max(200, int(a * 0.25)):
-        return "hit"
-    return ""
+        return r1
+    return None
 
 
-def _base_hash(host, t, timeout):
+def _base(host, t, timeout):
+    """Базовая страница: хеш тела и его размер."""
     try:
         r = http.get(host, t["path"], timeout=timeout)
-        return str(hash(r.text[:200000]))
+        body = r.text[:200000]
+        return str(hash(body)), len(r.content), r
     except Exception:
-        return ""
+        return "", 0, None
 
 
 def run(host, kind="", quiet=False):
@@ -115,14 +129,21 @@ def run(host, kind="", quiet=False):
             continue
         tid = t.get("id") or t["_file"]
         mode = (t.get("match") or {}).get("type")
-        bh = _base_hash(host, t, timeout) if mode in ("diff", "status_diff") else ""
+        base = ("", 0, None)
+        if mode in ("diff", "status_diff"):
+            base = _base(host, t, timeout)
+
         if mode == "bool" and len(t.get("payloads") or []) >= 2:
-            st = _bool(host, t, timeout)
-            if st == "hit":
-                found.append((tid, t["payloads"][0], t.get("score", 5)))
+            r = _bool(host, t, timeout)
+            if r is not None:
+                f = findings.make(host, _url(t, t["payloads"][0]), tid,
+                                  r.status_code, len(r.content), base[1], r.text,
+                                  t["payloads"][0])
+                found.append(f)
                 if not quiet:
-                    ui.ok("%s: %s" % (tid, t["payloads"][0][:50]))
+                    ui.ok("%s: %s" % (tid, f["url"]))
             continue
+
         state = ""
         for payload in t.get("payloads") or []:
             t0 = time.time()
@@ -131,16 +152,19 @@ def run(host, kind="", quiet=False):
             except Exception:
                 state = ""
                 break
-            state = _verdict(t, r, time.time() - t0, bh)
+            state = _verdict(t, r, time.time() - t0, base)
             if state == "skip":
                 break
             if state == "hit":
-                found.append((tid, payload, t.get("score", 5)))
+                f = findings.make(host, _url(t, payload), tid,
+                                  r.status_code, len(r.content), base[1], r.text, payload)
+                found.append(f)
                 if not quiet:
-                    ui.ok("%s: %s" % (tid, payload[:50]))
+                    ui.ok("%s: %s" % (tid, f["url"]))
                 break
         if state == "skip" and not quiet:
             ui.say("%s: не применим" % tid)
+
     if not found and not quiet:
         ui.say("шаблоны: пусто")
     return found
