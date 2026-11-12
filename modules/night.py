@@ -439,8 +439,8 @@ def _painter(st, box, total, stop, order, workers=0):
             pass
 
 
-def run():
-    hosts = queue.queue()
+def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
+    hosts = only or queue.queue()
     if not hosts:
         ui.say("очередь пуста")
         return
@@ -474,11 +474,11 @@ def run():
     else:
         ui.ok("сеть жива")
 
-    workers = ui.ask("потоков", "3")
-    br = ui.ask("браузер при защите (1 да / 0 нет)", "1")
-    limit = ui.ask("сколько целей (пусто = все)", "")
+    workers = str(n_workers) if n_workers else ui.ask("потоков", "3")
+    br = str(n_browser) if n_browser is not None else ui.ask("браузер при защите (1 да / 0 нет)", "1")
+    limit = str(n_limit) if n_limit else ui.ask("сколько целей (пусто = все)", "")
     hours = ui.ask("часов работать (пусто = без предела)", "")
-    mode = ui.ask("режим: 1 тихий / 2 полный (база и закреп)", "1")
+    mode = str(n_mode) if n_mode else ui.ask("режим: 1 тихий / 2 полный (база и закреп)", "1")
 
     try:
         workers = max(1, min(16, int(workers)))

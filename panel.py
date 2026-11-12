@@ -123,8 +123,8 @@ def do_run():
         ui.clear()
         ui.banner()
         ui.head("ПРОГОН", "STOP: " + ("есть" if os.path.isfile(STOP) else "нет"))
-        ui.item("1", "массовый", "быстрая оценка списка")
-        ui.item("2", "ночной", "полная цепочка")
+        ui.item("1", "фильтр и глубина", "сначала отсев, потом годное")
+        ui.item("2", "только ночной", "по всей очереди")
         ui.item("3", "поставить STOP")
         ui.item("4", "снять STOP")
         ui.item("0", "назад")
@@ -133,8 +133,28 @@ def do_run():
             return
         if c == "1":
             from modules import mass as m
-            ui.head("МАССОВЫЙ ПРОГОН")
+            ui.head("ФИЛЬТР")
             m.run()
+            hot = [d["host"] for d in state.by_status("hot")]
+            if not hot:
+                ui.say("годных нет, глубина не нужна")
+                ui.pause()
+                continue
+            ui.say("годных после фильтра: %d" % len(hot))
+            if ui.ask("пустить глубину по ним (1 да / 0 нет)", "1") == "1":
+                from modules import night
+                w = ui.ask("потоков", "3")
+                lim = ui.ask("сколько целей", str(min(len(hot), 10)))
+                md = ui.ask("режим: 1 тихий / 2 полный", "1")
+                try:
+                    w = int(w)
+                except Exception:
+                    w = 3
+                try:
+                    lim = int(lim)
+                except Exception:
+                    lim = len(hot)
+                night.run(only=hot, n_workers=w, n_limit=lim, n_mode=md)
             ui.pause()
         elif c == "2":
             from modules import night
