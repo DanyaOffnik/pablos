@@ -48,6 +48,13 @@ PROFILES = {
         "params": [("/", "q", "a"), ("/", "id", "1")],
         "login_field": "email",
     },
+    "frappe": {
+        "files": ["/api/method/ping", "/files/", "/private/files/",
+                  "/api/method/frappe.client.get_list?doctype=User"],
+        "admin": ["/login", "/app"],
+        "params": [("/login", "usr", "Administrator")],
+        "login_field": "usr",
+    },
     "django": {
         "files": ["/.env", "/.git/config", "/backup.sql", "/adminer.php"],
         "admin": ["/admin/", "/admin/login/"],

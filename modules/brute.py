@@ -180,7 +180,8 @@ def _form(host, path, sess):
         low = name.lower()
         if not pass_f and ("pass" in low or "pwd" in low):
             pass_f = name
-        elif not user_f and (low in ("log", "login", "username", "user", "email", "loginname")
+        elif not user_f and (low in ("log", "login", "username", "user", "email",
+                                     "loginname", "usr")
                              or "log" in low or "user" in low or "mail" in low):
             user_f = name
     if not pass_f:
@@ -230,6 +231,8 @@ def _ok(host, r, sess, kind):
         if _verify(host, sess, kind):
             return True
     body = r.text.lower()
+    if kind == "frappe" and ('"logged in"' in body or '"home_page"' in body):
+        return True
     if "logout" in body and 'name="password"' not in body:
         return True
     return False
@@ -271,6 +274,9 @@ def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login="")
         pairs.append((u, p))
     if kind == "bitrix":
         pairs.insert(0, ("bitrix", "bitrix"))
+    if kind == "frappe":
+        pairs.insert(0, ("Administrator", "admin"))
+        pairs.insert(0, ("Administrator", "Administrator"))
     for p in words:
         for u in users[:2]:
             pairs.append((u, p))

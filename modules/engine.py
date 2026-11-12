@@ -13,6 +13,7 @@ MARKS = [
     ("laravel", ("laravel", "csrf-token")),
     ("prestashop", ("prestashop", "modules/ps_")),
     ("django", ("csrfmiddlewaretoken", "django")),
+    ("frappe", ("frappe", "desk#", "/assets/frappe/")),
 ]
 
 
@@ -26,6 +27,13 @@ def detect(host):
             time.sleep(1.5)
     if r is None:
         return "нет связи", ""
+    if r.status_code == 200:
+        try:
+            p = http.get(host, "/api/method/ping", timeout=10)
+            if "pong" in p.text.lower():
+                return "frappe", r.text[:120000].lower()
+        except Exception:
+            pass
     if r.status_code != 200:
         return "код %d" % r.status_code, ""
     body = r.text[:120000].lower()
