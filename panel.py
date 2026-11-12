@@ -654,6 +654,10 @@ def do_reports():
         return
     if c == "0" or not c.isdigit():
         return
+    if not runs:
+        ui.say("прогонов нет")
+        ui.pause()
+        return
     try:
         d = os.path.join(config.RUNS, runs[int(c) - 1])
     except Exception:
@@ -723,6 +727,12 @@ def main():
         except KeyboardInterrupt:
             print()
             ui.warn("прервано")
+            ui.pause()
+        except Exception:
+            import traceback
+            print()
+            ui.err("сбой пункта, вернулся в меню")
+            print(traceback.format_exc(limit=3))
             ui.pause()
 
 
