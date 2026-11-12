@@ -41,6 +41,11 @@ ENGQ = {
     "wordpress": ['"wp-content/themes" магазин', '"wp-json" магазин', "wordpress магазин"],
     "bitrix": ['"bitrix/catalog"', "bitrix магазин"],
     "prestashop": ['"id_product" магазин', "prestashop магазин"],
+    "joomla": ['"option=com_content"', '"com_content&view=article"', "joomla сайт"],
+    "dle": ['"DataLife Engine"', '"engine/data/config.php"', "datalife движок"],
+    "frappe": ['"api/method/ping"', "frappe crm"],
+    "laravel": ['"_ignition/health-check"', "laravel сайт"],
+    "django": ['"csrfmiddlewaretoken" сайт', "django сайт"],
 }
 
 MARKS = (
@@ -48,6 +53,11 @@ MARKS = (
     ("opencart", ("route=product", "catalog/view", "oc_")),
     ("bitrix", ("bitrix",)),
     ("prestashop", ("prestashop", "id_product")),
+    ("joomla", ("com_content", "/media/system/js/", "joomla")),
+    ("dle", ("datalife", "engine/classes/")),
+    ("frappe", ("/assets/frappe/", "frappe")),
+    ("laravel", ("laravel", "csrf-token")),
+    ("django", ("csrfmiddlewaretoken",)),
 )
 
 CF = ("just a moment", "one moment, please", "checking your browser",
@@ -131,7 +141,7 @@ def run():
     ui.say("страны: ua, kz, by, ru, kg, uz, md, am, ge, az")
     zones = [z.strip() for z in ui.ask("какие берём", "ua,kz,by").split(",")
              if z.strip() in COUNTRIES]
-    ui.say("движки: opencart, wordpress, bitrix, prestashop")
+    ui.say("движки: opencart, wordpress, bitrix, prestashop, joomla, dle, frappe, laravel, django")
     kinds = [k.strip() for k in ui.ask("какие берём", "opencart,wordpress").split(",")
              if k.strip() in ENGQ]
     if not zones or not kinds:
