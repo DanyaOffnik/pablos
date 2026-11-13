@@ -316,6 +316,16 @@ def run(host, title="", quiet=False, kind="", budget=CAP, pause=PAUSE, login="")
     paths = [login] if login else _discover(host, sess, prof)
     for a in paths:
         try:
+            probe = http.get(host, a, sess=sess, timeout=8, tries=1)
+        except Exception:
+            probe = None
+        if probe is not None and (probe.status_code in (429, 503)
+                                  or "service temporarily unavailable" in (probe.text or "").lower()):
+            if not quiet:
+                ui.warn("лимит на сайте (%d)" % probe.status_code)
+            learn.error("brute", "limit")
+            return ("limit",)
+        try:
             form = _form(host, a, sess)
         except Exception:
             form = None
