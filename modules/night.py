@@ -184,6 +184,11 @@ def work(host, st, use_browser=True, full=False):
         rec["at"] = time.strftime("%Y-%m-%d %H:%M")
         st[host] = rec
         _DIRTY[0] = True
+        try:
+            _append(host, rec)
+            queue.drop(host, "done")
+        except Exception:
+            pass
         return host, rec
     finally:
         http.drop(host)
@@ -337,7 +342,7 @@ def _work(host, st, use_browser, full):
             _stage(st, host, "поиск админки", rec)
             try:
                 from modules import adminfind
-                hits = _call(adminfind.run, 300, host, 16, None, kind)[1] or []
+                hits = _call(adminfind.run, 320, host, 16, None, kind)[1] or []
             except Exception as e:
                 _log("%s adminfind: %s" % (host, e))
                 hits = []
