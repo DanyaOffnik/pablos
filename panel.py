@@ -164,8 +164,15 @@ def do_run():
             try:
                 night.run()
             except Exception:
-                ui.err("упал:")
-                print(traceback.format_exc())
+                tb = traceback.format_exc()
+                p = os.path.join(config.DATA, "last_error.log")
+                try:
+                    with open(p, "a", encoding="utf-8") as f:
+                        f.write(tb + "\n")
+                except Exception:
+                    pass
+                ui.err("упал, текст в " + p)
+                print(tb)
             ui.pause()
         elif c == "3":
             with open(STOP, "w", encoding="utf-8") as f:
@@ -445,6 +452,34 @@ def tool_backup(h):
         ui.say("база: %s байт" % (admin.backup(h, c) or "0"))
 
 
+def tool_passive(h):
+    from modules import passive
+    got = passive.run(h) or []
+    ui.say("находок: %d" % len(got))
+
+
+def tool_dumpfuzz(h):
+    from modules import dumpfuzz
+    got = dumpfuzz.run(h) or []
+    ui.say("дампов: %d" % len(got))
+
+
+def tool_sqli(h):
+    from modules import extract, sqli
+    got = sqli.run(h, _kind(h)) or []
+    if not got:
+        return
+    ui.say("подтверждено: %d" % len(got))
+    if ui.ask("разрабатывать (1 да / 0 нет)", "1") == "1":
+        extract.run(h, got, True)
+
+
+def tool_reg(h):
+    from modules import reg
+    got = reg.run(h, _kind(h)) or []
+    ui.say("форм: %d" % len(got))
+
+
 def tool_keep(h):
     from modules import keep
     c = _creds(h)
@@ -499,7 +534,11 @@ TOOLS = [
     ("7", "WordPress", tool_wp, "логины, плагины, уязвимости"),
     ("8", "слив контактов", tool_creds, "из найденных файлов"),
     ("9", "заказы и бэкап", tool_data, "выгрузка, дамп"),
-    ("10", "закрепление", tool_keep, "свой доступ"),
+    ("10", "пассивный сбор", tool_passive, "архив, сертификаты"),
+    ("11", "поиск дампов", tool_dumpfuzz, "бэкапы по датам"),
+    ("12", "инъекции", tool_sqli, "проверка и вывод"),
+    ("13", "регистрация", tool_reg, "завести учётку"),
+    ("14", "закрепление", tool_keep, "свой доступ"),
 ]
 
 
@@ -730,9 +769,16 @@ def main():
             ui.pause()
         except Exception:
             import traceback
+            tb = traceback.format_exc()
+            p = os.path.join(config.DATA, "last_error.log")
+            try:
+                with open(p, "a", encoding="utf-8") as f:
+                    f.write(tb + "\n")
+            except Exception:
+                pass
             print()
-            ui.err("сбой пункта, вернулся в меню")
-            print(traceback.format_exc(limit=3))
+            ui.err("сбой пункта, текст в " + p)
+            print(tb)
             ui.pause()
 
 

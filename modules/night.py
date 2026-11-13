@@ -10,7 +10,7 @@ import time
 import traceback
 from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 
-from core import browser, config, hints, http, notify, queue, ui, waf
+from core import browser, config, hints, http, notify, queue, state, ui, waf
 from core import card
 from modules import admin, arch, brute, engine, extract, files, keep, mass, orders, reuse, sqli, subdom, tpl, wp, wpfast, wpvuln
 from modules import creds as credmod
@@ -631,6 +631,18 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
     ui.say("отчёт: " + report)
     if os.path.isfile(ERRS):
         ui.say("ошибки: " + ERRS)
+
+    for host in left:
+        rec = st.get(host) or {}
+        try:
+            if rec.get("creds"):
+                state.set_status(host, "cracked", note="вход", score=rec.get("score", 0))
+            elif rec.get("score", 0) > 0:
+                state.set_status(host, "scanned", note="отработано", score=rec.get("score", 0))
+            else:
+                state.set_status(host, "trash", note="пусто", score=rec.get("score", 0))
+        except Exception:
+            pass
 
     with open(os.path.join(config.DATA, "summary.txt"), "a", encoding="utf-8") as f:
         f.write("%s целей=%d отработано=%d входов=%d контактов=%d\n"
