@@ -206,6 +206,7 @@ def _work(host, st, use_browser, full):
         st[host] = {"score": -2, "notes": ["нет связи"], "creds": "", "done": True,
                     "at": time.strftime("%Y-%m-%d %H:%M")}
         _DIRTY[0] = True
+        _append(host, st[host])
         return host, st[host]
 
     guard = _call(_blocked, 25, host)[1] or ""
@@ -214,6 +215,7 @@ def _work(host, st, use_browser, full):
             st[host] = {"score": 0, "notes": ["защита"], "creds": "", "done": True,
                         "at": time.strftime("%Y-%m-%d %H:%M")}
             _DIRTY[0] = True
+            _append(host, st[host])
             return host, st[host]
         _stage(st, host, "браузер", st.get(host))
         try:
@@ -231,6 +233,7 @@ def _work(host, st, use_browser, full):
             st[host] = {"score": 0, "notes": ["защита не пройдена"], "creds": "",
                         "done": True, "at": time.strftime("%Y-%m-%d %H:%M")}
             _DIRTY[0] = True
+            _append(host, st[host])
             return host, st[host]
 
     t0 = time.time()
@@ -601,7 +604,7 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
         pool.shutdown(wait=False)
         _save(st)
 
-    hits = [(h, r) for h, r in st.items() if r.get("creds")]
+    hits = [(h, st.get(h) or {}) for h in left if (st.get(h) or {}).get("creds")]
     contacts = 0
     for _, r in st.items():
         for n in (r.get("notes") or []):
