@@ -224,7 +224,7 @@ def _work(host, st, use_browser, full):
     _stage(st, host, "оценка", rec)
     data = _call(mass.scan, 90, host)[1]
     if isinstance(data, tuple):
-        _, score, notes_s, title = data
+        _, score, notes_s, title, _finds = data
         notes = [notes_s] if notes_s else []
 
     ver = _call(engine.version, 25, host, kind)[1] or ""
