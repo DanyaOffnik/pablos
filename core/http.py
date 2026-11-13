@@ -65,8 +65,11 @@ def _bad(px):
 
 
 def session(host):
-    s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT, verify=False,
-                     http2=False)
+    try:
+        s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT,
+                         verify=False, http2=False)
+    except TypeError:
+        s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT, verify=False)
     px = proxy_for(host)
     if px:
         s.proxies = {"http": px, "https": px}
