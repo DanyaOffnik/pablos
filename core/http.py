@@ -1,4 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
+import io
 import os
 import threading
 import time
@@ -59,6 +60,30 @@ def proxy_for(host):
     return p
 
 
+def _dec(r):
+    enc = (r.headers.get("content-encoding") or "").lower()
+    if not enc or not r.content:
+        return r
+    try:
+        raw = r.content
+        if enc == "zstd":
+            import zstandard
+            with zstandard.ZstdDecompressor().stream_reader(io.BytesIO(raw)) as rd:
+                raw = rd.read()
+        elif enc == "br":
+            import brotli
+            raw = brotli.decompress(raw)
+        elif enc == "deflate":
+            raw = zlib.decompress(raw)
+        else:
+            return r
+        r._content = raw
+        r.headers["content-encoding"] = "identity"
+    except Exception:
+        pass
+    return r
+
+
 def _bad(px):
     with _LOCK:
         _BAD[px] = _BAD.get(px, 0) + 1
@@ -70,6 +95,7 @@ def session(host):
                          verify=False, http2=False)
     except TypeError:
         s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT, verify=False)
+    s.headers["Accept-Encoding"] = "gzip, deflate, br"
     px = proxy_for(host)
     if px:
         s.proxies = {"http": px, "https": px}
@@ -145,6 +171,7 @@ def request(host, path, method="GET", body=None, ctype="", referer="", auth=None
             time.sleep(0.6 * (attempt + 1))
             continue
         last_r = r
+        _dec(r)
         if r.status_code in (429, 503) and attempt < RETRIES:
             time.sleep(1.2 * (attempt + 1))
             continue
