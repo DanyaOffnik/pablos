@@ -176,6 +176,15 @@ def work(host, st, use_browser=True, full=False):
         return host, rec
     try:
         return _work(host, st, use_browser, full)
+    except Exception:
+        _log("%s сбой: %s" % (host, traceback.format_exc().replace("\n", " | ")[:300]))
+        rec = st.get(host) or {}
+        rec.setdefault("notes", []).append("сбой")
+        rec["done"] = True
+        rec["at"] = time.strftime("%Y-%m-%d %H:%M")
+        st[host] = rec
+        _DIRTY[0] = True
+        return host, rec
     finally:
         http.drop(host)
 
@@ -270,12 +279,15 @@ def _work(host, st, use_browser, full):
             th = []
         if th:
             rec["notes"].append("шаблоны: %d" % len(th))
-            score = min(12, score + min(4, sum(c for _, _, c in th) // 4))
-            loud = [(i, p, c) for i, p, c in th if c >= 6]
+            score = min(12, score + min(4, len(th) * 2))
+            strong = ("x-bx-restore", "x-ps-parameters", "sqli", "x-wp-env",
+                      "x-jm-config", "x-oc-dump", "x-fr-guest", "x-jm-users")
+            loud = [f for f in th if str(f.get("tag", "")).startswith(strong)]
             if loud:
-                lvl = 2 if max(c for _, _, c in loud) >= 8 else 3
+                lvl = 2 if len(loud) else 3
                 notify.send_lvl(lvl, "ЗАЦЕПКИ\n%s\n%s" % (
-                    host, "\n".join("%s: %s" % (i, p[:40]) for i, p, _ in loud[:4])))
+                    host, "\n".join("%s: %s" % (f.get("tag"), str(f.get("url"))[:60])
+                                     for f in loud[:4])))
 
     if score >= 2 and time.time() - t0 < 400:
         _stage(st, host, "файлы", rec)
@@ -306,15 +318,15 @@ def _work(host, st, use_browser, full):
                 ex = _call(extract.run, 420 if full else 120, host, sq, full)[1] or []
                 if ex:
                     rec["notes"].append("вывод: %d" % len(ex))
-                    loud = [f for f in ex if f["tag"] in ("extract:база", "extract:таблицы")]
+                    loud = [f for f in ex if f.get("tag") in ("extract:база", "extract:таблицы")]
                     if loud:
-                        notify.send_lvl(2, "ИНЪЕКЦИЯ\n%s\n%s" % (host, loud[0]["extra"]))
+                        notify.send_lvl(2, "ИНЪЕКЦИЯ\n%s\n%s" % (host, loud[0].get("extra", "")))
 
     if score >= 4 and time.time() - t0 < 400:
         _stage(st, host, "архивы", rec)
         ah = _call(arch.run, 120, host)[1] or []
-        if ah:
-            rec["notes"].append("архив " + ah[0][1])
+        if ah and isinstance(ah[0], (list, tuple)) and len(ah[0]) > 1:
+            rec["notes"].append("архив " + str(ah[0][1]))
             notify.send_lvl(3, "АРХИВ\n%s\n%s" % (host, ah[0][0]))
 
     hits = []
