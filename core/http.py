@@ -121,6 +121,7 @@ def request(host, path, method="GET", body=None, ctype="", referer="", auth=None
         kw["data"] = body or ""
 
     last = None
+    last_r = None
     for attempt in range((RETRIES if tries is None else tries) + 1):
         s = sess or session(host)
         try:
@@ -134,10 +135,13 @@ def request(host, path, method="GET", body=None, ctype="", referer="", auth=None
                 drop(host)
             time.sleep(0.6 * (attempt + 1))
             continue
+        last_r = r
         if r.status_code in (429, 503) and attempt < RETRIES:
             time.sleep(1.2 * (attempt + 1))
             continue
         return r
+    if last_r is not None:
+        return last_r
     if last is not None:
         raise last
     raise RuntimeError("request failed")
