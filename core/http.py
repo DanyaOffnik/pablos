@@ -65,7 +65,8 @@ def _bad(px):
 
 
 def session(host):
-    s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT, verify=False)
+    s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT, verify=False,
+                     http2=False)
     px = proxy_for(host)
     if px:
         s.proxies = {"http": px, "https": px}
@@ -128,6 +129,11 @@ def request(host, path, method="GET", body=None, ctype="", referer="", auth=None
             r = s.request(method, url, **kw)
         except Exception as e:
             last = e
+            msg = str(e)
+            if "HTTP/2" in msg or "stream" in msg or "reset by server" in msg:
+                drop(host)
+                time.sleep(0.4)
+                continue
             if not sess:
                 px = _PROX.get(host)
                 if px:
