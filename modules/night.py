@@ -92,7 +92,7 @@ def _save(d):
     _DIRTY[0] = False
 
 
-def _saver(stop):
+def _saver(stop, st):
     while not stop.wait(5):
         if _DIRTY[0]:
             _save(st)
@@ -538,7 +538,7 @@ def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
     stop = threading.Event()
     box = [0]
     done = 0
-    threading.Thread(target=_saver, args=(stop,), daemon=True).start()
+    threading.Thread(target=_saver, args=(stop, st), daemon=True).start()
     threading.Thread(target=_painter, args=(st, box, total, stop, left, workers), daemon=True).start()
 
     window = workers + 1
