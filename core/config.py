@@ -1,4 +1,4 @@
-import os
+﻿import os
 import sys
 
 if getattr(sys, "frozen", False):
@@ -31,6 +31,7 @@ STOP = os.path.join(DATA, "STOP")
 PROXIES = os.path.join(DATA, "proxies.txt")
 
 TIMEOUT = 20
+CONNECT = 8
 
 LEASE_TTL = 1800
 HEARTBEAT = 900

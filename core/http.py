@@ -13,7 +13,11 @@ from core import browser, config
 SESS_MAX = 32
 PROX_MAX = 512
 BAD_LIMIT = 3
-RETRIES = 2
+RETRIES = 1
+
+
+def _tmo():
+    return (config.CONNECT, config.TIMEOUT)
 
 _LOCK = threading.Lock()
 _PROX = OrderedDict()
@@ -91,7 +95,7 @@ def _bad(px):
 
 def session(host):
     try:
-        s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT,
+        s = creq.Session(impersonate="chrome", timeout=_tmo(),
                          verify=False, http2=False)
     except TypeError:
         s = creq.Session(impersonate="chrome", timeout=config.TIMEOUT, verify=False)
@@ -144,7 +148,7 @@ def request(host, path, method="GET", body=None, ctype="", referer="", auth=None
     if ctype:
         h["Content-Type"] = ctype
     kw = {"headers": h, "allow_redirects": True,
-          "timeout": timeout or config.TIMEOUT}
+          "timeout": timeout or _tmo()}
     if auth:
         kw["auth"] = auth
     if method == "POST":
@@ -159,6 +163,9 @@ def request(host, path, method="GET", body=None, ctype="", referer="", auth=None
         except Exception as e:
             last = e
             msg = str(e)
+            if "Timeout" in type(e).__name__ or "timed out" in msg.lower():
+                drop(host)
+                break
             if "HTTP/2" in msg or "stream" in msg or "reset by server" in msg:
                 drop(host)
                 time.sleep(0.4)
