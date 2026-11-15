@@ -53,7 +53,6 @@ ERRS = os.path.join(RUN, "errors.log")
 LOCK = threading.Lock()
 SEM = threading.Semaphore(2)
 SLOTS = threading.BoundedSemaphore(16)
-SLOTS = threading.BoundedSemaphore(16)
 STAGE = ThreadPoolExecutor(max_workers=16)
 STAGE_LIMIT = 45
 
@@ -219,7 +218,6 @@ def work(host, st, use_browser=True, full=False):
 
 def _work(host, st, use_browser, full):
     rec = st.get(host) or {}
-    _TL.deadline = time.time() + 600
     _TL.deadline = time.time() + 600
     _stage(st, host, "проверка", rec)
 
@@ -476,9 +474,6 @@ def _row(host, rec):
     else:
         c, tail = ui.GREY, "ждёт"
     print("  " + c + "%-28s %3d %-26s" % (host, s, tail[:26]) + ui.OFF, flush=True)
-
-
-_PAINT = [False]
 
 
 _PAINT = [False]
