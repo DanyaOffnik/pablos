@@ -52,6 +52,7 @@ CREDS = os.path.join(RUN, "creds.txt")
 ERRS = os.path.join(RUN, "errors.log")
 LOCK = threading.Lock()
 SEM = threading.Semaphore(2)
+SLOTS = threading.BoundedSemaphore(16)
 STAGE = ThreadPoolExecutor(max_workers=16)
 STAGE_LIMIT = 45
 
@@ -108,14 +109,35 @@ def _run(fn, buf, a):
 
 def _call(fn, limit, *a):
     buf = sio.StringIO()
-    fut = STAGE.submit(_run, fn, buf, a)
-    try:
-        out = fut.result(timeout=limit or STAGE_LIMIT)
-    except Exception as e:
-        if type(e).__name__ == "TimeoutError":
-            return buf.getvalue(), None, "таймаут"
-        return buf.getvalue(), None, str(e).splitlines()[0]
-    return buf.getvalue(), out, ""
+    box = {}
+    dl = getattr(_TL, "deadline", 0)
+    if dl:
+        left = dl - time.time()
+        if left <= 3:
+            return "", None, "бюджет"
+        limit = min(limit or STAGE_LIMIT, left)
+    if not SLOTS.acquire(timeout=5):
+        return "", None, "очередь"
+
+    def _t():
+        _TL.buf = buf
+        try:
+            box["out"] = fn(*a)
+        except BaseException as e:
+            box["err"] = e
+        finally:
+            _TL.buf = None
+
+    th = threading.Thread(target=_t, daemon=True)
+    th.start()
+    th.join(limit or STAGE_LIMIT)
+    alive = th.is_alive()
+    SLOTS.release()
+    if alive:
+        return buf.getvalue(), None, "таймаут"
+    if "err" in box:
+        return buf.getvalue(), None, str(box["err"]).splitlines()[0]
+    return buf.getvalue(), box.get("out"), ""
 
 
 def _blocked(host):
@@ -196,6 +218,7 @@ def work(host, st, use_browser=True, full=False):
 
 def _work(host, st, use_browser, full):
     rec = st.get(host) or {}
+    _TL.deadline = time.time() + 600
     _stage(st, host, "проверка", rec)
 
     kind = _call(engine.detect, 30, host)[1]
@@ -453,27 +476,47 @@ def _row(host, rec):
     print("  " + c + "%-28s %3d %-26s" % (host, s, tail[:26]) + ui.OFF, flush=True)
 
 
+_PAINT = [False]
+
+
 def _draw(st, done, total, order, workers=0):
-    ui.clear()
+    w = sys.stdout
+    w.write("\033[H")
     ui.banner()
-    ui.head("НОЧНОЙ ПРОГОН", "%d / %d  потоков %d" % (done, total, workers))
-    for host in order:
+    ui.head("НОЧНОЙ ПРОГОН",
+            "%d / %d  потоков %d" % (done, total, workers))
+    live = [h for h in order if not (st.get(h) or {}).get("done")]
+    fin = [h for h in order if (st.get(h) or {}).get("done")]
+    show = live[:26] + fin[-4:]
+    for host in show:
         _row(host, st.get(host) or {})
+    if len(order) > len(show):
+        print("  ... ещё %d" % (len(order) - len(show)))
     if TAIL:
         print()
-        for line in TAIL:
+        for line in TAIL[-4:]:
             print("  " + ui.YELLOW + "  ! " + line + ui.OFF)
     if os.path.isfile(STOP):
         print()
         ui.warn("найден STOP, встаю после текущих")
+    w.write("\033[J")
+    try:
+        w.flush()
+    except Exception:
+        pass
 
 
 def _painter(st, box, total, stop, order, workers=0):
-    while not stop.wait(2):
+    while not stop.wait(1.5):
+        if _PAINT[0]:
+            continue
+        _PAINT[0] = True
         try:
             _draw(st, box[0], total, order, workers)
         except Exception:
             pass
+        finally:
+            _PAINT[0] = False
 
 
 def run(only=None, n_workers=None, n_limit=None, n_mode=None, n_browser=None):
