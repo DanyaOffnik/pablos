@@ -1,0 +1,2053 @@
+<!doctype html>
+<html lang="ru-RU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Страница не найдена - Eco Lares</title>
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:title" content="Страница не найдена - Eco Lares" />
+	<meta property="og:site_name" content="Eco Lares" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://ecolares.ru/#website","url":"https://ecolares.ru/","name":"Eco Lares - безворсовые ковры","description":"Купить стильный ковер для дома в ECO LARES. Ковры разных размеров и цветов, современные коллекции для спальни, гостиной, детской и других помещений.","publisher":{"@id":"https://ecolares.ru/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ecolares.ru/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"ru-RU"},{"@type":"Organization","@id":"https://ecolares.ru/#organization","name":"Eco Lares - ковер на основе хлопка","url":"https://ecolares.ru/","logo":{"@type":"ImageObject","inLanguage":"ru-RU","@id":"https://ecolares.ru/#/schema/logo/image/","url":"https://ecolares.ru/wp-content/uploads/2026/09/logo_green@2x_2.svg","contentUrl":"https://ecolares.ru/wp-content/uploads/2026/09/logo_green@2x_2.svg","width":"1024","height":"1024","caption":"Eco Lares - ковер на основе хлопка"},"image":{"@id":"https://ecolares.ru/#/schema/logo/image/"},"sameAs":["https://vk.ru/eco.lares","https://ru.pinterest.com/eco_lares/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='wc-blocks-style-css' href='https://ecolares.ru/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.5.3' media='all' />
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id="woocommerce-inline-inline-css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='my-fancybox-css' href='https://ecolares.ru/wp-content/themes/eco_erq/css/fancybox.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='my-app-css' href='https://ecolares.ru/wp-content/themes/eco_erq/css/app.css?ver=1793885409' media='all' />
+<link rel='stylesheet' id='my-style-main-css' href='https://ecolares.ru/wp-content/themes/eco_erq/style.css?ver=1782340504' media='all' />
+<script id="wp-yandex-metrika_YmEc-js" src="https://ecolares.ru/wp-content/plugins/wp-yandex-metrika/assets/YmEc.min.js?ver=1.2.4"></script>
+<script id="wp-yandex-metrika_YmEc-js-after">
+window.tmpwpym={datalayername:'dataLayer',counters:JSON.parse('[{"number":"110453815","webvisor":"1"},{"number":"111320562","webvisor":"1"}]'),targets:JSON.parse('[]')};
+//# sourceURL=wp-yandex-metrika_YmEc-js-after
+</script>
+<script id="jquery-core-js" src="https://ecolares.ru/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://ecolares.ru/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="wp-yandex-metrika_frontend-js" src="https://ecolares.ru/wp-content/plugins/wp-yandex-metrika/assets/frontend.min.js?ver=1.2.4"></script>
+<script data-wp-strategy="defer" defer id="wc-jquery-blockui-js" src="https://ecolares.ru/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.5.3"></script>
+<script id="wc-add-to-cart-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"\u041f\u0440\u043e\u0441\u043c\u043e\u0442\u0440 \u043a\u043e\u0440\u0437\u0438\u043d\u044b","cart_url":"https://ecolares.ru/cart/","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wc-add-to-cart-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="wc-add-to-cart-js" src="https://ecolares.ru/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.5.3"></script>
+<script data-wp-strategy="defer" defer id="wc-js-cookie-js" src="https://ecolares.ru/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.5.3"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u044c \u043f\u0430\u0440\u043e\u043b\u044c","i18n_password_hide":"\u0421\u043a\u0440\u044b\u0442\u044c \u043f\u0430\u0440\u043e\u043b\u044c"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="woocommerce-js" src="https://ecolares.ru/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.5.3"></script>
+<link rel="https://api.w.org/" href="https://ecolares.ru/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ecolares.ru/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.4" />
+<meta name="generator" content="WooCommerce 10.5.3" />
+<meta name="verification" content="f612c7d25f5690ad41496fcfdbf8d1" />	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	        <!-- Yandex.Metrica counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () {
+                    (m[i].a = m[i].a || []).push(arguments)
+                };
+                m[i].l = 1 * new Date();
+                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym("110453815", "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+                ecommerce: "dataLayer",
+                params: {
+                    __ym: {
+                        "ymCmsPlugin": {
+                            "cms": "wordpress",
+                            "cmsVersion":"7.1",
+                            "pluginVersion": "1.2.4",
+                            "ymCmsRip": "2333575466"
+                        }
+                    }
+                }
+            });
+        </script>
+        <!-- /Yandex.Metrica counter -->
+                <!-- Yandex.Metrica counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] = m[i] || function () {
+                    (m[i].a = m[i].a || []).push(arguments)
+                };
+                m[i].l = 1 * new Date();
+                k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+            })
+
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+            ym("111320562", "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+                ecommerce: "dataLayer",
+                params: {
+                    __ym: {
+                        "ymCmsPlugin": {
+                            "cms": "wordpress",
+                            "cmsVersion":"7.1",
+                            "pluginVersion": "1.2.4",
+                            "ymCmsRip": "2333575466"
+                        }
+                    }
+                }
+            });
+        </script>
+        <!-- /Yandex.Metrica counter -->
+        <link rel="icon" href="https://ecolares.ru/wp-content/uploads/2026/03/cropped-favikon-100x100.png" sizes="32x32" />
+<link rel="icon" href="https://ecolares.ru/wp-content/uploads/2026/03/cropped-favikon-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ecolares.ru/wp-content/uploads/2026/03/cropped-favikon-300x300.png" />
+<meta name="msapplication-TileImage" content="https://ecolares.ru/wp-content/uploads/2026/03/cropped-favikon-300x300.png" />
+<link rel='stylesheet' id='contact-form-7-css' href='https://ecolares.ru/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.5' media='all' />
+
+</head>
+
+<body class="error404 wp-theme-eco_erq theme-eco_erq woocommerce-no-js woo-variation-gallery woo-variation-gallery-theme-eco_erq">
+  
+  
+  <div class="wrapper">
+
+          <div data-fls-watcher class="header-top-block">
+        <div class="header-top-block__container">
+          <div class="header-top">
+                          <a href="/kollekczii/"
+               class="header-top-link"
+               >
+               Внимание: увеличены сроки изготовления ковров увеличены до 30  рабочих дней. Пожалуйста, учитывайте это при заказе.               <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" width="6" height="10" alt="Image">
+             </a>
+                    </div>
+       </div>
+     </div>
+   
+   <header data-fls-header class="header">
+    <div class="header__container">
+      <div class="header-menu">
+        <div class="header-menu-top">
+          <button class="header-menu-button" type="button">
+            <span></span>
+          </button>
+
+                    <a href="https://ecolares.ru/" class="header__logo"
+           >
+                       <img
+              src="https://ecolares.ru/wp-content/uploads/2026/02/logo_white_2-1.svg"
+              width="244"
+              height="54"
+              alt=""
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            >
+                                <img
+              src="https://ecolares.ru/wp-content/uploads/2026/02/logo_green_3-1.svg"
+              width="244"
+              height="54"
+              alt=""
+              loading="lazy"
+              decoding="async"
+            >
+                  </a>
+
+                <div data-fls-dynamic=".header-menu-list-mob,1088,1" class="header-nav">
+          <ul>
+                                            <li>
+                    <button type="button" class="header-nav-button" data-nav="collections">
+                      Коллекции                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/chewBottom.svg" alt="Image">
+                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/close.svg" alt="Image">
+                    </button>
+                  </li>
+
+                                             <li>
+                    <button type="button" class="header-nav-button" data-nav="room">
+                      Помещение                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/chewBottom.svg" alt="Image">
+                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/close.svg" alt="Image">
+                    </button>
+                  </li>
+
+                                             <li>
+                    <button type="button" class="header-nav-button" data-nav="size">
+                      Размер                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/chewBottom.svg" alt="Image">
+                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/close.svg" alt="Image">
+                    </button>
+                  </li>
+
+                                             <li>
+                    <button type="button" class="header-nav-button" data-nav="colors">
+                      Цвет                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/chewBottom.svg" alt="Image">
+                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/close.svg" alt="Image">
+                    </button>
+                  </li>
+
+                                             <li>
+                    <button type="button" class="header-nav-button" data-nav="accessories">
+                      Аксессуары                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/chewBottom.svg" alt="Image">
+                      <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/close.svg" alt="Image">
+                    </button>
+                  </li>
+
+                                           <li>
+                  <a href="/novinki/" class="header-nav-button"
+                   >
+                   Новинки                 </a>
+               </li>
+                                          <li>
+                    <a class="carpet-designer" href="/konstruktor-kovrov/"
+                     >
+                     <span>Конструктор ковров</span>
+                   </a>
+                 </li>
+
+                                          <li class="only-mobile">
+                  <a href="https://ecolares.ru/o-kompanii/" class="header-nav-button"
+                   >
+                   О компании                 </a>
+               </li>
+                                        <li class="only-mobile">
+                  <a href="https://ecolares.ru/kontakty/" class="header-nav-button"
+                   >
+                   Контакты                 </a>
+               </li>
+                                        </ul>
+     </div>
+
+     <div class="header-buttons">
+            <button type="button" class="header-search-button" data-role="open-search-widget" aria-label="Поиск">
+        <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/search-white.png" alt="" loading="eager" decoding="async">
+        <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/search-green.png" alt="" loading="eager" decoding="async">
+      </button>
+
+            <a href="/favorite/"
+       >
+               <img src="https://ecolares.ru/wp-content/uploads/2026/02/heart.svg" alt="" loading="eager" decoding="async">
+                    <img src="https://ecolares.ru/wp-content/uploads/2026/02/heartg.svg" alt="" loading="eager" decoding="async">
+            <span class="count --favorite-count">0</span>
+    </a>
+
+    <a href="/cart/"
+     >
+           <img src="https://ecolares.ru/wp-content/uploads/2026/02/cart.svg" alt="" loading="eager" decoding="async">
+              <img src="https://ecolares.ru/wp-content/uploads/2026/02/cartg.svg" alt="" loading="eager" decoding="async">
+        <span class="count --cart-count">
+      0    </span>
+  </a>
+</div>
+</div>
+
+<div class="header-menu-list-mob"></div>
+
+  <div class="header-menu-list">
+    <div class="header-menu-list-wrapper">
+
+              <div class="header-menu-list-items --pc" data-list="collections">
+          <h4 class="back-menu">
+            <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+            Коллекции          </h4>
+          
+                      <ul>
+
+                                                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="novogodnyaya-kollekcziya"
+                      >
+                      Новогодняя коллекция                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="kovry-hvostogramm"
+                      >
+                      Ковры Хвостограмм                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="sport"
+                      >
+                      Спорт                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="kovrovye-igry"
+                      >
+                      Ковровые игры                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="enimalz"
+                      >
+                      Энималз                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="eklektika"
+                      >
+                      Эклектика                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="vesna"
+                      >
+                      Весна                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="tatarskaya-kollekcziya"
+                      >
+                      Татарская коллекция                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="czirk"
+                      >
+                      Цирк                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="lares"
+                      >
+                      Lares                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="glitch"
+                      >
+                      Glitch                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="russkij-kod"
+                      >
+                      Русский код                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="trendi"
+                      >
+                      Trendi                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="japandi"
+                      >
+                      Japandi                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="anime"
+                      >
+                      Аниме                    </button>
+                  </li>
+                                    <li>
+                      <button
+                      type="button"
+                      data-list-subcategory
+                      data-value="individualnye-proekty"
+                      >
+                      Индивидуальные проекты                    </button>
+                  </li>
+                              
+              <li>
+                <a href="https://ecolares.ru/kollekczii/" type="button">
+                  Все ковры
+                  <div>
+                    <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeftW.svg" alt="Image">
+                  </div>
+                </a>
+              </li>
+            
+            
+        </ul>
+      
+    </div>
+          <div class="header-menu-list-items --pc" data-list="room">
+          <h4 class="back-menu">
+            <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+            Помещение          </h4>
+          
+          
+    </div>
+          <div class="header-menu-list-items --pc" data-list="size">
+          <h4 class="back-menu">
+            <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+            Размер          </h4>
+          <p><a href="/kak-podobrat-idealnyj-razmer-kovra/">В статье</a> рассказываем, как подобрать идеальный размер ковра</p>
+
+          
+    </div>
+          <div class="header-menu-list-items --pc" data-list="colors">
+          <h4 class="back-menu">
+            <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+            Цвет          </h4>
+          <p><a href="/sovety-po-podboru-ottenka-kovra-pod-lyuboj-interer/">В статье</a> &#8212; советы по подбору оттенка под любой интерьер</p>
+
+          
+    </div>
+          <div class="header-menu-list-items --pc" data-list="accessories">
+          <h4 class="back-menu">
+            <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+            Аксессуары          </h4>
+          
+                      <ul>
+
+              
+                                                            <li>
+                    <button
+                    type="button"
+                    data-list-subcategory
+                    data-value="mini-kovry"
+                    >
+                    Мини ковры                  </button>
+                </li>
+                                <li>
+                    <button
+                    type="button"
+                    data-list-subcategory
+                    data-value="pledy"
+                    >
+                    Пледы                  </button>
+                </li>
+                          
+                        <li>
+              <a href="https://ecolares.ru/product-category/aksessuary/" type="button">
+                Все аксессуары
+                <div>
+                  <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeftW.svg" alt="Image">
+                </div>
+              </a>
+            </li>
+            
+          
+        </ul>
+      
+    </div>
+  
+</div>
+<div class="header-menu-list-content">
+
+      <div class="header-menu-list-content-items" data-list="collections">
+      <h4 class="back-menu">
+        <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+        Коллекции      </h4>
+
+              
+          
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="novogodnyaya-kollekcziya">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="novogodnyaya-kollekcziya"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="kovry-hvostogramm">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="kovry-hvostogramm"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="sport">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="sport"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="kovrovye-igry">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="kovrovye-igry"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="enimalz">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="enimalz"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="eklektika">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="eklektika"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="vesna">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="vesna"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="tatarskaya-kollekcziya">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="tatarskaya-kollekcziya"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="czirk">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="czirk"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="lares">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="lares"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="glitch">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="glitch"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="russkij-kod">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="russkij-kod"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="trendi">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="trendi"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="japandi">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="japandi"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="anime">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="anime"></div>
+            
+          </div>
+
+        
+            <div class="header-menu-list-content-items-block"
+            data-list-subcategory="individualnye-proekty">
+
+                          <div class="eco-menu-ajax-placeholder" data-eco-menu="collections" data-term-slug="individualnye-proekty"></div>
+            
+          </div>
+
+        
+      
+    
+    
+    
+    
+    
+</div>
+    <div class="header-menu-list-content-items" data-list="room">
+      <h4 class="back-menu">
+        <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+        Помещение      </h4>
+
+      
+                  <div class="header-menu-list-content-items-block">
+          
+            <a href="https://ecolares.ru/shop/?space=19">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate1.webp" class="attachment-full size-full" alt="Гостиная" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate1.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate1-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate1-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate1-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Гостиная                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=20">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate2.webp" class="attachment-full size-full" alt="Спальня" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate2.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate2-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate2-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate2-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Спальня                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=42">
+              <div class="menu-image-link">
+                <img width="1920" height="1920" src="https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1.jpeg" class="attachment-full size-full" alt="Детская" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1.jpeg 1920w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-300x300.jpeg 300w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-1024x1024.jpeg 1024w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-150x150.jpeg 150w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-768x768.jpeg 768w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-1536x1536.jpeg 1536w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-550x550.jpeg 550w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-600x600.jpeg 600w, https://ecolares.ru/wp-content/uploads/2026/07/detskaya-1-100x100.jpeg 100w" sizes="auto, (max-width: 1920px) 100vw, 1920px" />              </div>
+
+              <div class="menu-text-link">
+                Детская                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=43">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate4.webp" class="attachment-full size-full" alt="Кухня" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate4.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate4-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate4-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate4-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Кухня                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=44">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate5.webp" class="attachment-full size-full" alt="Ванная" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate5.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate5-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate5-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate5-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Ванная                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=45">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate6.webp" class="attachment-full size-full" alt="Балкон/Терраса" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate6.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate6-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate6-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate6-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Балкон/Терраса                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=86">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate7.webp" class="attachment-full size-full" alt="Коридор" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate7.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate7-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate7-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate7-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Коридор                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+          
+            <a href="https://ecolares.ru/shop/?space=87">
+              <div class="menu-image-link">
+                <img width="446" height="446" src="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate8.webp" class="attachment-full size-full" alt="Коммерция" loading="lazy" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate8.webp 446w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate8-300x300.webp 300w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate8-150x150.webp 150w, https://ecolares.ru/wp-content/uploads/2026/02/collectionscreate8-100x100.webp 100w" sizes="auto, (max-width: 446px) 100vw, 446px" />              </div>
+
+              <div class="menu-text-link">
+                Коммерция                <img src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="" loading="lazy">
+              </div>
+            </a>
+
+                  </div>
+      
+    
+    
+    
+    
+</div>
+    <div class="header-menu-list-content-items" data-list="size">
+      <h4 class="back-menu">
+        <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+        Размер      </h4>
+
+      
+    
+                  <div class="header-menu-list-content-items-block">
+                      <a class="select-size-card" href="https://ecolares.ru/shop/?size=21">
+              <div class="select-size-card__image">
+                <img loading="lazy" width="175" height="199" src="https://ecolares.ru/wp-content/uploads/2026/06/maliy.png" class="attachment-full size-full" alt="" decoding="async" />              </div>
+
+              <div class="select-size-card__title">
+                <h6>
+                  Малые ковры                  <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+                </h6>
+
+                                  <p>от 50х70 до 80х300</p>
+                              </div>
+            </a>
+                      <a class="select-size-card" href="https://ecolares.ru/shop/?size=22">
+              <div class="select-size-card__image">
+                <img loading="lazy" width="272" height="210" src="https://ecolares.ru/wp-content/uploads/2026/02/size2.webp" class="attachment-full size-full" alt="" decoding="async" fetchpriority="high" />              </div>
+
+              <div class="select-size-card__title">
+                <h6>
+                  Средние ковры                  <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+                </h6>
+
+                                  <p>от 120х180 до 160х230</p>
+                              </div>
+            </a>
+                      <a class="select-size-card" href="https://ecolares.ru/shop/?size=23">
+              <div class="select-size-card__image">
+                <img loading="lazy" width="323" height="238" src="https://ecolares.ru/wp-content/uploads/2026/05/group-203.png" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/05/group-203.png 323w, https://ecolares.ru/wp-content/uploads/2026/05/group-203-300x221.png 300w" sizes="(max-width: 323px) 100vw, 323px" />              </div>
+
+              <div class="select-size-card__title">
+                <h6>
+                  Большие ковры                  <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+                </h6>
+
+                                  <p>от 175х300 до 240х340</p>
+                              </div>
+            </a>
+          
+                      <p class="mob-text"><a href="/kak-podobrat-idealnyj-razmer-kovra/">В статье</a> рассказываем, как подобрать идеальный размер ковра</p>
+          
+        </div>
+      
+    
+    
+    
+</div>
+    <div class="header-menu-list-content-items" data-list="colors">
+      <h4 class="back-menu">
+        <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+        Цвет      </h4>
+
+      
+    
+    
+          
+      <div class="header-menu-list-content-items-block">
+        <div class="color-carpet-block">
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=196">
+              <div class="color-carpet-card__image">
+                                  <!-- если у терма нет картинки -->
+                  <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/placeholder.webp" alt="Изумрудны">
+                              </div>
+              <h6>
+                Изумрудны                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=195">
+              <div class="color-carpet-card__image">
+                                  <!-- если у терма нет картинки -->
+                  <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/placeholder.webp" alt="Бордовый">
+                              </div>
+              <h6>
+                Бордовый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=24">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color1.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color1.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color1-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Бежевый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=25">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color2.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color2.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color2-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Белый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=26">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color3.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color3.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color3-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Голубой                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=46">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color4.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color4.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color4-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Желтый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=47">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color5.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color5.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color5-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Зелёный                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=48">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color6.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color6.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color6-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Коричневый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=49">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color7.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color7.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color7-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Красный                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=50">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color8.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color8.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color8-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Оранжевый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=51">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color9.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color9.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color9-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Розовый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=52">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color10.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color10.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color10-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Серый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=53">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color11.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color11.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color11-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Синий                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=54">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color12.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color12.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color12-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Фиолетовый                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=55">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color13.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color13.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color13-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Черный                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                      
+            <a class="color-carpet-card" href="https://ecolares.ru/shop/?color=56">
+              <div class="color-carpet-card__image">
+                                  <img loading="lazy" width="124" height="124" src="https://ecolares.ru/wp-content/uploads/2026/02/color14.webp" class="attachment-full size-full" alt="" decoding="async" srcset="https://ecolares.ru/wp-content/uploads/2026/02/color14.webp 124w, https://ecolares.ru/wp-content/uploads/2026/02/color14-100x100.webp 100w" sizes="(max-width: 124px) 100vw, 124px" />                              </div>
+              <h6>
+                Многоцветный                <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="">
+              </h6>
+            </a>
+
+                  </div>
+
+                  <p class="mob-text"><a href="/sovety-po-podboru-ottenka-kovra-pod-lyuboj-interer/">В статье</a> &#8212; советы по подбору оттенка под любой интерьер</p>
+        
+      </div>
+
+    
+    
+</div>
+    <div class="header-menu-list-content-items" data-list="accessories">
+      <h4 class="back-menu">
+        <img loading="lazy" src="https://ecolares.ru/wp-content/themes/eco_erq/img/icons/shewLeft.svg" alt="Image">
+        Аксессуары      </h4>
+
+      
+    
+    
+    
+              <div class="header-menu-list-content-items-block"
+    data-list-subcategory="mini-kovry">
+
+          <div class="eco-menu-ajax-placeholder" data-eco-menu="accessories" data-term-slug="mini-kovry"></div>
+    
+  </div>
+      <div class="header-menu-list-content-items-block"
+    data-list-subcategory="pledy">
+
+          <div class="eco-menu-ajax-placeholder" data-eco-menu="accessories" data-term-slug="pledy"></div>
+    
+  </div>
+  
+</div>
+
+</div>
+</div>
+
+</div>
+</div>
+</header>
+
+<main class="page page--not-found">
+	<div class="blankets__container">
+		<nav aria-label="breadcrumb"><ol itemscope itemtype="http://schema.org/BreadcrumbList"><li><a href="https://ecolares.ru">Главная</a></li><li>Ошибка 404</li></ol></nav>	</div>
+	<section class="not-found">
+		<div class="not-found__container">
+			<div class="not-found-wrapper" style="background-image: url(https://ecolares.ru/wp-content/uploads/2026/02/404-1.png);">
+				<div class="not-found-block">
+
+											<h1>404: Страница <br />
+не найдена.</h1>
+					
+											<p>Давайте вернём вас в уют</p>
+					
+													
+						<div class="not-found-button">
+							<a href="/" class="button">На главную</a>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer data-fls-footer class="footer">
+  <div class="footer__container">
+    <div class="footer-block">
+      <div class="footer-block-info">
+                <a href="https://ecolares.ru/" class="footer__logo"
+         >
+                   <img src="https://ecolares.ru/wp-content/uploads/2026/02/logo_white_2-1.svg" alt="" loading="lazy">
+              </a>
+
+      <div class="footer-form">
+        <div class="footer-form-block">
+          <h5>Персональные скидки и ранний доступ к распродажам по подписке.</h5>
+
+          
+<div class="wpcf7 no-js" id="wpcf7-f10-o1" lang="ru-RU" dir="ltr" data-wpcf7-id="10">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/wp-config.php.dist#wpcf7-f10-o1" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="10" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f10-o1" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form__line">
+<span class="wpcf7-form-control-wrap" data-name="email_1"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email input" aria-required="true" aria-invalid="false" placeholder="Email" value="" type="email" name="email_1" /></span>
+<button type="submit" class="wpcf7-form-control wpcf7-submit button">Подписаться</button>
+</div>
+<label data-fls-checkbox="" class="checkbox">
+<input class="checkbox__input" type="checkbox" name="checkbox_1">
+<div class="checkbox__text">
+<div>Я согласен с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></div>
+</div>
+</label><span class="eco-hp-field" aria-hidden="true"><input type="text" name="eco_contact_line_2" value="" tabindex="-1" autocomplete="off" inputmode="none"></span><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+        </div>
+
+                  <a href="https://disk.yandex.ru/d/Xw7FsCZ9kPQ4Gw" class="button _orange"
+           target="_blank"           download>
+           Скачать каталог                       <img src="https://ecolares.ru/wp-content/uploads/2026/02/download.webp" alt="" loading="lazy">
+                  </a>
+      
+      <div class="footer-address">
+        <h6>Нас можно найти:</h6>
+        <ul>
+                        <li>
+                                  <a href="https://yandex.com/maps/org/eco_lares/151058327469/reviews/?ll=37.572298%2C55.811462&#038;z=17" target="_blank" rel="noopener noreferrer">
+                    г. Москва, Костякова, 7/7, Склад-шоурум                  </a>
+                              </li>
+                            <li>
+                                  <a href="https://yandex.com/maps/org/eco_lares/203293183953/?ll=49.015981%2C55.862891&#038;z=12" target="_blank" rel="noopener noreferrer">
+                    г. Казань, Шамиля Усманова 1, павильон 1, Московский рынок, Семейный шоурум «ECO LARES»                  </a>
+                              </li>
+                            <li>
+                                  <a href="https://yandex.com/maps/org/rugs_dealers/244096503970/?ll=30.311107%2C59.929047&#038;z=17" target="_blank" rel="noopener noreferrer">
+                    г. Санкт-Петербург, Казанская, 35, шоу-рум Rugs Dealers (Временно закрыт)                  </a>
+                              </li>
+                            <li>
+                                  <a href="https://yandex.com/maps/org/sut_/37910210243/?indoorLevel=1&#038;ll=37.584460%2C55.805528&#038;z=17" target="_blank" rel="noopener noreferrer">
+                    г. Москва, Большая Новодмитровская улица, 36 с9, магазин «Суть»                  </a>
+                              </li>
+                      </ul>
+      </div>
+
+      <div class="footer-site">
+        <ul>
+                        <li>
+                <a target="_blank" href="https://kubatura.ru/companies/ecolares/">
+                                      <img src="https://ecolares.ru/wp-content/uploads/2026/02/cuba.webp" alt="" loading="lazy">
+                                  </a>
+              </li>
+                            <li>
+                <a target="_blank" href="https://www.avito.ru/brands/i205678124/all?sellerId=2f7fb0e4fe2f0cc426cfe0fcac60399f">
+                                      <img src="https://ecolares.ru/wp-content/uploads/2026/02/avito.webp" alt="" loading="lazy">
+                                  </a>
+              </li>
+                      </ul>
+
+        <ul>
+                        <li>
+                <a target="_blank" href="https://www.ozon.ru/category/kovry-eco-lares/?__rr=1&#038;abt_att=1&#038;origin_referer=www.google.com">
+                                      <img src="https://ecolares.ru/wp-content/uploads/2026/02/frame-3594.png" alt="" loading="lazy">
+                                  </a>
+              </li>
+                            <li>
+                <a target="_blank" href="https://www.wildberries.ru/brands/310590789-eco-lares/kovry">
+                                      <img src="https://ecolares.ru/wp-content/uploads/2026/02/frame-3593.png" alt="" loading="lazy">
+                                  </a>
+              </li>
+                            <li>
+                <a target="_blank" href="https://goldapple.ru/brands/eco-lares?srsltid=AfmBOooKOVs0D1QbVWlGRIEv1KiSEZICmVBsNnj3EbK52QDTEHeVPJMM">
+                                      <img src="https://ecolares.ru/wp-content/uploads/2026/02/frame-3592.png" alt="" loading="lazy">
+                                  </a>
+              </li>
+                            <li>
+                <a target="_blank" href="https://market.yandex.ru/search?text=eco%20lares">
+                                      <img src="https://ecolares.ru/wp-content/uploads/2026/02/frame-3591.png" alt="" loading="lazy">
+                                  </a>
+              </li>
+                      </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-block-navigates">
+    <div class="footer-navigates-wrapper">
+
+      
+        
+                    <div class="footer-block-links">
+            <h6>Магазин</h6>
+
+            <ul><li id="menu-item-734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734"><a href="https://ecolares.ru/kollekczii/">Коллекции</a></li>
+<li id="menu-item-735" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735"><a href="https://ecolares.ru/novinki/">Новинки</a></li>
+<li id="menu-item-744" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-744"><a href="https://ecolares.ru/konstruktor-kovrov/">Конструктор ковров</a></li>
+</ul>
+          </div>
+        
+      
+                    <div class="footer-block-links">
+            <h6>Компания</h6>
+
+            <ul><li id="menu-item-747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-747"><a href="https://ecolares.ru/o-kompanii/">О компании</a></li>
+<li id="menu-item-750" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-750"><a href="https://ecolares.ru/stati/">Блог</a></li>
+<li id="menu-item-746" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-746"><a href="https://ecolares.ru/kontakty/">Контакты</a></li>
+<li id="menu-item-748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-748"><a href="https://ecolares.ru/otzyvy/">Отзывы</a></li>
+<li id="menu-item-1320" class="modal_menu_item menu-item menu-item-type-custom menu-item-object-custom menu-item-1320"><a href="#" data-popup="#cooperation" role="button">Сотрудничество</a></li>
+<li id="menu-item-1294" class="modal_menu_item menu-item menu-item-type-custom menu-item-object-custom menu-item-1294"><a href="#" data-popup="#offer" role="button">Вакансии</a></li>
+</ul>
+          </div>
+        
+      
+                    <div class="footer-block-links">
+            <h6>Помощь и поддержка</h6>
+
+            <ul><li id="menu-item-751" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-751"><a href="https://ecolares.ru/sovety-po-uhodu/">Советы по уходу</a></li>
+<li id="menu-item-752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-752"><a href="https://ecolares.ru/chasto-zadavaemye-voprosy/">Часто задаваемые вопросы</a></li>
+<li id="menu-item-755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-755"><a href="https://ecolares.ru/optovye-zakupki/">Оптовые закупки</a></li>
+<li id="menu-item-753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753"><a href="https://ecolares.ru/vozvrat-i-obmen-tovara/">Возврат и обмен товара</a></li>
+<li id="menu-item-754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-754"><a href="https://ecolares.ru/dostavka-i-oplata/">Доставка и оплата</a></li>
+</ul>
+          </div>
+        
+      
+    
+    <div class="footer-block-links">
+      
+              <h6>Связь с нами</h6>
+            
+      <ul>
+                  <li>
+            <a href="mailto:http://Ecolares@yandex.ru">
+             Ecolares@yandex.ru           </a>
+         </li>
+       
+               <li>
+          <a href="tel:79777594999">
+           +7 (977) 759-49-99         </a>
+       </li>
+     
+     <li class="footer-social">
+                <a href="https://vk.ru/eco.lares" target="_blank">
+                       <img src="https://ecolares.ru/wp-content/uploads/2026/02/1.svg" alt="" loading="lazy">
+                            </a>
+                <a href="https://t.me/eco_lares" target="_blank">
+                       <img src="https://ecolares.ru/wp-content/uploads/2026/02/tg.png" alt="" loading="lazy">
+                            </a>
+                <a href="https://ru.pinterest.com/eco_lares/" target="_blank">
+                       <img src="https://ecolares.ru/wp-content/uploads/2026/02/pint.png" alt="" loading="lazy">
+                            </a>
+                <a href="https://www.instagram.com/eco.lares/" target="_blank">
+                       <img src="https://ecolares.ru/wp-content/uploads/2026/02/inst.png" alt="" loading="lazy">
+                    *        </a>
+                <a href="https://web.max.ru/208407243" target="_blank">
+                       <img src="https://ecolares.ru/wp-content/uploads/2026/06/img_4240.png" alt="" loading="lazy">
+                            </a>
+        </li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer-block-copir">
+  <p>© 2026 ИП Дерябин Максим Сергеевич. Все права защищены.</p>
+
+  <ul>
+            <li>
+          <a href="/privacy-policy/"
+           >
+           Политика конфиденциальности.         </a>
+       </li>
+             <li>
+          <a href="/dogovor-publichnoj-oferty-o-prodazhe-tovarov/"
+           target="_blank">
+           Договор публичной оферты         </a>
+       </li>
+      </ul>
+
+   <p>* деятельность организации Meta Platforms Inc, ее продукта Instagram запрещена в Российской Федерации.</p>
+
+  <p>Безопасность платежей гарантируется использованием SSL протокола. Данные вашей банковской карты надежно защищены при оплате онлайн.</p>
+
+<ul>
+        <li>
+        <img src="https://ecolares.ru/wp-content/uploads/2026/02/1.webp" alt="image" loading="lazy">
+      </li>
+          <li>
+        <img src="https://ecolares.ru/wp-content/uploads/2026/02/2.webp" alt="image" loading="lazy">
+      </li>
+          <li>
+        <img src="https://ecolares.ru/wp-content/uploads/2026/02/3.webp" alt="image" loading="lazy">
+      </li>
+          <li>
+        <img src="https://ecolares.ru/wp-content/uploads/2026/02/4.webp" alt="image" loading="lazy">
+      </li>
+    </ul>
+
+  <a href="https://puurple.ru/" target="_blank">
+    PURPLE  </a>
+    </div>
+
+</div>
+</div>
+</div>
+</footer>
+
+    <div id="offer" aria-hidden="true" class="popup">
+      <div data-popup-wrapper class="popup__wrapper">
+        <div data-popup-body class="popup__body">
+          <div data-popup-content class="popup__content">
+            <div class="popup-content-info">
+              <h4>Вакансии</h4>              <p>Хотите стать частью нашей дружной команды?<br />
+Отправляйте свои контактные данные, напишите о себе и мы свяжемся с вами для обсуждения деталей.</p>                              <img width="227" height="311" src="https://ecolares.ru/wp-content/uploads/2026/02/offerform.webp" class="" alt="" decoding="async" loading="lazy" srcset="https://ecolares.ru/wp-content/uploads/2026/02/offerform.webp 227w, https://ecolares.ru/wp-content/uploads/2026/02/offerform-219x300.webp 219w" sizes="auto, (max-width: 227px) 100vw, 227px" />                          </div>
+
+                        <div class="popup-content-form">
+              <button data-popup-close type="button" class="popup__close" aria-label="Закрыть">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                  <path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                </svg>
+              </button>
+
+              
+<div class="wpcf7 no-js" id="wpcf7-f164-o2" lang="ru-RU" dir="ltr" data-wpcf7-id="164">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/wp-config.php.dist#wpcf7-f164-o2" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="164" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f164-o2" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-line-block">
+<div class="form__line">
+<label>Ваше имя</label>
+<span class="wpcf7-form-control-wrap" data-name="name_2"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="Введите имя" value="" type="text" name="name_2" /></span>
+</div>
+<div class="form__line">
+<label>Номер телефона*</label>
+<span class="wpcf7-form-control-wrap" data-name="tel_2"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="tel" name="tel_2" / data-fls-input-mask="+7(999) 999-99-99"></span>
+</div>
+</div>
+<div class="form__line">
+<label>Email</label>
+<span class="wpcf7-form-control-wrap" data-name="email_2"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email input" aria-invalid="false" placeholder="Alexey90@mail.ru" value="" type="email" name="email_2" /></span>
+</div>
+<div class="form__line">
+<label>Дополнительно</label>
+<span class="wpcf7-form-control-wrap" data-name="textarea_2"><textarea cols="40" rows="5" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input" aria-invalid="false" placeholder="Введите текст..." name="textarea_2"></textarea></span></div>
+<div class="form-buttons">
+<label data-fls-checkbox="" class="checkbox">
+<input class="checkbox__input" type="checkbox" name="checkbox_2">
+<div class="checkbox__text">
+<div>Я согласен с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></div>
+</div>
+</label>
+<button type="submit" class="wpcf7-form-control wpcf7-submit button _green">Отправить</button>
+</div><span class="eco-hp-field" aria-hidden="true"><input type="text" name="eco_contact_line_2" value="" tabindex="-1" autocomplete="off" inputmode="none"></span><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div id="cooperation" aria-hidden="true" class="popup">
+      <div data-popup-wrapper class="popup__wrapper">
+        <div data-popup-body class="popup__body">
+          <div data-popup-content class="popup__content">
+            <div class="popup-content-info">
+              <h4>Сотрудничество</h4>              <p>Мы рады сотрудничать со всеми!<br />
+Для обсуждения деталей оставьте свои контактные данные и свяжемся с вами.</p>                              <img width="228" height="311" src="https://ecolares.ru/wp-content/uploads/2026/02/coopirationform.webp" class="" alt="" decoding="async" loading="lazy" srcset="https://ecolares.ru/wp-content/uploads/2026/02/coopirationform.webp 228w, https://ecolares.ru/wp-content/uploads/2026/02/coopirationform-220x300.webp 220w" sizes="auto, (max-width: 228px) 100vw, 228px" />                          </div>
+
+                        <div class="popup-content-form">
+              <button data-popup-close type="button" class="popup__close" aria-label="Закрыть">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                  <path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                </svg>
+              </button>
+
+              
+<div class="wpcf7 no-js" id="wpcf7-f165-o3" lang="ru-RU" dir="ltr" data-wpcf7-id="165">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/wp-config.php.dist#wpcf7-f165-o3" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="165" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f165-o3" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-line-block">
+<div class="form__line">
+<label>Ваше имя</label>
+<span class="wpcf7-form-control-wrap" data-name="name_3"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="Введите имя" value="" type="text" name="name_3" /></span>
+</div>
+<div class="form__line">
+<label>Номер телефона*</label>
+<span class="wpcf7-form-control-wrap" data-name="tel_3"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="tel" name="tel_3" / data-fls-input-mask="+7(999) 999-99-99"></span>
+</div>
+</div>
+<div class="form__line">
+<label>Email</label>
+<span class="wpcf7-form-control-wrap" data-name="email_3"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email input" aria-invalid="false" placeholder="Alexey90@mail.ru" value="" type="email" name="email_3" /></span>
+</div>
+<div class="form__line">
+<label>Дополнительно</label>
+<span class="wpcf7-form-control-wrap" data-name="textarea_3"><textarea cols="40" rows="5" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input" aria-invalid="false" placeholder="Введите текст..." name="textarea_3"></textarea></span></div>
+<div class="form-buttons">
+<label data-fls-checkbox="" class="checkbox">
+<input class="checkbox__input" type="checkbox" name="checkbox_3">
+<div class="checkbox__text">
+<div>Я согласен с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></div>
+</div>
+</label>
+<button type="submit" class="wpcf7-form-control wpcf7-submit button _green">Отправить</button>
+</div><span class="eco-hp-field" aria-hidden="true"><input type="text" name="eco_contact_line_2" value="" tabindex="-1" autocomplete="off" inputmode="none"></span><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div id="сalculateСost" aria-hidden="true" class="popup">
+      <div data-popup-wrapper class="popup__wrapper">
+        <div data-popup-body class="popup__body">
+          <div data-popup-content class="popup__content">
+            <div class="popup-content-info">
+              <h4>Рассчитать стоимость</h4>              <p>Оставьте контакты — менеджер рассчитает стоимость с учетом всех ваших пожеланий и сообщит варианты.</p>                              <img width="412" height="248" src="https://ecolares.ru/wp-content/uploads/2026/02/preordertitle.webp" class="" alt="" decoding="async" loading="lazy" srcset="https://ecolares.ru/wp-content/uploads/2026/02/preordertitle.webp 412w, https://ecolares.ru/wp-content/uploads/2026/02/preordertitle-300x181.webp 300w" sizes="auto, (max-width: 412px) 100vw, 412px" />                          </div>
+
+                        <div class="popup-content-form">
+              <button data-popup-close type="button" class="popup__close" aria-label="Закрыть">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                  <path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                </svg>
+              </button>
+
+              
+<div class="wpcf7 no-js" id="wpcf7-f166-o4" lang="ru-RU" dir="ltr" data-wpcf7-id="166">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/wp-config.php.dist#wpcf7-f166-o4" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="166" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f166-o4" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-line-block">
+<div class="form__line">
+<label>Ваше имя</label>
+<span class="wpcf7-form-control-wrap" data-name="name_4"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="Введите имя" value="" type="text" name="name_4" /></span>
+</div>
+<div class="form__line">
+<label>Номер телефона*</label>
+<span class="wpcf7-form-control-wrap" data-name="tel_4"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="tel" name="tel_4" / data-fls-input-mask="+7(999) 999-99-99"></span>
+</div>
+</div>
+<div class="form__line">
+<label>Email</label>
+<span class="wpcf7-form-control-wrap" data-name="email_4"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email input" aria-invalid="false" placeholder="Alexey90@mail.ru" value="" type="email" name="email_4" /></span>
+</div>
+<div class="form__line">
+<label>Дополнительно</label>
+<span class="wpcf7-form-control-wrap" data-name="textarea_4"><textarea cols="40" rows="5" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input" aria-invalid="false" placeholder="Введите текст..." name="textarea_4"></textarea></span></div>
+<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="rug_length" />
+<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="rug_width" />
+<input class="wpcf7-form-control wpcf7-hidden" value="" type="hidden" name="rug_image_base64" />
+<div class="form-buttons">
+<label data-fls-checkbox="" class="checkbox">
+<input class="checkbox__input" type="checkbox" name="checkbox_4">
+<div class="checkbox__text">
+<div>Я согласен с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></div>
+</div>
+</label>
+<button type="submit" class="wpcf7-form-control wpcf7-submit button _green">Отправить</button>
+</div><span class="eco-hp-field" aria-hidden="true"><input type="text" name="eco_contact_line_2" value="" tabindex="-1" autocomplete="off" inputmode="none"></span><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div id="preOrderTitle" aria-hidden="true" class="popup">
+      <div data-popup-wrapper class="popup__wrapper">
+        <div data-popup-body class="popup__body">
+          <div data-popup-content class="popup__content">
+            <div class="popup-content-info">
+              <h4>Предзакажите &lt;span&gt;&quot;Название&quot;&lt;/span&gt;</h4>              <p>Оставьте контакты —  менеджер свяжется с вами, чтобы рассчитать стоимость и сроки доставки вашего ковра.</p>                              <img width="412" height="248" src="https://ecolares.ru/wp-content/uploads/2026/02/preordertitle-1.webp" class="" alt="" decoding="async" loading="lazy" srcset="https://ecolares.ru/wp-content/uploads/2026/02/preordertitle-1.webp 412w, https://ecolares.ru/wp-content/uploads/2026/02/preordertitle-1-300x181.webp 300w" sizes="auto, (max-width: 412px) 100vw, 412px" />                          </div>
+
+                        <div class="popup-content-form">
+              <button data-popup-close type="button" class="popup__close" aria-label="Закрыть">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                  <path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                </svg>
+              </button>
+
+              
+<div class="wpcf7 no-js" id="wpcf7-f167-o5" lang="ru-RU" dir="ltr" data-wpcf7-id="167">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/wp-config.php.dist#wpcf7-f167-o5" method="post" class="wpcf7-form init" aria-label="Контактная форма" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="167" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f167-o5" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-line-block">
+<div class="form__line">
+<label>Ваше имя</label>
+<span class="wpcf7-form-control-wrap" data-name="name_5"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="Введите имя" value="" type="text" name="name_5" /></span>
+</div>
+<div class="form__line">
+<label>Номер телефона*</label>
+<span class="wpcf7-form-control-wrap" data-name="tel_5"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel input" aria-required="true" aria-invalid="false" placeholder="+7" value="" type="tel" name="tel_5" / data-fls-input-mask="+7(999) 999-99-99"></span>
+</div>
+</div>
+<div class="form__line">
+<label>Email</label>
+<span class="wpcf7-form-control-wrap" data-name="email_5"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email input" aria-invalid="false" placeholder="Alexey90@mail.ru" value="" type="email" name="email_5" /></span>
+</div>
+<div class="form__line">
+<label>Дополнительно</label>
+<span class="wpcf7-form-control-wrap" data-name="textarea_5"><textarea cols="40" rows="5" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input" aria-invalid="false" placeholder="Введите текст..." name="textarea_5"></textarea></span></div>
+<div class="form-buttons">
+<label data-fls-checkbox="" class="checkbox">
+<input class="checkbox__input" type="checkbox" name="checkbox_5">
+<div class="checkbox__text">
+<div>Я согласен с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></div>
+</div>
+</label>
+<button type="submit" class="wpcf7-form-control wpcf7-submit button _green">Отправить</button>
+</div><span class="eco-hp-field" aria-hidden="true"><input type="text" name="eco_contact_line_2" value="" tabindex="-1" autocomplete="off" inputmode="none"></span><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <div id="shareExperience" aria-hidden="true" class="popup">
+      <div data-popup-wrapper class="popup__wrapper">
+        <div data-popup-body class="popup__body">
+          <div data-popup-content class="popup__content">
+            <div class="popup-content-info">
+              <h4>Поделитесь своим опытом</h4>              <p>Ваше мнение бесценно для нас! Расскажите, что вам понравилось в ковре, как он вписался в интерьер и насколько удобен в уходе.</p>                              <img width="323" height="293" src="https://ecolares.ru/wp-content/uploads/2026/02/shareexperience.webp" class="image-form-bottom" alt="" decoding="async" loading="lazy" srcset="https://ecolares.ru/wp-content/uploads/2026/02/shareexperience.webp 323w, https://ecolares.ru/wp-content/uploads/2026/02/shareexperience-300x272.webp 300w" sizes="auto, (max-width: 323px) 100vw, 323px" />                          </div>
+
+                        <div class="popup-content-form">
+              <button data-popup-close type="button" class="popup__close" aria-label="Закрыть">
+                <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path opacity="0.850056" d="M1.73333 1.48883L21.5469 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                  <path opacity="0.850056" d="M21.2667 1.48883L1.45309 21.0288" stroke="#052203" stroke-linecap="square"></path>
+                </svg>
+              </button>
+
+              
+<div class="wpcf7 no-js" id="wpcf7-f168-o6" lang="ru-RU" dir="ltr" data-wpcf7-id="168">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/wp-config.php.dist#wpcf7-f168-o6" method="post" class="wpcf7-form init" aria-label="Контактная форма" enctype="multipart/form-data" novalidate="novalidate" data-status="init">
+<fieldset class="hidden-fields-container"><input type="hidden" name="_wpcf7" value="168" /><input type="hidden" name="_wpcf7_version" value="6.1.5" /><input type="hidden" name="_wpcf7_locale" value="ru_RU" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f168-o6" /><input type="hidden" name="_wpcf7_container_post" value="0" /><input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</fieldset>
+<div class="form-line-block">
+<div class="form__line">
+<label>Ваше имя</label>
+<span class="wpcf7-form-control-wrap" data-name="name_6"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required input" aria-required="true" aria-invalid="false" placeholder="Введите имя" value="" type="text" name="name_6" /></span>
+</div>
+<div class="form__line">
+<label>Email</label>
+<span class="wpcf7-form-control-wrap" data-name="email_6"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-text wpcf7-validates-as-email input" aria-invalid="false" placeholder="Alexey90@mail.ru" value="" type="email" name="email_6" /></span>
+</div>
+</div>
+<div class="form__line">
+<label>Отзыв</label>
+<span class="wpcf7-form-control-wrap" data-name="textarea_6"><textarea cols="40" rows="2" maxlength="2000" class="wpcf7-form-control wpcf7-textarea input" aria-invalid="false" placeholder="Введите текст..." name="textarea_6"></textarea></span>
+</div>
+<div class="form__line --rating">
+<label>Ваша оценка:</label>
+<div data-fls-rating="set" data-fls-rating-value="3.6" class="rating"></div>
+<input class="wpcf7-form-control wpcf7-hidden" id="current_rating" value="" type="hidden" name="rating_6" />
+</div>
+<div class="form__line">
+<label>Прикрепите фото:</label>
+<div class="add-photo" data-upload="">
+<span class="wpcf7-form-control-wrap" data-name="file_6"><input size="40" class="wpcf7-form-control wpcf7-file" accept=".webp,.jpg,.png" aria-invalid="false" type="file" name="file_6" /></span>
+<button type="button" class="button _green">Выберите файл<img loading="lazy" src="/wp-content/themes/eco_erq/img/icons/addPhoto.svg" alt="Image">
+</button>
+<p>Или перетащите файл в формате WEBP, WEBP в эту область</p>
+<div class="add-photo__filename"></div>
+</div>
+</div>
+<div class="form-buttons">
+<label data-fls-checkbox="" class="checkbox">
+<input class="checkbox__input" type="checkbox" name="checkbox_5">
+<div class="checkbox__text">
+<div>Я согласен с <a href="/privacy-policy/" target="_blank">политикой конфиденциальности</a></div>
+</div>
+</label>
+<button type="submit" class="wpcf7-form-control wpcf7-submit button _green">Отправить</button>
+</div><span class="eco-hp-field" aria-hidden="true"><input type="text" name="eco_contact_line_2" value="" tabindex="-1" autocomplete="off" inputmode="none"></span><div class="wpcf7-response-output" aria-hidden="true"></div>
+</form>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  <div class="cookie-banner">
+    <div class="cookie-banner-wrapper">
+      <div class="cookie-banner-body ">
+        <div class="cookie-banner-content">
+          <div class="cookie-banner__text">Мы используем файлы cookie для улучшения работы сайта и повышения эффективности. Продолжив пользоваться сайтом, вы даёте своё согласие на применение файлов cookie.</div>
+          <div class="cookie-banner__buttons">
+            <a href="/privacy-policy/" class="button _white" target="_blank">Подробнее</a>
+            <button  class="button _green js-cookie-accept">Хорошо</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.wrapper -->
+
+<div class="product-search-widget" data-role="search-widget" aria-hidden="true">
+	<div class="product-search-widget__backdrop" data-role="close-search-widget"></div>
+	<div class="product-search-widget__panel" role="dialog" aria-modal="true" aria-label="Поиск">
+		<input
+			class="product-search-widget__input"
+			type="search"
+			placeholder="Поиск"
+			autocomplete="off"
+			data-role="search-input"
+		/>
+
+		<div class="product-search-widget__results" data-role="search-results" hidden>
+			<div class="product-search-widget__results-list" data-role="search-results-list"></div>
+		</div>
+	</div>
+</div>
+
+<style>
+	.product-search-widget{
+		position:fixed;
+		inset:0;
+		z-index:999999;
+		visibility:hidden;
+		pointer-events:none;
+	}
+	.product-search-widget.is-open,
+	.product-search-widget.is-closing{
+		visibility:visible;
+		pointer-events:auto;
+	}
+	.product-search-widget__backdrop{
+		position:absolute;
+		inset:0;
+		background:rgba(0,0,0,.35);
+		backdrop-filter:blur(5px);
+		opacity:0;
+		transition:opacity .28s ease;
+	}
+	.product-search-widget.is-open .product-search-widget__backdrop{opacity:1}
+	.product-search-widget.is-closing .product-search-widget__backdrop{opacity:0}
+	.product-search-widget__panel{
+		position:relative;
+		z-index:1;
+		max-width:720px;
+		margin:90px auto 0;
+		padding:0 20px;
+		opacity:0;
+		transform:translateY(-12px);
+		transition:opacity .32s cubic-bezier(.22,1,.36,1),transform .32s cubic-bezier(.22,1,.36,1);
+		transition-delay:.04s;
+		font-family:"Cygre",sans-serif;
+		font-weight:300;
+	}
+	.product-search-widget.is-open .product-search-widget__panel{
+		opacity:1;
+		transform:translateY(0);
+	}
+	.product-search-widget.is-closing .product-search-widget__panel{
+		opacity:0;
+		transform:translateY(-8px);
+		transition-delay:0s;
+	}
+	.product-search-widget__input{
+		width:100%;
+		height:70px;
+		padding:0 18px;
+		border-radius:16px;
+		border:1px solid #506D4D;
+		background:#f8f3de;
+		font-size:18px;
+		font-weight:300;
+		outline:none;
+	}
+	.product-search-widget__input:focus{box-shadow:0 0 0 3px rgba(80,109,77,.15)}
+	.product-search-widget__results{
+		margin-top:10px;
+		border-radius:16px;
+		border:1px solid #506D4D;
+		background:#fff;
+		overflow:hidden;
+		opacity:0;
+		transform:translateY(-6px);
+		transition:opacity .22s ease,transform .22s ease;
+	}
+	.product-search-widget__results.is-visible{
+		opacity:1;
+		transform:translateY(0);
+	}
+	.product-search-widget__results-list{
+		display:flex;
+		flex-direction:column;
+		max-height:min(420px,50vh);
+		overflow:auto;
+	}
+	.product-search-widget__item{
+		display:flex;
+		align-items:center;
+		gap:14px;
+		padding:12px 16px;
+		text-decoration:none;
+		color:inherit;
+		border-bottom:1px solid rgba(80,109,77,.12);
+	}
+	.product-search-widget__item:last-child{border-bottom:none}
+	.product-search-widget__item:hover{background:#f8f3de}
+	.product-search-widget__item-image{
+		flex:0 0 64px;
+		width:64px;
+		height:64px;
+		border-radius:12px;
+		overflow:hidden;
+		background:#f8f3de;
+	}
+	.product-search-widget__item-image img{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+		display:block;
+	}
+	.product-search-widget__item-body{
+		flex:1 1 auto;
+		min-width:0;
+	}
+	.product-search-widget__item-title{
+		font-size:16px;
+		font-weight:300;
+		line-height:1.3;
+		margin-bottom:4px;
+	}
+	.product-search-widget__item-sku,
+	.product-search-widget__item-meta{
+		font-size:13px;
+		font-weight:300;
+		color:rgba(0,0,0,.55);
+		line-height:1.35;
+	}
+	.product-search-widget__item-meta-size::before{
+		content:'•';
+		margin:0 6px;
+	}
+	@media (max-width: 520px){
+		.product-search-widget__item-meta{
+			display:flex;
+			flex-direction:column;
+			gap:4px;
+		}
+		.product-search-widget__item-meta-size::before{
+			content:none;
+			margin:0;
+		}
+	}
+	.product-search-widget__item-price{
+		flex:0 0 auto;
+		font-size:16px;
+		font-weight:300;
+		white-space:nowrap;
+	}
+	body.search-widget-open{
+		position:fixed;
+		width:100%;
+		left:0;
+		right:0;
+	}
+	.product-search-widget__empty{
+		padding:16px;
+		font-size:14px;
+		color:rgba(0,0,0,.6);
+	}
+	@media (prefers-reduced-motion:reduce){
+		.product-search-widget__backdrop,
+		.product-search-widget__panel,
+		.product-search-widget__results{transition:none}
+	}
+
+	/* Header search button (same icon swap as fav/cart). */
+	.header-buttons button.header-search-button{
+		border:0;
+		background:transparent;
+		padding:0;
+		cursor:pointer;
+		line-height:0;
+		position:relative;
+	}
+	.header-buttons button.header-search-button img{
+		width:20px;
+		height:20px;
+		display:block;
+	}
+	@media (max-width: 1088px){
+		.header-buttons button.header-search-button img{
+			height:auto;
+		}
+	}
+	.header-buttons button.header-search-button img:nth-child(2){display:none}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const openBtns = document.querySelectorAll('[data-role="open-search-widget"]');
+  const widget = document.querySelector('[data-role="search-widget"]');
+  const backdrop = widget ? widget.querySelector('.product-search-widget__backdrop') : null;
+  const closeEls = document.querySelectorAll('[data-role="close-search-widget"]');
+  const input = document.querySelector('[data-role="search-input"]');
+  const results = document.querySelector('[data-role="search-results"]');
+  const list = document.querySelector('[data-role="search-results-list"]');
+  if (!openBtns.length || !widget || !backdrop || !input || !list) return;
+
+  let isClosing = false;
+  let lockedScrollY = 0;
+  let searchTimer = null;
+  let activeSearchController = null;
+
+  const ajaxUrl = 'https://ecolares.ru/wp-admin/admin-ajax.php';
+  const ajaxNonce = 'e882aa5410';
+
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function renderResults(items) {
+    if (!Array.isArray(items) || !items.length) {
+      list.innerHTML = '<div class="product-search-widget__empty">Ничего не найдено</div>';
+      return;
+    }
+
+    list.innerHTML = items.map(function (item) {
+      let metaLine = '';
+      if (item.sku) {
+        let metaHtml = '<span class="product-search-widget__item-meta-article">Артикул: ' + escapeHtml(item.sku) + '</span>';
+        if (item.size_display) {
+          metaHtml += '<span class="product-search-widget__item-meta-size">Размер: ' + escapeHtml(item.size_display) + '</span>';
+        }
+        metaLine = '<div class="product-search-widget__item-meta">' + metaHtml + '</div>';
+      }
+      const priceText = item.price_display || item.price_from || '';
+      const priceLine = priceText ? '<div class="product-search-widget__item-price">' + escapeHtml(priceText) + '</div>' : '';
+      const image = item.image_url
+        ? '<img src="' + escapeHtml(item.image_url) + '" alt="' + escapeHtml(item.title) + '" loading="lazy">'
+        : '';
+
+      return ''
+        + '<a href="' + escapeHtml(item.link || '#') + '" class="product-search-widget__item">'
+        +   '<div class="product-search-widget__item-image">' + image + '</div>'
+        +   '<div class="product-search-widget__item-body">'
+        +     '<div class="product-search-widget__item-title">' + escapeHtml(item.title || '') + '</div>'
+        +     metaLine
+        +   '</div>'
+        +   priceLine
+        + '</a>';
+    }).join('');
+  }
+
+  function lockPageScroll() {
+    lockedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.classList.add('search-widget-open');
+    document.body.style.top = '-' + lockedScrollY + 'px';
+  }
+
+  function unlockPageScroll() {
+    document.body.classList.remove('search-widget-open');
+    document.body.style.top = '';
+    window.scrollTo(0, lockedScrollY);
+  }
+
+  function updateResultsVisibility() {
+    if (!results || !list) return;
+    const hasQuery = input.value.trim().length > 0;
+    results.hidden = !hasQuery;
+    results.classList.toggle('is-visible', hasQuery);
+    if (!hasQuery) {
+      list.innerHTML = '';
+    }
+  }
+
+  function resetSearchState() {
+    input.value = '';
+    if (searchTimer) {
+      clearTimeout(searchTimer);
+      searchTimer = null;
+    }
+    if (activeSearchController) {
+      activeSearchController.abort();
+      activeSearchController = null;
+    }
+    updateResultsVisibility();
+  }
+
+  function runSearch(query) {
+    if (!query) return;
+
+    if (activeSearchController) {
+      activeSearchController.abort();
+    }
+    activeSearchController = new AbortController();
+
+    const params = new URLSearchParams({
+      action: 'eco_product_search',
+      nonce: ajaxNonce,
+      q: query
+    });
+
+    fetch(ajaxUrl + '?' + params.toString(), { signal: activeSearchController.signal })
+      .then(function (res) { return res.json(); })
+      .then(function (payload) {
+        if (!payload || !payload.success) {
+          renderResults([]);
+          return;
+        }
+        renderResults(payload.data && payload.data.items ? payload.data.items : []);
+      })
+      .catch(function (err) {
+        if (err && err.name === 'AbortError') return;
+        renderResults([]);
+      })
+      .finally(function () {
+        activeSearchController = null;
+      });
+  }
+
+  function openWidget() {
+    if (widget.classList.contains('is-open') || isClosing) return;
+
+    widget.classList.remove('is-closing');
+    widget.setAttribute('aria-hidden', 'false');
+    lockPageScroll();
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        widget.classList.add('is-open');
+        input.focus();
+      });
+    });
+  }
+
+  function closeWidget() {
+    if (!widget.classList.contains('is-open') || isClosing) return;
+
+    isClosing = true;
+    widget.classList.remove('is-open');
+    widget.classList.add('is-closing');
+
+    const finishClose = function () {
+      backdrop.removeEventListener('transitionend', onTransitionEnd);
+      widget.classList.remove('is-closing');
+      widget.setAttribute('aria-hidden', 'true');
+      unlockPageScroll();
+      resetSearchState();
+      isClosing = false;
+    };
+
+    const onTransitionEnd = function (e) {
+      if (e.target !== backdrop) return;
+      finishClose();
+    };
+
+    backdrop.addEventListener('transitionend', onTransitionEnd);
+
+    setTimeout(function () {
+      if (isClosing) finishClose();
+    }, 400);
+  }
+
+  openBtns.forEach(function (btn) {
+    btn.addEventListener('click', openWidget);
+  });
+  input.addEventListener('input', function () {
+    updateResultsVisibility();
+    const query = input.value.trim();
+    if (searchTimer) {
+      clearTimeout(searchTimer);
+      searchTimer = null;
+    }
+    if (!query) return;
+    searchTimer = setTimeout(function () {
+      runSearch(query);
+    }, 220);
+  });
+  closeEls.forEach(function (el) {
+    el.addEventListener('click', closeWidget);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeWidget();
+  });
+});
+</script>
+
+            <noscript>
+                <div>
+                    <img loading="lazy" src="https://mc.yandex.ru/watch/110453815" style="position:absolute; left:-9999px;" alt=""/>
+                </div>
+            </noscript>
+                        <noscript>
+                <div>
+                    <img loading="lazy" src="https://mc.yandex.ru/watch/111320562" style="position:absolute; left:-9999px;" alt=""/>
+                </div>
+            </noscript>
+            <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/eco_erq/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<script type="text/html" id="tmpl-woo-variation-gallery-slider-template">
+	    <div class="wvg-gallery-image">
+        <div>
+            <# if( data.srcset ){ #>
+            <div class="wvg-single-gallery-image-container">
+                <img loading="lazy" class="{{data.class}}" width="{{data.src_w}}" height="{{data.src_h}}" src="{{data.src}}" alt="{{data.alt}}" title="{{data.title}}" data-caption="{{data.caption}}" data-src="{{data.full_src}}" data-large_image="{{data.full_src}}" data-large_image_width="{{data.full_src_w}}" data-large_image_height="{{data.full_src_h}}" srcset="{{data.srcset}}" sizes="{{data.sizes}}" {{data.extra_params}}/>
+            </div>
+            <# } #>
+
+            <# if( !data.srcset ){ #>
+            <div class="wvg-single-gallery-image-container">
+                <img loading="lazy" class="{{data.class}}" width="{{data.src_w}}" height="{{data.src_h}}" src="{{data.src}}" alt="{{data.alt}}" title="{{data.title}}" data-caption="{{data.caption}}" data-src="{{data.full_src}}" data-large_image="{{data.full_src}}" data-large_image_width="{{data.full_src_w}}" data-large_image_height="{{data.full_src_h}}" sizes="{{data.sizes}}" {{data.extra_params}}/>
+            </div>
+            <# } #>
+        </div>
+    </div>
+	</script>
+
+<script type="text/html" id="tmpl-woo-variation-gallery-thumbnail-template">
+	<div class="wvg-gallery-thumbnail-image">
+		<div>
+			<img loading="lazy" class="{{data.gallery_thumbnail_class}}" width="{{data.gallery_thumbnail_src_w}}" height="{{data.gallery_thumbnail_src_h}}" src="{{data.gallery_thumbnail_src}}" alt="{{data.alt}}" title="{{data.title}}" />
+		</div>
+	</div>
+</script><script type="application/ld+json">{"@context":"https://schema.org/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"\u0413\u043b\u0430\u0432\u043d\u0430\u044f","@id":"https://ecolares.ru"}},{"@type":"ListItem","position":2,"item":{"name":"\u041e\u0448\u0438\u0431\u043a\u0430 404","@id":"https://ecolares.ru/wp-config.php.dist"}}]}</script>	<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script id="wp-yandex-metrika_woocommerce-js" src="https://ecolares.ru/wp-content/plugins/wp-yandex-metrika/assets/woocommerce.min.js?ver=1.2.4"></script>
+<script id="wp-yandex-metrika_woocommerce-js-after">
+jQuery(document.body).on('wpym_ec_ready', function(){if (typeof wpym !== 'undefined' && wpym.ec) {wpym.ajaxurl = 'https://ecolares.ru/wp-admin/admin-ajax.php';wpym.ec.addData({"currency":"RUB"});}})
+//# sourceURL=wp-yandex-metrika_woocommerce-js-after
+</script>
+<script id="wp-yandex-metrika_contact-form-7-js" src="https://ecolares.ru/wp-content/plugins/wp-yandex-metrika/assets/contactFormSeven.min.js?ver=1.2.4"></script>
+<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/checkout/|/cart/|/checkout/??(.*)|/cart/?|/my-account/??(.*)|/(index.php/)?(.*)wp-json(/.*|$)|/favorite(/|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://ecolares.ru","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+</script>
+<script id="my-nouislider-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/nouislider.js?ver=7.1.4"></script>
+<script id="my-fancybox-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/fancybox.umd.js?ver=7.1.4"></script>
+<script id="my-favorites-js-extra">
+var Favorites = {"ajaxUrl":"https://ecolares.ru/wp-admin/admin-ajax.php","nonce":"5230a68ed8","isLoggedIn":"0"};
+//# sourceURL=my-favorites-js-extra
+</script>
+<script id="my-favorites-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/favorites.js?ver=1782340504"></script>
+<script id="my-cookie-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/cookie.js?ver=1782705277"></script>
+<script id="my-app-js-extra">
+var ECO_MENU_AJAX = {"enabled":"1","ajax_url":"https://ecolares.ru/wp-admin/admin-ajax.php","nonce":"312d40d181"};
+//# sourceURL=my-app-js-extra
+</script>
+<script id="my-app-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/app.js?ver=1793883843"></script>
+<script id="my-add-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/add.js?ver=1791466142"></script>
+<script id="catalog-ajax-js-extra">
+var CATALOG_AJAX = {"ajax_url":"https://ecolares.ru/wp-admin/admin-ajax.php","nonce":"b0df835f68","cat_id":"0","per_page":"9"};
+//# sourceURL=catalog-ajax-js-extra
+</script>
+<script id="catalog-ajax-js" src="https://ecolares.ru/wp-content/themes/eco_erq/js/catalog-ajax.js?ver=1782340504"></script>
+<script id="wp-hooks-js" src="https://ecolares.ru/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://ecolares.ru/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://ecolares.ru/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.5"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2026-02-09 17:37:19+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);","lang":"ru"},"This contact form is placed in the wrong place.":["\u042d\u0442\u0430 \u043a\u043e\u043d\u0442\u0430\u043a\u0442\u043d\u0430\u044f \u0444\u043e\u0440\u043c\u0430 \u0440\u0430\u0437\u043c\u0435\u0449\u0435\u043d\u0430 \u0432 \u043d\u0435\u043f\u0440\u0430\u0432\u0438\u043b\u044c\u043d\u043e\u043c \u043c\u0435\u0441\u0442\u0435."],"Error:":["\u041e\u0448\u0438\u0431\u043a\u0430:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/ecolares.ru\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://ecolares.ru/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.5"></script>
+</body>
+</html>
