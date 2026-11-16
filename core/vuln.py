@@ -151,6 +151,35 @@ def tail(cve_id, n=40):
     return list(_read_jsonl(sink_path(cve_id)))[-n:]
 
 
+def report(cve_id):
+    v = load(cve_id)
+    rows = [r for r in _read_jsonl(sink_path(cve_id)) if r.get("state") in ("confirmed", "owned")]
+    uniq = {}
+    for r in rows:
+        uniq.setdefault(r["host"], r)
+    if not uniq:
+        return ""
+    p = os.path.join(DB, cve_id, "report.txt")
+    lines = []
+    lines.append("ОТЧЁТ ПО УЯЗВИМОСТИ")
+    lines.append("=" * 60)
+    lines.append("CVE:      " + v["id"])
+    lines.append("Название: " + v.get("title", ""))
+    lines.append("Диапазон: " + json.dumps(v.get("affected", {}), ensure_ascii=False))
+    lines.append("Проверено хостов: %d, подтверждено: %d" % (len(seen(cve_id)) + len(uniq), len(uniq)))
+    lines.append("")
+    lines.append("%-40s %-10s %s" % ("хост", "версия", "статус"))
+    lines.append("-" * 60)
+    for h, r in sorted(uniq.items()):
+        st = "шелл получен" if r.get("state") == "owned" else "уязвим по версии"
+        lines.append("%-40s %-10s %s" % (h[:40], r.get("version", "-"), st))
+    lines.append("")
+    lines.append("Рекомендация: обновить WordPress до исправленной версии ветки.")
+    with open(p, "w", encoding="utf-8", newline="\n") as f:
+        f.write("\n".join(lines) + "\n")
+    return p
+
+
 def grab(cve_id):
     return [r for r in _read_jsonl(sink_path(cve_id)) if r.get("state") == "owned"]
 

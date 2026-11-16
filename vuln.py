@@ -19,6 +19,9 @@ def main():
     r.add_argument("--timeout", type=int, default=30)
     r.add_argument("--limit", type=int, default=0)
 
+    rp = sub.add_parser("report")
+    rp.add_argument("--cve", required=True)
+
     g = sub.add_parser("grab")
     g.add_argument("--cve", required=True)
 
@@ -30,6 +33,11 @@ def main():
             print("база пуста")
         for cid, title, plug in rows:
             print("%-18s %-28s %s" % (cid, plug, title))
+        return
+
+    if a.cmd == "report":
+        p = vuln.report(a.cve)
+        print(p or "нечего включать в отчёт")
         return
 
     if a.cmd == "grab":
