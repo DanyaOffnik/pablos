@@ -73,6 +73,11 @@ def _vcmp(a, b):
 
 
 def _affected(version, rule):
+    for lo, hi in rule.get("ranges") or []:
+        if _vcmp(version, lo) >= 0 and _vcmp(version, hi) <= 0:
+            return True
+    if rule.get("ranges"):
+        return False
     c = _vcmp(version, rule.get("version", "0"))
     return {"<": c < 0, "<=": c <= 0, "==": c == 0,
             ">=": c >= 0, ">": c > 0}.get(rule.get("op", "<="), False)
