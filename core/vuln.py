@@ -178,10 +178,15 @@ def append_list(cve_id, hosts):
             if f.read(1) != b"\n":
                 with open(p, "a", encoding="utf-8") as g:
                     g.write("\n")
+    have = set()
+    if os.path.isfile(p):
+        with open(p, encoding="utf-8", errors="ignore") as g:
+            have = {ln.strip().lower() for ln in g if ln.strip()}
     with open(p, "a", encoding="utf-8") as f:
         for h in hosts:
             h = h.strip()
-            if h:
+            if h and h.lower() not in have:
+                have.add(h.lower())
                 f.write(h + "\n")
 
 
@@ -462,7 +467,12 @@ def run(cve_id, hosts, threads=8, tmo=90, limit=0, stop_fn=None):
     v = load(cve_id)
     marker = "PBL" + _rnd(12).upper()
     done = seen(cve_id)
-    queue = [h for h in hosts if h and h not in done]
+    seen_q = set()
+    queue = []
+    for h in hosts:
+        if h and h not in done and h not in seen_q:
+            seen_q.add(h)
+            queue.append(h)
     if limit:
         queue = queue[:limit]
     if not queue:
