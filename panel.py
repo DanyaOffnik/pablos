@@ -129,7 +129,12 @@ def do_run():
         ui.item("4", "снять STOP", "продолжить")
         ui.item("5", "возобновить отложенные", "капча, лимит, блок")
         ui.item("0", "назад")
+        ui.item("6", "поиск по дырам", "список доменов -> CVE -> эксплойт")
         c = ui.ask("пункт")
+        if c == "6":
+            from modules import vulntab
+            vulntab.run()
+            continue
         if c == "0":
             return
         if c == "1":

