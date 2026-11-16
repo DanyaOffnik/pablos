@@ -175,7 +175,7 @@ def report(cve_id):
         lines.append("%-40s %-10s %s" % (h[:40], r.get("version", "-"), st))
     lines.append("")
     lines.append("Рекомендация: обновить WordPress до исправленной версии ветки.")
-    with open(p, "w", encoding="utf-8", newline="\n") as f:
+    with open(p, "w", encoding="utf-8-sig", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
     return p
 
